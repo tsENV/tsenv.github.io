@@ -68,6 +68,6 @@
     "applied force",
     "surface angle"
   ],
-  "download_link": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/questions/MassSlide.zip",
+  "download_link": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/questions/MassSlide.zip",
   "sample_count": 5
 }

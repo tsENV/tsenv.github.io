@@ -17,7 +17,7 @@ from validate_website_data import validate
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "public" / "data"
-DEFAULT_REPO = "tsenv/tsenv-benchmark"
+DEFAULT_REPO = "TommasoBendinelli/tsenv-benchmark"
 TOP_LEVEL_FILES = ("summary.json", "leaderboard.json")
 SIMULATORS = ("BallDrop", "BounceBall", "MassSlide")
 

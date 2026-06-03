@@ -547,7 +547,7 @@ function normalizeSubmissionDetail(detail, submissionId) {
     downloads: {
       trajectory_archive: links.trajectories || "#",
       complete_results_table: links.results || "#",
-      benchmark_dataset: "https://huggingface.co/datasets/tsenv/tsenv-benchmark",
+      benchmark_dataset: "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark",
     },
   };
 }

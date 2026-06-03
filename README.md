@@ -5,7 +5,7 @@ Static single-page application for the public TSENV benchmark website at
 
 The site is a rendering layer only. Benchmark results, trajectories, generated
 question data, and accepted submissions are treated as canonical in the
-Hugging Face dataset repository `tsenv/tsenv-benchmark`.
+Hugging Face dataset repository `TommasoBendinelli/tsenv-benchmark`.
 
 ## Preview Locally
 
@@ -46,7 +46,7 @@ python3 scripts/validate_website_data.py
 Regenerate from Hugging Face:
 
 ```bash
-python3 scripts/sync_hf_to_website_data.py --hf-repo tsenv/tsenv-benchmark
+python3 scripts/sync_hf_to_website_data.py --hf-repo TommasoBendinelli/tsenv-benchmark
 ```
 
 For local prepared data:

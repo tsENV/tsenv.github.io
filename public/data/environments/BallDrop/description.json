@@ -63,6 +63,6 @@
     "drag coefficient",
     "gravity acceleration"
   ],
-  "download_link": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/questions/BallDrop.zip",
+  "download_link": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/questions/BallDrop.zip",
   "sample_count": 5
 }

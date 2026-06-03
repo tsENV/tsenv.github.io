@@ -68,6 +68,6 @@
     "initial velocity",
     "drag coefficient"
   ],
-  "download_link": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/questions/BounceBall.zip",
+  "download_link": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/questions/BounceBall.zip",
   "sample_count": 5
 }
