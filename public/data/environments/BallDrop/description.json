@@ -1,0 +1,68 @@
+{
+  "environment_id": "BallDrop",
+  "name": "BallDrop",
+  "short_one_line_description": "A ball is dropped from a height and observed over time.",
+  "prompt_combinations": [
+    {
+      "desc_level": "high",
+      "task_type": "direct",
+      "training_samples": "none",
+      "agent_instruction": "You are given multivariate time-series observations from a ball-drop simulator. Identify which physical parameter changed, or answer that no intervention occurred.\n\nThe channels are ball height, ball velocity, and contact impulse. An intervention may occur at the vertical marker. Ground truth labels are not included in the observation."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "direct",
+      "training_samples": ">0",
+      "agent_instruction": "You are given multivariate time-series observations from a ball-drop simulator. Identify which physical parameter changed, or answer that no intervention occurred.\n\nThe channels are ball height, ball velocity, and contact impulse. An intervention may occur at the vertical marker. Ground truth labels are not included in the observation.\n\nExample: when gravity increases, the velocity slope becomes more negative after the intervention marker. Example: a restitution change affects rebound height after contact."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "code",
+      "training_samples": "none",
+      "agent_instruction": "You are given multivariate time-series observations from a ball-drop simulator. Inspect the signals and write a compact Python-style answer identifying the changed physical parameter, or return no_intervention if nothing changed.\n\nThe channels are ball height, ball velocity, and contact impulse. An intervention may occur at the vertical marker. Ground truth labels are not included in the observation."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "code",
+      "training_samples": ">0",
+      "agent_instruction": "You are given multivariate time-series observations from a ball-drop simulator. Inspect the signals and write a compact Python-style answer identifying the changed physical parameter, or return no_intervention if nothing changed.\n\nThe channels are ball height, ball velocity, and contact impulse. An intervention may occur at the vertical marker. Ground truth labels are not included in the observation.\n\nExample: when gravity increases, the velocity slope becomes more negative after the intervention marker. Example: a restitution change affects rebound height after contact."
+    },
+    {
+      "desc_level": "none",
+      "task_type": "direct",
+      "training_samples": ">0",
+      "agent_instruction": "You are given multivariate time-series observations from a ball-drop simulator. Identify which physical parameter changed, or answer that no intervention occurred.\n\nExample: when gravity increases, the velocity slope becomes more negative after the intervention marker. Example: a restitution change affects rebound height after contact."
+    },
+    {
+      "desc_level": "none",
+      "task_type": "code",
+      "training_samples": ">0",
+      "agent_instruction": "You are given multivariate time-series observations from a ball-drop simulator. Inspect the signals and write a compact Python-style answer identifying the changed physical parameter, or return no_intervention if nothing changed.\n\nExample: when gravity increases, the velocity slope becomes more negative after the intervention marker. Example: a restitution change affects rebound height after contact."
+    }
+  ],
+  "observed_channels": [
+    {
+      "id": "Position",
+      "label": "ball height",
+      "unit": "m"
+    },
+    {
+      "id": "Velocity",
+      "label": "ball velocity",
+      "unit": "m/s"
+    },
+    {
+      "id": "Hard_Stop_f",
+      "label": "contact impulse",
+      "unit": "N*s"
+    }
+  ],
+  "candidate_parameters": [
+    "coefficient of restitution",
+    "mass",
+    "drag coefficient",
+    "gravity acceleration"
+  ],
+  "download_link": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/questions/BallDrop.zip",
+  "sample_count": 5
+}

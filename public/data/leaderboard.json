@@ -1,0 +1,2431 @@
+{
+  "generated_at": "2026-05-31T00:00:00Z",
+  "canonical_scope": {
+    "task_mode": "Code",
+    "noise": "Low",
+    "context": "High",
+    "examples": "Three Examples",
+    "required_seeds_per_simulator": 5
+  },
+  "filters": {
+    "task_mode": [
+      "Code",
+      "Direct"
+    ],
+    "noise": [
+      "Low",
+      "High"
+    ],
+    "context": [
+      "High",
+      "None"
+    ],
+    "examples": [
+      "None",
+      "One Example",
+      "Three Examples"
+    ]
+  },
+  "rows": [
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.748,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.781,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.815,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.683,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.743,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.769,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.669,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.697,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.733,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.594,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.645,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.68,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.689,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.74,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.779,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.646,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.685,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.722,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.622,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.65,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.697,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.565,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.603,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 1,
+      "submission_id": "agent-x-2026-05-01",
+      "agent": "Agent X",
+      "model": "Model Y",
+      "score": 0.627,
+      "date": "2026-05-01",
+      "submitter": "Lab Z",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/agent-x-2026-05-01.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.696,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.728,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.75,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.62,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.685,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.707,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.607,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.653,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.676,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.556,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.589,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.621,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.648,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.69,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.724,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.587,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.637,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.649,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.548,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.597,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.62,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.494,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.537,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 2,
+      "submission_id": "structured-reasoner-2026-05-14",
+      "agent": "Structured Reasoner",
+      "model": "Model R",
+      "score": 0.57,
+      "date": "2026-05-14",
+      "submitter": "TSENV Team",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/structured-reasoner-2026-05-14.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.618,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.659,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.687,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.553,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.601,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.645,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.534,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.58,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.597,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.48,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.514,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.547,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.582,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.62,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.646,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.519,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.57,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.597,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.478,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.521,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.556,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.424,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.47,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 3,
+      "submission_id": "trajectory-search-2026-05-18",
+      "agent": "Trajectory Search",
+      "model": "Model Q",
+      "score": 0.516,
+      "date": "2026-05-18",
+      "submitter": "Open Evaluation",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/trajectory-search-2026-05-18.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.514,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.548,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.584,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.447,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.507,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.524,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "Low",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.414,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.461,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.496,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.359,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.414,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.45,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Code",
+        "noise": "High",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.458,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.5,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.547,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.405,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.442,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.469,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "Low",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.366,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.425,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.457,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "High",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.318,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "None"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.357,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "One Example"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    },
+    {
+      "rank": 4,
+      "submission_id": "react-baseline-2026-05-22",
+      "agent": "ReAct Baseline",
+      "model": "Model B",
+      "score": 0.392,
+      "date": "2026-05-22",
+      "submitter": "Baseline Maintainers",
+      "scope": {
+        "task_mode": "Direct",
+        "noise": "High",
+        "context": "None",
+        "examples": "Three Examples"
+      },
+      "complete": true,
+      "required_seed_summary": {
+        "BallDrop": 5,
+        "BounceBall": 5,
+        "MassSlide": 5
+      },
+      "links": {
+        "trajectories": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/submissions/react-baseline-2026-05-22.zip",
+        "complete_table": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/results.parquet"
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "environment_id": "BounceBall",
+  "name": "BounceBall",
+  "short_one_line_description": "A bouncing ball trajectory with impacts, velocity changes, and contact impulses.",
+  "prompt_combinations": [
+    {
+      "desc_level": "high",
+      "task_type": "direct",
+      "training_samples": "none",
+      "agent_instruction": "Inspect a bouncing-ball trajectory and name the changed physical parameter, or no_intervention.\n\nThe simulator records horizontal position, vertical position, vertical velocity, and contact impulse."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "direct",
+      "training_samples": ">0",
+      "agent_instruction": "Inspect a bouncing-ball trajectory and name the changed physical parameter, or no_intervention.\n\nThe simulator records horizontal position, vertical position, vertical velocity, and contact impulse.\n\nExample: lower restitution shortens subsequent bounces. Example: increased gravity steepens vertical velocity between impacts."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "code",
+      "training_samples": "none",
+      "agent_instruction": "Inspect a bouncing-ball trajectory and emit a JSON-like answer with the intervention parameter and evidence from observed channels.\n\nThe simulator records horizontal position, vertical position, vertical velocity, and contact impulse."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "code",
+      "training_samples": ">0",
+      "agent_instruction": "Inspect a bouncing-ball trajectory and emit a JSON-like answer with the intervention parameter and evidence from observed channels.\n\nThe simulator records horizontal position, vertical position, vertical velocity, and contact impulse.\n\nExample: lower restitution shortens subsequent bounces. Example: increased gravity steepens vertical velocity between impacts."
+    },
+    {
+      "desc_level": "none",
+      "task_type": "direct",
+      "training_samples": ">0",
+      "agent_instruction": "Inspect a bouncing-ball trajectory and name the changed physical parameter, or no_intervention.\n\nExample: lower restitution shortens subsequent bounces. Example: increased gravity steepens vertical velocity between impacts."
+    },
+    {
+      "desc_level": "none",
+      "task_type": "code",
+      "training_samples": ">0",
+      "agent_instruction": "Inspect a bouncing-ball trajectory and emit a JSON-like answer with the intervention parameter and evidence from observed channels.\n\nExample: lower restitution shortens subsequent bounces. Example: increased gravity steepens vertical velocity between impacts."
+    }
+  ],
+  "observed_channels": [
+    {
+      "id": "Position_X",
+      "label": "horizontal position",
+      "unit": "m"
+    },
+    {
+      "id": "Position_Y",
+      "label": "vertical position",
+      "unit": "m"
+    },
+    {
+      "id": "Velocity_Y",
+      "label": "vertical velocity",
+      "unit": "m/s"
+    },
+    {
+      "id": "Contact_Impulse",
+      "label": "contact impulse",
+      "unit": "N*s"
+    }
+  ],
+  "candidate_parameters": [
+    "coefficient of restitution",
+    "gravity acceleration",
+    "initial velocity",
+    "drag coefficient"
+  ],
+  "download_link": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/questions/BounceBall.zip",
+  "sample_count": 5
+}

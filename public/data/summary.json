@@ -1,0 +1,24 @@
+{
+  "num_simulators": 3,
+  "simulators": [
+    "BallDrop",
+    "BounceBall",
+    "MassSlide"
+  ],
+  "task_modes": [
+    "Code",
+    "Direct"
+  ],
+  "axes": [
+    "noise",
+    "context",
+    "examples"
+  ],
+  "canonical_scope": {
+    "task_mode": "Code",
+    "noise": "Low",
+    "context": "High",
+    "examples": "Three Examples",
+    "required_seeds_per_simulator": 5
+  }
+}

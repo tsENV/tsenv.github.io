@@ -1,0 +1,73 @@
+{
+  "environment_id": "MassSlide",
+  "name": "MassSlide",
+  "short_one_line_description": "A mass slides under force while friction and velocity are observed over time.",
+  "prompt_combinations": [
+    {
+      "desc_level": "high",
+      "task_type": "direct",
+      "training_samples": "none",
+      "agent_instruction": "Analyze a sliding-mass simulator and identify the changed parameter, or no_intervention.\n\nThe simulator records displacement, velocity, applied force, and friction force over time."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "direct",
+      "training_samples": ">0",
+      "agent_instruction": "Analyze a sliding-mass simulator and identify the changed parameter, or no_intervention.\n\nThe simulator records displacement, velocity, applied force, and friction force over time.\n\nExample: increased friction reduces acceleration after the intervention. Example: increased mass reduces acceleration without changing applied force."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "code",
+      "training_samples": "none",
+      "agent_instruction": "Analyze a sliding-mass simulator and return a concise programmatic answer naming the changed parameter and evidence.\n\nThe simulator records displacement, velocity, applied force, and friction force over time."
+    },
+    {
+      "desc_level": "high",
+      "task_type": "code",
+      "training_samples": ">0",
+      "agent_instruction": "Analyze a sliding-mass simulator and return a concise programmatic answer naming the changed parameter and evidence.\n\nThe simulator records displacement, velocity, applied force, and friction force over time.\n\nExample: increased friction reduces acceleration after the intervention. Example: increased mass reduces acceleration without changing applied force."
+    },
+    {
+      "desc_level": "none",
+      "task_type": "direct",
+      "training_samples": ">0",
+      "agent_instruction": "Analyze a sliding-mass simulator and identify the changed parameter, or no_intervention.\n\nExample: increased friction reduces acceleration after the intervention. Example: increased mass reduces acceleration without changing applied force."
+    },
+    {
+      "desc_level": "none",
+      "task_type": "code",
+      "training_samples": ">0",
+      "agent_instruction": "Analyze a sliding-mass simulator and return a concise programmatic answer naming the changed parameter and evidence.\n\nExample: increased friction reduces acceleration after the intervention. Example: increased mass reduces acceleration without changing applied force."
+    }
+  ],
+  "observed_channels": [
+    {
+      "id": "Position",
+      "label": "mass displacement",
+      "unit": "m"
+    },
+    {
+      "id": "Velocity",
+      "label": "mass velocity",
+      "unit": "m/s"
+    },
+    {
+      "id": "Applied_Force",
+      "label": "applied force",
+      "unit": "N"
+    },
+    {
+      "id": "Friction_Force",
+      "label": "friction force",
+      "unit": "N"
+    }
+  ],
+  "candidate_parameters": [
+    "friction coefficient",
+    "mass",
+    "applied force",
+    "surface angle"
+  ],
+  "download_link": "https://huggingface.co/datasets/tsenv/tsenv-benchmark/resolve/main/questions/MassSlide.zip",
+  "sample_count": 5
+}
