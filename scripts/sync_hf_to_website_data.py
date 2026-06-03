@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import sys
 import urllib.error
@@ -34,9 +35,14 @@ def hf_url(repo: str, path: str, revision: str) -> str:
 
 def download_file(url: str, destination: Path) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
+    headers = {}
+    hf_token = os.environ.get("HF_TOKEN", "").strip()
+    if hf_token:
+        headers["Authorization"] = f"Bearer {hf_token}"
+    request = urllib.request.Request(url, headers=headers)
     try:
-      with urllib.request.urlopen(url, timeout=30) as response:
-          destination.write_bytes(response.read())
+        with urllib.request.urlopen(request, timeout=30) as response:
+            destination.write_bytes(response.read())
     except urllib.error.HTTPError as exc:
         raise RuntimeError(f"failed to download {url}: HTTP {exc.code}") from exc
     except urllib.error.URLError as exc:
