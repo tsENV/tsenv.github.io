@@ -285,23 +285,6 @@ function renderPlot(data, description, options = {}) {
   limitedChannels.forEach((channel, index) => {
     const channelMeta = channelDescriptions.find(ch => (ch.id || ch) === channel) || { label: channel, unit: "" };
     const values = rows.map(row => Number(row[channel]));
-    if (index === 0 && options.axis === "NOISE") {
-      const finiteValues = values.filter(Number.isFinite);
-      const minValue = Math.min(...finiteValues);
-      const maxValue = Math.max(...finiteValues);
-      const band = Math.max((maxValue - minValue) * 0.04, 0.01);
-      traces.push({ x, y: values.map(value => value + band), mode: "lines", line: { width: 0 }, hoverinfo: "skip", showlegend: false });
-      traces.push({
-        x,
-        y: values.map(value => value - band),
-        mode: "lines",
-        fill: "tonexty",
-        fillcolor: "rgba(31, 95, 191, 0.16)",
-        line: { width: 0 },
-        hoverinfo: "skip",
-        showlegend: false,
-      });
-    }
     traces.push({
       x,
       y: values,
@@ -398,11 +381,6 @@ async function renderHome() {
   const description = await getEnvironmentDescription("BallDrop");
   const data = await getEnvironmentData("BallDrop", 1);
   const prompt = findPrompt(description, state.home.taskMode, state.home.axis);
-  const axisNote = {
-    NOISE: "Noise axis selected: the plot shows a light uncertainty band around the primary channel.",
-    CONTEXT: "Context axis selected: the prompt includes simulator and channel context.",
-    EXAMPLES: "Examples axis selected: the prompt includes compact labeled examples."
-  }[state.home.axis];
 
   const stats = [
     ["3 physical simulators", "BallDrop, BounceBall, MassSlide"],
@@ -433,7 +411,6 @@ async function renderHome() {
         ${taskControls("home", state.home.taskMode, state.home.axis)}
         ${renderPlot(data, description, { axis: state.home.axis })}
         <div class="prompt-panel">
-          <p class="small muted">${axisNote}</p>
           <pre>${escapeHtml(prompt.agent_instruction)}</pre>
           <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>
           ${state.home.reveal ? `<div class="reveal-answer"><strong>Correct answer:</strong> ${escapeHtml(data.answer || data.intervention_parameter || "no intervention")} changed at the intervention marker.</div>` : ""}
