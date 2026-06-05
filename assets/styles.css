@@ -233,6 +233,13 @@ button, select { font: inherit; }
   width: 100%;
   overflow: hidden;
 }
+.plotly-wrap {
+  min-height: 430px;
+}
+.plotly-host {
+  width: 100%;
+  min-height: 430px;
+}
 .plot-svg {
   width: 100%;
   display: block;

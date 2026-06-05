@@ -1,0 +1,21 @@
+{
+  "website_url": "https://tsenv.github.io/",
+  "code_url": "https://github.com/tsenv/tsENV",
+  "hf_repo": "TommasoBendinelli/tsenv-benchmark",
+  "hf_dataset_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark",
+  "issues_url": "https://github.com/tsenv/tsENV/issues",
+  "affiliation_url": "https://siplab.org/",
+  "paper_url": "https://arxiv.org",
+  "authors": [
+    {
+      "name": "Tommaso Bendinelli",
+      "affiliation": "ETH Zurich SIPLAB / CSEM",
+      "url": ""
+    }
+  ],
+  "contact": {
+    "label": "GitHub issues",
+    "url": "https://github.com/tsenv/tsENV/issues"
+  },
+  "citation": "@inproceedings{tsenv2026,\n  title={TSENV: Controllable Time-Series Exploration Benchmark for Agents},\n  author={Tommaso Bendinelli and Artur Dox and Christian Holz},\n  year={2026}\n}"
+}

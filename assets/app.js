@@ -3,6 +3,7 @@ const DATA_ROOT = "/public/data";
 const DEFAULT_SCOPE = { task_mode: "Code", noise: "Low", context: "High", examples: "Three Examples" };
 
 const state = {
+  site: null,
   summary: null,
   leaderboard: null,
   envDescriptions: {},
@@ -20,6 +21,8 @@ const state = {
 };
 
 const app = document.getElementById("app");
+const plotPayloads = new Map();
+let plotCounter = 0;
 
 async function loadJson(path) {
   const response = await fetch(path, { cache: "no-store" });
@@ -36,6 +39,14 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+function siteValue(key, fallback = "") {
+  return state.site?.[key] || fallback;
+}
+
+function siteHref(key) {
+  return escapeHtml(siteValue(key, "#"));
 }
 
 function normalizePath(pathname) {
@@ -132,13 +143,18 @@ function shell(content) {
           <a href="/environments/" data-link class="${navActive("environments") ? "active" : ""}">Environments</a>
           <a href="/get-started/" data-link class="${navActive("get-started") ? "active" : ""}">Get Started</a>
           <a href="/authors/" data-link class="${navActive("authors") ? "active" : ""}">Authors</a>
-          <a class="external" href="https://arxiv.org/" target="_blank" rel="noreferrer">Paper (arXiv)</a>
-          <a class="external" href="https://github.com/tsenv/tsENV" target="_blank" rel="noreferrer">Code</a>
+          <a class="external" href="${siteHref("paper_url")}" target="_blank" rel="noreferrer">Paper (arXiv)</a>
+          <a class="external" href="${siteHref("code_url")}" target="_blank" rel="noreferrer">Code</a>
         </nav>
       </div>
     </header>
     <main class="main-shell">${content}</main>
   `;
+}
+
+function commit(content) {
+  app.innerHTML = shell(content);
+  mountPlots();
 }
 
 function navigate(path) {
@@ -239,15 +255,7 @@ async function getEnvironmentDescription(environmentId) {
 async function getEnvironmentData(environmentId, sampleIndex = 0) {
   const key = `${environmentId}:${sampleIndex}`;
   if (!state.envData[key]) {
-    try {
-      state.envData[key] = await loadJson(`${DATA_ROOT}/environments/${environmentId}/data_${sampleIndex}.json`);
-    } catch (error) {
-      if (sampleIndex === 1) {
-        state.envData[key] = await loadJson(`${DATA_ROOT}/environments/${environmentId}/data_0.json`);
-      } else {
-        throw error;
-      }
-    }
+    state.envData[key] = await loadJson(`${DATA_ROOT}/environments/${environmentId}/data_${sampleIndex}.json`);
   }
   return state.envData[key];
 }
@@ -259,22 +267,10 @@ async function getSubmissionDetail(submissionId) {
   return state.submissionDetails[submissionId];
 }
 
-function buildPath(points, xFor, yFor) {
-  return points.map((point, index) => `${index === 0 ? "M" : "L"}${xFor(point).toFixed(2)},${yFor(point).toFixed(2)}`).join(" ");
-}
-
 function renderPlot(data, description, options = {}) {
   const rows = data.rows || [];
   if (!rows.length) return `<div class="plot-wrap"><p class="muted">No sample rows available.</p></div>`;
 
-  const width = 1000;
-  const height = 420;
-  const margin = { left: 72, right: 32, top: 30, bottom: 58 };
-  const plotWidth = width - margin.left - margin.right;
-  const plotHeight = height - margin.top - margin.bottom;
-  const timeValues = rows.map(r => Number(r.time));
-  const minT = Math.min(...timeValues);
-  const maxT = Math.max(...timeValues);
   const channelDescriptions = description.observed_channels || (description.observedChannels || []).map(item => (
     typeof item === "string" ? { id: item, label: item, unit: "" } : item
   ));
@@ -282,50 +278,93 @@ function renderPlot(data, description, options = {}) {
     .map(ch => ch.id || ch)
     .filter(id => id !== "time" && rows.some(r => typeof r[id] === "number"));
   const limitedChannels = channels.slice(0, 4);
-  const classNames = ["primary", "secondary", "tertiary", "secondary"];
-  const xFor = row => margin.left + ((Number(row.time) - minT) / (maxT - minT || 1)) * plotWidth;
-  const horizontalGrid = [0, 0.25, 0.5, 0.75, 1].map(f => margin.top + f * plotHeight);
-  const verticalGrid = [0, 0.25, 0.5, 0.75, 1].map(f => margin.left + f * plotWidth);
-  const interventionX = margin.left + ((Number(data.intervention_time) - minT) / (maxT - minT || 1)) * plotWidth;
+  const x = rows.map(row => Number(row.time));
+  const colors = ["#1f5fbf", "#6c757d", "#d97917", "#2f7d55"];
+  const traces = [];
 
-  const lineSvg = limitedChannels.map((channel, idx) => {
-    const values = rows.map(r => Number(r[channel])).filter(v => Number.isFinite(v));
-    let min = Math.min(...values);
-    let max = Math.max(...values);
-    if (min === max) { min -= 1; max += 1; }
-    const bandOffset = options.axis === "NOISE" && idx === 0 ? plotHeight * 0.04 : 0;
-    const yFor = row => margin.top + (1 - ((Number(row[channel]) - min) / (max - min || 1))) * plotHeight;
-    const path = buildPath(rows, xFor, yFor);
-    let band = "";
-    if (options.axis === "NOISE" && idx === 0) {
-      const upper = rows.map((row, i) => `${i === 0 ? "M" : "L"}${xFor(row).toFixed(2)},${(yFor(row) - bandOffset).toFixed(2)}`).join(" ");
-      const lower = [...rows].reverse().map((row, i) => `${i === 0 ? "L" : "L"}${xFor(row).toFixed(2)},${(yFor(row) + bandOffset).toFixed(2)}`).join(" ");
-      band = `<path class="noise-band" d="${upper} ${lower} Z"></path>`;
-    }
-    const labelY = 26 + idx * 20;
+  limitedChannels.forEach((channel, index) => {
     const channelMeta = channelDescriptions.find(ch => (ch.id || ch) === channel) || { label: channel, unit: "" };
-    return `${band}<path class="plot-line ${classNames[idx] || "secondary"}" d="${path}"></path>
-      <text class="plot-label" x="${margin.left + idx * 220}" y="${labelY}">${escapeHtml(channelMeta.label)}${channelMeta.unit ? ` (${escapeHtml(channelMeta.unit)})` : ""}</text>`;
-  }).join("");
+    const values = rows.map(row => Number(row[channel]));
+    if (index === 0 && options.axis === "NOISE") {
+      const finiteValues = values.filter(Number.isFinite);
+      const minValue = Math.min(...finiteValues);
+      const maxValue = Math.max(...finiteValues);
+      const band = Math.max((maxValue - minValue) * 0.04, 0.01);
+      traces.push({ x, y: values.map(value => value + band), mode: "lines", line: { width: 0 }, hoverinfo: "skip", showlegend: false });
+      traces.push({
+        x,
+        y: values.map(value => value - band),
+        mode: "lines",
+        fill: "tonexty",
+        fillcolor: "rgba(31, 95, 191, 0.16)",
+        line: { width: 0 },
+        hoverinfo: "skip",
+        showlegend: false,
+      });
+    }
+    traces.push({
+      x,
+      y: values,
+      mode: "lines",
+      name: `${channelMeta.label}${channelMeta.unit ? ` (${channelMeta.unit})` : ""}`,
+      line: { color: colors[index] || colors[0], width: 2 },
+      hovertemplate: "time=%{x:.3f}s<br>%{y:.4f}<extra>%{fullData.name}</extra>",
+    });
+  });
 
-  return `
-    <div class="plot-wrap" role="img" aria-label="Time-series plot with intervention marker">
-      <svg class="plot-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
-        <rect x="0" y="0" width="${width}" height="${height}" fill="#fff"></rect>
-        ${horizontalGrid.map(y => `<line class="plot-grid" x1="${margin.left}" x2="${width - margin.right}" y1="${y}" y2="${y}"></line>`).join("")}
-        ${verticalGrid.map(x => `<line class="plot-grid" x1="${x}" x2="${x}" y1="${margin.top}" y2="${height - margin.bottom}"></line>`).join("")}
-        <line class="plot-axis" x1="${margin.left}" x2="${width - margin.right}" y1="${height - margin.bottom}" y2="${height - margin.bottom}"></line>
-        <line class="plot-axis" x1="${margin.left}" x2="${margin.left}" y1="${margin.top}" y2="${height - margin.bottom}"></line>
-        <line class="intervention-line" x1="${interventionX}" x2="${interventionX}" y1="${margin.top}" y2="${height - margin.bottom}"></line>
-        ${lineSvg}
-        <text class="plot-tick" x="${margin.left}" y="${height - 22}">${minT.toFixed(1)}s</text>
-        <text class="plot-tick" x="${width - margin.right - 30}" y="${height - 22}">${maxT.toFixed(1)}s</text>
-        <text class="plot-tick" x="${interventionX + 8}" y="${margin.top + 18}">intervention t=${escapeHtml(data.intervention_time)}s</text>
-        <text class="plot-tick" x="${width / 2 - 18}" y="${height - 22}">time</text>
-        <text class="plot-tick" transform="translate(22 ${height / 2 + 42}) rotate(-90)">normalized channels</text>
-      </svg>
-    </div>
-  `;
+  const plotId = `plotly-${++plotCounter}`;
+  plotPayloads.set(plotId, {
+    traces,
+    layout: {
+      autosize: true,
+      height: 430,
+      margin: { l: 58, r: 24, t: 24, b: 54 },
+      paper_bgcolor: "#ffffff",
+      plot_bgcolor: "#ffffff",
+      font: { family: "Inter, system-ui, sans-serif", color: "#111111", size: 12 },
+      xaxis: { title: "time", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
+      yaxis: { title: "observed channels", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
+      legend: { orientation: "h", x: 0, y: 1.14 },
+      shapes: [{
+        type: "line",
+        x0: Number(data.intervention_time),
+        x1: Number(data.intervention_time),
+        y0: 0,
+        y1: 1,
+        yref: "paper",
+        line: { color: "#d97917", width: 2, dash: "dash" },
+      }],
+      annotations: [{
+        x: Number(data.intervention_time),
+        y: 1,
+        yref: "paper",
+        text: `intervention t=${escapeHtml(data.intervention_time)}s`,
+        showarrow: false,
+        xanchor: "left",
+        yanchor: "bottom",
+        font: { color: "#5f6368", size: 12 },
+      }],
+    },
+    config: { responsive: true, displayModeBar: false },
+  });
+
+  return `<div class="plot-wrap plotly-wrap"><div id="${plotId}" class="plotly-host" role="img" aria-label="Time-series Plotly plot with intervention marker"></div></div>`;
+}
+
+function mountPlots() {
+  if (!plotPayloads.size) return;
+  window.requestAnimationFrame(() => {
+    for (const [plotId, payload] of plotPayloads.entries()) {
+      const element = document.getElementById(plotId);
+      if (!element) continue;
+      if (!window.Plotly) {
+        element.innerHTML = `<p class="muted">Plotly could not be loaded.</p>`;
+        continue;
+      }
+      window.Plotly.react(element, payload.traces, payload.layout, payload.config);
+    }
+    plotPayloads.clear();
+  });
 }
 
 function findPrompt(description, taskMode, axis, examplesLabel = "Three Examples") {
@@ -414,7 +453,7 @@ async function renderHome() {
     </section>
     <div class="footer-rule">Public data is loaded from <code>/public/data</code>.</div>
   `;
-  app.innerHTML = shell(content);
+  commit(content);
 }
 
 function sortRows(rows) {
@@ -494,7 +533,7 @@ function renderResults() {
       ${renderLeaderboardTable(rows)}
     </section>
   `;
-  app.innerHTML = shell(content);
+  commit(content);
 }
 
 function normalizeSubmissionDetail(detail, submissionId) {
@@ -547,7 +586,7 @@ function normalizeSubmissionDetail(detail, submissionId) {
     downloads: {
       trajectory_archive: links.trajectories || "#",
       complete_results_table: links.results || "#",
-      benchmark_dataset: "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark",
+      benchmark_dataset: siteValue("hf_dataset_url", "#"),
     },
   };
 }
@@ -633,7 +672,7 @@ async function renderResultDetail(submissionId) {
       </section>
     </section>
   `;
-  app.innerHTML = shell(content);
+  commit(content);
 }
 
 async function renderEnvironments() {
@@ -652,7 +691,7 @@ async function renderEnvironments() {
       </div>
     </section>
   `;
-  app.innerHTML = shell(content);
+  commit(content);
 }
 
 async function renderEnvironmentDetail(environmentId) {
@@ -700,12 +739,12 @@ async function renderEnvironmentDetail(environmentId) {
       </section>
     </section>
   `;
-  app.innerHTML = shell(content);
+  commit(content);
 }
 
 function renderGetStarted() {
   const quickStart = `# Clone and install
-git clone <TSENV_PUBLIC_REPOSITORY_URL>
+git clone ${siteValue("code_url", "<TSENV_PUBLIC_REPOSITORY_URL>")}
 cd tsENV
 python -m venv env
 source env/bin/activate
@@ -761,15 +800,27 @@ python workflows/rollout/question_run_orchestrator.py \\
       </section>
     </section>
   `;
-  app.innerHTML = shell(content);
+  commit(content);
 }
 
 function renderAuthors() {
-  const citation = `@inproceedings{tsenv2026,
-  title={TSENV: Controllable Time-Series Exploration Benchmark for Agents},
-  author={...},
-  year={2026}
-}`;
+  const authors = Array.isArray(state.site?.authors) ? state.site.authors : [];
+  const contact = state.site?.contact || {};
+  const citation = siteValue("citation", "Citation coming soon.");
+  const authorHtml = authors.length
+    ? authors.map(author => {
+      const name = escapeHtml(author.name || "");
+      const affiliation = escapeHtml(author.affiliation || "");
+      const url = author.url ? escapeHtml(author.url) : "";
+      const nameHtml = url ? `<a href="${url}" target="_blank" rel="noreferrer">${name}</a>` : name;
+      return `<p><strong>${nameHtml}</strong>${affiliation ? `, ${affiliation}` : ""}</p>`;
+    }).join("")
+    : `<p><strong>TSENV authors to be announced</strong></p>`;
+  const contactLinks = [
+    contact.url ? [contact.label || "Contact", contact.url] : null,
+    siteValue("code_url") ? ["Repository", siteValue("code_url")] : null,
+    siteValue("affiliation_url") ? ["Affiliation", siteValue("affiliation_url")] : null,
+  ].filter(Boolean);
   const content = `
     <section>
       <h1 class="page-title">Authors, Citation, and Contact</h1>
@@ -777,8 +828,7 @@ function renderAuthors() {
 
       <section class="section">
         <div class="section-header"><h2>Authors</h2></div>
-        <p><strong>TSENV Team</strong>, ETH Zurich SIPLAB and collaborators.</p>
-        <p class="muted">Replace this placeholder with final author names, affiliations, and equal-contribution notes.</p>
+        ${authorHtml}
       </section>
 
       <section class="section">
@@ -792,14 +842,12 @@ function renderAuthors() {
         <div class="section-header"><h2>Contact</h2></div>
         <p>Questions, feedback, or collaboration.</p>
         <div class="contact-row">
-          <a href="mailto:tsenv@siplab.org">Email</a>
-          <a href="https://github.com/tsenv/tsENV" target="_blank" rel="noreferrer">Repository</a>
-          <a href="https://siplab.org" target="_blank" rel="noreferrer">Affiliation</a>
+          ${contactLinks.map(([label, url]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`).join("")}
         </div>
       </section>
     </section>
   `;
-  app.innerHTML = shell(content);
+  commit(content);
 }
 
 function renderNotFound(message = "The requested route is not part of this website.") {
@@ -810,12 +858,15 @@ function renderNotFound(message = "The requested route is not part of this websi
       <p><a href="/" data-link>Return home</a></p>
     </section>
   `;
-  app.innerHTML = shell(content);
+  commit(content);
 }
 
 async function render() {
   try {
     const route = routeInfo();
+    if (!state.site) {
+      state.site = await loadJson("/site.json");
+    }
     if (!state.summary || !state.leaderboard) {
       state.summary = await loadJson(`${DATA_ROOT}/summary.json`);
       state.leaderboard = await loadJson(`${DATA_ROOT}/leaderboard.json`);

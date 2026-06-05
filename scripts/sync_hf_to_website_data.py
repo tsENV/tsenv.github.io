@@ -62,6 +62,9 @@ def sync_from_hf(repo: str, revision: str, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     for filename in TOP_LEVEL_FILES:
         download_file(hf_url(repo, f"website/{filename}", revision), output_dir / filename)
+    environments_dir = output_dir / "environments"
+    if environments_dir.exists():
+        shutil.rmtree(environments_dir)
     for simulator in SIMULATORS:
         base = f"website/environments/{simulator}"
         download_file(hf_url(repo, f"{base}/description.json", revision), output_dir / "environments" / simulator / "description.json")
