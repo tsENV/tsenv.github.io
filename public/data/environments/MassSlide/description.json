@@ -1,73 +1,80 @@
 {
-  "environment_id": "MassSlide",
-  "name": "MassSlide",
-  "short_one_line_description": "A mass slides under force while friction and velocity are observed over time.",
-  "prompt_combinations": [
-    {
-      "desc_level": "high",
-      "task_type": "direct",
-      "training_samples": "none",
-      "agent_instruction": "Analyze a sliding-mass simulator and identify the changed parameter, or no_intervention.\n\nThe simulator records displacement, velocity, applied force, and friction force over time."
-    },
-    {
-      "desc_level": "high",
-      "task_type": "direct",
-      "training_samples": ">0",
-      "agent_instruction": "Analyze a sliding-mass simulator and identify the changed parameter, or no_intervention.\n\nThe simulator records displacement, velocity, applied force, and friction force over time.\n\nExample: increased friction reduces acceleration after the intervention. Example: increased mass reduces acceleration without changing applied force."
-    },
-    {
-      "desc_level": "high",
-      "task_type": "code",
-      "training_samples": "none",
-      "agent_instruction": "Analyze a sliding-mass simulator and return a concise programmatic answer naming the changed parameter and evidence.\n\nThe simulator records displacement, velocity, applied force, and friction force over time."
-    },
-    {
-      "desc_level": "high",
-      "task_type": "code",
-      "training_samples": ">0",
-      "agent_instruction": "Analyze a sliding-mass simulator and return a concise programmatic answer naming the changed parameter and evidence.\n\nThe simulator records displacement, velocity, applied force, and friction force over time.\n\nExample: increased friction reduces acceleration after the intervention. Example: increased mass reduces acceleration without changing applied force."
-    },
-    {
-      "desc_level": "none",
-      "task_type": "direct",
-      "training_samples": ">0",
-      "agent_instruction": "Analyze a sliding-mass simulator and identify the changed parameter, or no_intervention.\n\nExample: increased friction reduces acceleration after the intervention. Example: increased mass reduces acceleration without changing applied force."
-    },
-    {
-      "desc_level": "none",
-      "task_type": "code",
-      "training_samples": ">0",
-      "agent_instruction": "Analyze a sliding-mass simulator and return a concise programmatic answer naming the changed parameter and evidence.\n\nExample: increased friction reduces acceleration after the intervention. Example: increased mass reduces acceleration without changing applied force."
-    }
-  ],
-  "observed_channels": [
-    {
-      "id": "Position",
-      "label": "mass displacement",
-      "unit": "m"
-    },
-    {
-      "id": "Velocity",
-      "label": "mass velocity",
-      "unit": "m/s"
-    },
-    {
-      "id": "Applied_Force",
-      "label": "applied force",
-      "unit": "N"
-    },
-    {
-      "id": "Friction_Force",
-      "label": "friction force",
-      "unit": "N"
-    }
-  ],
   "candidate_parameters": [
-    "friction coefficient",
-    "mass",
-    "applied force",
-    "surface angle"
+    "gravity acceleration",
+    "plane inclination angle",
+    "Coulomb friction coefficient",
+    "breakaway friction coefficient"
   ],
   "download_link": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/questions/MassSlide.zip",
-  "sample_count": 5
+  "environment_id": "MassSlide",
+  "name": "MassSlide",
+  "observed_channels": [
+    {
+      "id": "mass_velocity",
+      "label": "velocity of the mass along the plane",
+      "unit": ""
+    },
+    {
+      "id": "friction_force",
+      "label": "friction force",
+      "unit": ""
+    },
+    {
+      "id": "normal_force",
+      "label": "normal force",
+      "unit": ""
+    }
+  ],
+  "prompt_combinations": [
+    {
+      "agent_instruction": "You are given multivariate time-series observations from MassSlide.\n\nIdentify which physical parameter changed, or answer that no intervention occurred.\n\nby simulating a block of mass m moving along an infinitely long rigid plane inclined at an angle theta under gravitational acceleration g and Coulomb friction. The coordinate axis is aligned with the plane. The block is also subject to an externally applied periodic force along the plane. The friction force acts along the plane and opposes motion. When the block is moving, that is, when v(t) is nonzero, friction is modeled as kinetic Coulomb friction. A breakaway static-friction threshold is also modeled: when the block is at rest, motion starts only if the net driving force along the plane exceeds a breakaway limit.\n\nThe observed channels are velocity of the mass along the plane, friction force, normal force.\n\nReturn the final ranked answer directly.",
+      "desc_level": "high",
+      "task_type": "direct",
+      "training_samples": "none"
+    },
+    {
+      "agent_instruction": "You are given multivariate time-series observations from MassSlide.\n\nIdentify which physical parameter changed, or answer that no intervention occurred.\n\nby simulating a block of mass m moving along an infinitely long rigid plane inclined at an angle theta under gravitational acceleration g and Coulomb friction. The coordinate axis is aligned with the plane. The block is also subject to an externally applied periodic force along the plane. The friction force acts along the plane and opposes motion. When the block is moving, that is, when v(t) is nonzero, friction is modeled as kinetic Coulomb friction. A breakaway static-friction threshold is also modeled: when the block is at rest, motion starts only if the net driving force along the plane exceeds a breakaway limit.\n\nThe observed channels are velocity of the mass along the plane, friction force, normal force.\n\nUse the provided labeled examples as calibration examples for the same benchmark condition.\n\nReturn the final ranked answer directly.",
+      "desc_level": "high",
+      "task_type": "direct",
+      "training_samples": ">0"
+    },
+    {
+      "agent_instruction": "You are given multivariate time-series observations from MassSlide.\n\nIdentify which physical parameter changed, or answer that no intervention occurred.\n\nby simulating a block of mass m moving along an infinitely long rigid plane inclined at an angle theta under gravitational acceleration g and Coulomb friction. The coordinate axis is aligned with the plane. The block is also subject to an externally applied periodic force along the plane. The friction force acts along the plane and opposes motion. When the block is moving, that is, when v(t) is nonzero, friction is modeled as kinetic Coulomb friction. A breakaway static-friction threshold is also modeled: when the block is at rest, motion starts only if the net driving force along the plane exceeds a breakaway limit.\n\nThe observed channels are velocity of the mass along the plane, friction force, normal force.\n\nReturn executable analysis code and the final ranked answer.",
+      "desc_level": "high",
+      "task_type": "code",
+      "training_samples": "none"
+    },
+    {
+      "agent_instruction": "You are given multivariate time-series observations from MassSlide.\n\nIdentify which physical parameter changed, or answer that no intervention occurred.\n\nby simulating a block of mass m moving along an infinitely long rigid plane inclined at an angle theta under gravitational acceleration g and Coulomb friction. The coordinate axis is aligned with the plane. The block is also subject to an externally applied periodic force along the plane. The friction force acts along the plane and opposes motion. When the block is moving, that is, when v(t) is nonzero, friction is modeled as kinetic Coulomb friction. A breakaway static-friction threshold is also modeled: when the block is at rest, motion starts only if the net driving force along the plane exceeds a breakaway limit.\n\nThe observed channels are velocity of the mass along the plane, friction force, normal force.\n\nUse the provided labeled examples as calibration examples for the same benchmark condition.\n\nReturn executable analysis code and the final ranked answer.",
+      "desc_level": "high",
+      "task_type": "code",
+      "training_samples": ">0"
+    },
+    {
+      "agent_instruction": "You are given multivariate time-series observations from MassSlide.\n\nIdentify which physical parameter changed, or answer that no intervention occurred.\n\nThe observed channels are velocity of the mass along the plane, friction force, normal force.\n\nReturn the final ranked answer directly.",
+      "desc_level": "none",
+      "task_type": "direct",
+      "training_samples": "none"
+    },
+    {
+      "agent_instruction": "You are given multivariate time-series observations from MassSlide.\n\nIdentify which physical parameter changed, or answer that no intervention occurred.\n\nThe observed channels are velocity of the mass along the plane, friction force, normal force.\n\nUse the provided labeled examples as calibration examples for the same benchmark condition.\n\nReturn the final ranked answer directly.",
+      "desc_level": "none",
+      "task_type": "direct",
+      "training_samples": ">0"
+    },
+    {
+      "agent_instruction": "You are given multivariate time-series observations from MassSlide.\n\nIdentify which physical parameter changed, or answer that no intervention occurred.\n\nThe observed channels are velocity of the mass along the plane, friction force, normal force.\n\nReturn executable analysis code and the final ranked answer.",
+      "desc_level": "none",
+      "task_type": "code",
+      "training_samples": "none"
+    },
+    {
+      "agent_instruction": "You are given multivariate time-series observations from MassSlide.\n\nIdentify which physical parameter changed, or answer that no intervention occurred.\n\nThe observed channels are velocity of the mass along the plane, friction force, normal force.\n\nUse the provided labeled examples as calibration examples for the same benchmark condition.\n\nReturn executable analysis code and the final ranked answer.",
+      "desc_level": "none",
+      "task_type": "code",
+      "training_samples": ">0"
+    }
+  ],
+  "sample_count": 5,
+  "short_one_line_description": "A mass slides under force while friction and velocity are observed over time."
 }

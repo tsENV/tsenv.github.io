@@ -75,6 +75,8 @@ def sync_from_hf(repo: str, revision: str, output_dir: Path) -> None:
         submissions_manifest.write_text("", encoding="utf-8")
 
     submissions_dir = output_dir / "submissions"
+    if submissions_dir.exists():
+        shutil.rmtree(submissions_dir)
     submissions_dir.mkdir(exist_ok=True)
     for line in submissions_manifest.read_text(encoding="utf-8").splitlines():
         submission_id = line.strip()

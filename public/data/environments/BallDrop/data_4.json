@@ -1,621 +1,495 @@
 {
-  "run_id": "4b6796ea3b3243d19e247ae1577c1a01",
-  "source": "tsENV_questions/BallDrop/dataframes/4b6796ea3b3243d19e247ae1577c1a01.parquet",
+  "answer": "gravity acceleration",
   "columns": [
     "Position",
     "Velocity",
     "Hard_Stop_f",
     "time"
   ],
-  "intervention_time": 5,
   "intervention_parameter": "gravity acceleration",
-  "answer": "gravity acceleration",
+  "intervention_time": 5,
   "rows": [
     {
-      "Position": 12.7675,
-      "Velocity": 2.25,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7334,
+      "Velocity": 0.2147,
       "time": 0.0
     },
     {
-      "Position": 12.95,
-      "Velocity": 1.4,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7532,
+      "Velocity": 0.1737,
       "time": 0.1
     },
     {
-      "Position": 13.0475,
-      "Velocity": 0.55,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7679,
+      "Velocity": 0.1328,
       "time": 0.2
     },
     {
-      "Position": 13.06,
-      "Velocity": -0.3,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7776,
+      "Velocity": 0.0921,
       "time": 0.3
     },
     {
-      "Position": 12.9875,
-      "Velocity": -1.15,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7822,
+      "Velocity": 0.0519,
       "time": 0.4
     },
     {
-      "Position": 12.83,
-      "Velocity": -2.0,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7819,
+      "Velocity": 0.0125,
       "time": 0.5
     },
     {
-      "Position": 12.5875,
-      "Velocity": -2.85,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7768,
+      "Velocity": -0.0259,
       "time": 0.6
     },
     {
-      "Position": 12.26,
-      "Velocity": -3.7,
       "Hard_Stop_f": 0.0,
+      "Position": 12.767,
+      "Velocity": -0.0631,
       "time": 0.7
     },
     {
-      "Position": 11.8475,
-      "Velocity": -4.55,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7528,
+      "Velocity": -0.0988,
       "time": 0.8
     },
     {
-      "Position": 11.35,
-      "Velocity": -5.4,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7343,
+      "Velocity": -0.1329,
       "time": 0.9
     },
     {
-      "Position": 10.7675,
-      "Velocity": -6.25,
       "Hard_Stop_f": 0.0,
+      "Position": 12.7118,
+      "Velocity": -0.1653,
       "time": 1.0
     },
     {
-      "Position": 10.1,
-      "Velocity": -7.1,
       "Hard_Stop_f": 0.0,
+      "Position": 12.6856,
+      "Velocity": -0.1956,
       "time": 1.1
     },
     {
-      "Position": 9.3475,
-      "Velocity": -7.95,
       "Hard_Stop_f": 0.0,
+      "Position": 12.6559,
+      "Velocity": -0.2238,
       "time": 1.2
     },
     {
-      "Position": 8.51,
-      "Velocity": -8.8,
       "Hard_Stop_f": 0.0,
+      "Position": 12.623,
+      "Velocity": -0.2498,
       "time": 1.3
     },
     {
-      "Position": 7.5875,
-      "Velocity": -9.65,
       "Hard_Stop_f": 0.0,
+      "Position": 12.5873,
+      "Velocity": -0.2735,
       "time": 1.4
     },
     {
-      "Position": 6.58,
-      "Velocity": -10.5,
       "Hard_Stop_f": 0.0,
+      "Position": 12.5491,
+      "Velocity": -0.2947,
       "time": 1.5
     },
     {
-      "Position": 5.4875,
-      "Velocity": -11.35,
       "Hard_Stop_f": 0.0,
+      "Position": 12.5087,
+      "Velocity": -0.3135,
       "time": 1.6
     },
     {
-      "Position": 4.31,
-      "Velocity": -12.2,
       "Hard_Stop_f": 0.0,
+      "Position": 12.4666,
+      "Velocity": -0.3298,
       "time": 1.7
     },
     {
-      "Position": 3.0475,
-      "Velocity": -13.05,
       "Hard_Stop_f": 0.0,
+      "Position": 12.4229,
+      "Velocity": -0.3436,
       "time": 1.8
     },
     {
-      "Position": 1.7,
-      "Velocity": -13.9,
       "Hard_Stop_f": 0.0,
+      "Position": 12.3781,
+      "Velocity": -0.3549,
       "time": 1.9
     },
     {
-      "Position": 0.2675,
-      "Velocity": -14.75,
       "Hard_Stop_f": 0.0,
+      "Position": 12.3326,
+      "Velocity": -0.3638,
       "time": 2.0
     },
     {
-      "Position": 0.0,
-      "Velocity": 6.552,
-      "Hard_Stop_f": 6.552,
+      "Hard_Stop_f": 0.0,
+      "Position": 12.2866,
+      "Velocity": -0.3704,
       "time": 2.1
     },
     {
-      "Position": 0.6127,
-      "Velocity": 5.702,
       "Hard_Stop_f": 0.0,
+      "Position": 12.2405,
+      "Velocity": -0.3746,
       "time": 2.2
     },
     {
-      "Position": 1.1404,
-      "Velocity": 4.852,
       "Hard_Stop_f": 0.0,
+      "Position": 12.1946,
+      "Velocity": -0.3768,
       "time": 2.3
     },
     {
-      "Position": 1.5831,
-      "Velocity": 4.002,
       "Hard_Stop_f": 0.0,
+      "Position": 12.1492,
+      "Velocity": -0.3769,
       "time": 2.4
     },
     {
-      "Position": 1.9408,
-      "Velocity": 3.152,
       "Hard_Stop_f": 0.0,
+      "Position": 12.1045,
+      "Velocity": -0.3752,
       "time": 2.5
     },
     {
-      "Position": 2.2135,
-      "Velocity": 2.302,
       "Hard_Stop_f": 0.0,
+      "Position": 12.0609,
+      "Velocity": -0.3718,
       "time": 2.6
     },
     {
-      "Position": 2.4012,
-      "Velocity": 1.452,
       "Hard_Stop_f": 0.0,
+      "Position": 12.0184,
+      "Velocity": -0.3669,
       "time": 2.7
     },
     {
-      "Position": 2.5039,
-      "Velocity": 0.602,
       "Hard_Stop_f": 0.0,
+      "Position": 11.9774,
+      "Velocity": -0.3608,
       "time": 2.8
     },
     {
-      "Position": 2.5216,
-      "Velocity": -0.248,
       "Hard_Stop_f": 0.0,
+      "Position": 11.938,
+      "Velocity": -0.3536,
       "time": 2.9
     },
     {
-      "Position": 2.4543,
-      "Velocity": -1.098,
       "Hard_Stop_f": 0.0,
+      "Position": 11.9002,
+      "Velocity": -0.3456,
       "time": 3.0
     },
     {
-      "Position": 2.302,
-      "Velocity": -1.948,
       "Hard_Stop_f": 0.0,
+      "Position": 11.8643,
+      "Velocity": -0.337,
       "time": 3.1
     },
     {
-      "Position": 2.0647,
-      "Velocity": -2.798,
       "Hard_Stop_f": 0.0,
+      "Position": 11.8302,
+      "Velocity": -0.3281,
       "time": 3.2
     },
     {
-      "Position": 1.7424,
-      "Velocity": -3.648,
       "Hard_Stop_f": 0.0,
+      "Position": 11.798,
+      "Velocity": -0.3191,
       "time": 3.3
     },
     {
-      "Position": 1.3351,
-      "Velocity": -4.498,
       "Hard_Stop_f": 0.0,
+      "Position": 11.7677,
+      "Velocity": -0.3103,
       "time": 3.4
     },
     {
-      "Position": 0.8428,
-      "Velocity": -5.348,
       "Hard_Stop_f": 0.0,
+      "Position": 11.7393,
+      "Velocity": -0.3019,
       "time": 3.5
     },
     {
-      "Position": 0.2655,
-      "Velocity": -6.198,
       "Hard_Stop_f": 0.0,
+      "Position": 11.7126,
+      "Velocity": -0.2942,
       "time": 3.6
     },
     {
-      "Position": 0.0,
-      "Velocity": 2.96016,
-      "Hard_Stop_f": 2.96016,
+      "Hard_Stop_f": 0.0,
+      "Position": 11.6876,
+      "Velocity": -0.2873,
       "time": 3.7
     },
     {
-      "Position": 0.25352,
-      "Velocity": 2.11016,
       "Hard_Stop_f": 0.0,
+      "Position": 11.6641,
+      "Velocity": -0.2816,
       "time": 3.8
     },
     {
-      "Position": 0.42203,
-      "Velocity": 1.26016,
       "Hard_Stop_f": 0.0,
+      "Position": 11.6419,
+      "Velocity": -0.2772,
       "time": 3.9
     },
     {
-      "Position": 0.50555,
-      "Velocity": 0.41016,
       "Hard_Stop_f": 0.0,
+      "Position": 11.6209,
+      "Velocity": -0.2744,
       "time": 4.0
     },
     {
-      "Position": 0.50406,
-      "Velocity": -0.43984,
       "Hard_Stop_f": 0.0,
+      "Position": 11.6009,
+      "Velocity": -0.2733,
       "time": 4.1
     },
     {
-      "Position": 0.41758,
-      "Velocity": -1.28984,
       "Hard_Stop_f": 0.0,
+      "Position": 11.5815,
+      "Velocity": -0.2741,
       "time": 4.2
     },
     {
-      "Position": 0.2461,
-      "Velocity": -2.13984,
       "Hard_Stop_f": 0.0,
+      "Position": 11.5624,
+      "Velocity": -0.277,
       "time": 4.3
     },
     {
-      "Position": 0.0,
-      "Velocity": 1.25573,
-      "Hard_Stop_f": 1.25573,
+      "Hard_Stop_f": 0.0,
+      "Position": 11.5435,
+      "Velocity": -0.282,
       "time": 4.4
     },
     {
-      "Position": 0.08307,
-      "Velocity": 0.40573,
       "Hard_Stop_f": 0.0,
+      "Position": 11.5243,
+      "Velocity": -0.2894,
       "time": 4.5
     },
     {
-      "Position": 0.08115,
-      "Velocity": -0.44427,
       "Hard_Stop_f": 0.0,
+      "Position": 11.5046,
+      "Velocity": -0.2991,
       "time": 4.6
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.54359,
-      "Hard_Stop_f": 0.54359,
+      "Hard_Stop_f": 0.0,
+      "Position": 11.4839,
+      "Velocity": -0.3113,
       "time": 4.7
     },
     {
-      "Position": 0.01186,
-      "Velocity": -0.30641,
       "Hard_Stop_f": 0.0,
+      "Position": 11.4621,
+      "Velocity": -0.326,
       "time": 4.8
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.48569,
-      "Hard_Stop_f": 0.48569,
+      "Hard_Stop_f": 0.0,
+      "Position": 11.4386,
+      "Velocity": -0.3432,
       "time": 4.9
     },
     {
-      "Position": 0.01457,
-      "Velocity": -0.19431,
       "Hard_Stop_f": 0.0,
+      "Position": 10.749,
+      "Velocity": -0.7124,
       "time": 5.0
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.36721,
-      "Hard_Stop_f": 0.36721,
+      "Hard_Stop_f": 0.0,
+      "Position": 10.6859,
+      "Velocity": -0.7437,
       "time": 5.1
     },
     {
-      "Position": 0.00272,
-      "Velocity": -0.31279,
       "Hard_Stop_f": 0.0,
+      "Position": 10.6193,
+      "Velocity": -0.7774,
       "time": 5.2
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.41697,
-      "Hard_Stop_f": 0.41697,
+      "Hard_Stop_f": 0.0,
+      "Position": 10.5488,
+      "Velocity": -0.8134,
       "time": 5.3
     },
     {
-      "Position": 0.0077,
-      "Velocity": -0.26303,
       "Hard_Stop_f": 0.0,
+      "Position": 10.4741,
+      "Velocity": -0.8516,
       "time": 5.4
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.39607,
-      "Hard_Stop_f": 0.39607,
+      "Hard_Stop_f": 0.0,
+      "Position": 10.3949,
+      "Velocity": -0.8919,
       "time": 5.5
     },
     {
-      "Position": 0.00561,
-      "Velocity": -0.28393,
       "Hard_Stop_f": 0.0,
+      "Position": 10.3109,
+      "Velocity": -0.9341,
       "time": 5.6
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40485,
-      "Hard_Stop_f": 0.40485,
+      "Hard_Stop_f": 0.0,
+      "Position": 10.222,
+      "Velocity": -0.978,
       "time": 5.7
     },
     {
-      "Position": 0.00648,
-      "Velocity": -0.27515,
       "Hard_Stop_f": 0.0,
+      "Position": 10.1278,
+      "Velocity": -1.0235,
       "time": 5.8
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40116,
-      "Hard_Stop_f": 0.40116,
+      "Hard_Stop_f": 0.0,
+      "Position": 10.0281,
+      "Velocity": -1.0703,
       "time": 5.9
     },
     {
-      "Position": 0.00612,
-      "Velocity": -0.27884,
       "Hard_Stop_f": 0.0,
+      "Position": 9.9228,
+      "Velocity": -1.1183,
       "time": 6.0
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40271,
-      "Hard_Stop_f": 0.40271,
+      "Hard_Stop_f": 0.0,
+      "Position": 9.8117,
+      "Velocity": -1.1672,
       "time": 6.1
     },
     {
-      "Position": 0.00627,
-      "Velocity": -0.27729,
       "Hard_Stop_f": 0.0,
+      "Position": 9.6947,
+      "Velocity": -1.2167,
       "time": 6.2
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40206,
-      "Hard_Stop_f": 0.40206,
+      "Hard_Stop_f": 0.0,
+      "Position": 9.5718,
+      "Velocity": -1.2667,
       "time": 6.3
     },
     {
-      "Position": 0.00621,
-      "Velocity": -0.27794,
       "Hard_Stop_f": 0.0,
+      "Position": 9.4428,
+      "Velocity": -1.3169,
       "time": 6.4
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40233,
-      "Hard_Stop_f": 0.40233,
+      "Hard_Stop_f": 0.0,
+      "Position": 9.3079,
+      "Velocity": -1.367,
       "time": 6.5
     },
     {
-      "Position": 0.00623,
-      "Velocity": -0.27767,
       "Hard_Stop_f": 0.0,
+      "Position": 9.1669,
+      "Velocity": -1.4168,
       "time": 6.6
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40222,
-      "Hard_Stop_f": 0.40222,
+      "Hard_Stop_f": 0.0,
+      "Position": 9.0201,
+      "Velocity": -1.4661,
       "time": 6.7
     },
     {
-      "Position": 0.00622,
-      "Velocity": -0.27778,
       "Hard_Stop_f": 0.0,
+      "Position": 8.8674,
+      "Velocity": -1.5145,
       "time": 6.8
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40227,
-      "Hard_Stop_f": 0.40227,
+      "Hard_Stop_f": 0.0,
+      "Position": 8.7089,
+      "Velocity": -1.5619,
       "time": 6.9
     },
     {
-      "Position": 0.00623,
-      "Velocity": -0.27773,
       "Hard_Stop_f": 0.0,
+      "Position": 8.545,
+      "Velocity": -1.6081,
       "time": 7.0
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
+      "Hard_Stop_f": 0.0,
+      "Position": 8.3757,
+      "Velocity": -1.6528,
       "time": 7.1
     },
     {
-      "Position": 0.00622,
-      "Velocity": -0.27775,
       "Hard_Stop_f": 0.0,
+      "Position": 8.2012,
+      "Velocity": -1.6958,
       "time": 7.2
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40226,
-      "Hard_Stop_f": 0.40226,
+      "Hard_Stop_f": 0.0,
+      "Position": 8.0219,
+      "Velocity": -1.737,
       "time": 7.3
     },
     {
-      "Position": 0.00623,
-      "Velocity": -0.27774,
       "Hard_Stop_f": 0.0,
+      "Position": 7.8379,
+      "Velocity": -1.7762,
       "time": 7.4
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
+      "Hard_Stop_f": 0.0,
+      "Position": 7.6497,
+      "Velocity": -1.8133,
       "time": 7.5
     },
     {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
       "Hard_Stop_f": 0.0,
+      "Position": 7.4573,
+      "Velocity": -1.8481,
       "time": 7.6
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
+      "Hard_Stop_f": 0.0,
+      "Position": 7.2613,
+      "Velocity": -1.8805,
       "time": 7.7
     },
     {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
       "Hard_Stop_f": 0.0,
+      "Position": 7.0619,
+      "Velocity": -1.9106,
       "time": 7.8
     },
     {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
+      "Hard_Stop_f": 0.0,
+      "Position": 6.8595,
+      "Velocity": -1.9381,
       "time": 7.9
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 8.0
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 8.1
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 8.2
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 8.3
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 8.4
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 8.5
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 8.6
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 8.7
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 8.8
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 8.9
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 9.0
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 9.1
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 9.2
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 9.3
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 9.4
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 9.5
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 9.6
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 9.7
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 9.8
-    },
-    {
-      "Position": 0.0,
-      "Velocity": 0.40225,
-      "Hard_Stop_f": 0.40225,
-      "time": 9.9
-    },
-    {
-      "Position": 0.00623,
-      "Velocity": -0.27775,
-      "Hard_Stop_f": 0.0,
-      "time": 10.0
     }
-  ]
+  ],
+  "run_id": "balldrop-sample-4",
+  "source": "tsENV_questions/BallDrop/dataframes/balldrop-sample-4.parquet"
 }

@@ -1,723 +1,495 @@
 {
-  "run_id": "586d37af6c694711ae37a8a0d01bce13",
-  "source": "tsENV_questions/BounceBall/dataframes/586d37af6c694711ae37a8a0d01bce13.parquet",
+  "answer": "coefficient of viscous damping",
   "columns": [
-    "Position_X",
-    "Position_Y",
-    "Velocity_Y",
-    "Contact_Impulse",
+    "Initial_Spacer_F_x",
+    "Initial_Spacer_F_v",
+    "Right_Hard_Stop_f",
     "time"
   ],
+  "intervention_parameter": "coefficient of viscous damping",
   "intervention_time": 5,
-  "intervention_parameter": "coefficient of restitution",
-  "answer": "coefficient of restitution",
   "rows": [
     {
-      "Position_X": 0.12,
-      "Position_Y": 3.1519,
-      "Velocity_Y": 1.519,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 1.0339,
+      "Initial_Spacer_F_x": 0.6743,
+      "Right_Hard_Stop_f": 0.0,
       "time": 0.0
     },
     {
-      "Position_X": 0.24,
-      "Position_Y": 3.2057,
-      "Velocity_Y": 0.538,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.8814,
+      "Initial_Spacer_F_x": 0.7615,
+      "Right_Hard_Stop_f": 0.3324,
       "time": 0.1
     },
     {
-      "Position_X": 0.36,
-      "Position_Y": 3.1614,
-      "Velocity_Y": -0.443,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.7153,
+      "Initial_Spacer_F_x": 0.8319,
+      "Right_Hard_Stop_f": 0.8952,
       "time": 0.2
     },
     {
-      "Position_X": 0.48,
-      "Position_Y": 3.019,
-      "Velocity_Y": -1.424,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.5393,
+      "Initial_Spacer_F_x": 0.8844,
+      "Right_Hard_Stop_f": 1.3151,
       "time": 0.3
     },
     {
-      "Position_X": 0.6,
-      "Position_Y": 2.7785,
-      "Velocity_Y": -2.405,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.3569,
+      "Initial_Spacer_F_x": 0.9184,
+      "Right_Hard_Stop_f": 1.5872,
       "time": 0.4
     },
     {
-      "Position_X": 0.72,
-      "Position_Y": 2.4399,
-      "Velocity_Y": -3.386,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.172,
+      "Initial_Spacer_F_x": 0.9337,
+      "Right_Hard_Stop_f": 1.7098,
       "time": 0.5
     },
     {
-      "Position_X": 0.84,
-      "Position_Y": 2.0032,
-      "Velocity_Y": -4.367,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.012,
+      "Initial_Spacer_F_x": 0.9305,
+      "Right_Hard_Stop_f": 1.6839,
       "time": 0.6
     },
     {
-      "Position_X": 0.96,
-      "Position_Y": 1.4684,
-      "Velocity_Y": -5.348,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.1913,
+      "Initial_Spacer_F_x": 0.9092,
+      "Right_Hard_Stop_f": 1.5137,
       "time": 0.7
     },
     {
-      "Position_X": 1.08,
-      "Position_Y": 0.8355,
-      "Velocity_Y": -6.329,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.3627,
+      "Initial_Spacer_F_x": 0.8707,
+      "Right_Hard_Stop_f": 1.2059,
       "time": 0.8
     },
     {
-      "Position_X": 1.2,
-      "Position_Y": 0.1045,
-      "Velocity_Y": -7.31,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.523,
+      "Initial_Spacer_F_x": 0.8162,
+      "Right_Hard_Stop_f": 0.7697,
       "time": 0.9
     },
     {
-      "Position_X": 1.32,
-      "Position_Y": 0.0,
-      "Velocity_Y": 6.46698,
-      "Contact_Impulse": 6.46698,
+      "Initial_Spacer_F_v": -0.6692,
+      "Initial_Spacer_F_x": 0.7471,
+      "Right_Hard_Stop_f": 0.2166,
       "time": 1.0
     },
     {
-      "Position_X": 1.44,
-      "Position_Y": 0.5486,
-      "Velocity_Y": 5.48598,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.799,
+      "Initial_Spacer_F_x": 0.665,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.1
     },
     {
-      "Position_X": 1.56,
-      "Position_Y": 0.9991,
-      "Velocity_Y": 4.50498,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.9101,
+      "Initial_Spacer_F_x": 0.572,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.2
     },
     {
-      "Position_X": 1.68,
-      "Position_Y": 1.35149,
-      "Velocity_Y": 3.52398,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -1.0009,
+      "Initial_Spacer_F_x": 0.47,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.3
     },
     {
-      "Position_X": 1.8,
-      "Position_Y": 1.60579,
-      "Velocity_Y": 2.54298,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -1.07,
+      "Initial_Spacer_F_x": 0.3613,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.4
     },
     {
-      "Position_X": 1.92,
-      "Position_Y": 1.76199,
-      "Velocity_Y": 1.56198,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -1.1166,
+      "Initial_Spacer_F_x": 0.2481,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.5
     },
     {
-      "Position_X": 2.04,
-      "Position_Y": 1.82009,
-      "Velocity_Y": 0.58098,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -1.1404,
+      "Initial_Spacer_F_x": 0.1328,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.6
     },
     {
-      "Position_X": 2.16,
-      "Position_Y": 1.78009,
-      "Velocity_Y": -0.40002,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -1.1414,
+      "Initial_Spacer_F_x": 0.0176,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.7
     },
     {
-      "Position_X": 2.28,
-      "Position_Y": 1.64198,
-      "Velocity_Y": -1.38102,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -1.1201,
+      "Initial_Spacer_F_x": -0.0952,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.8
     },
     {
-      "Position_X": 2.4,
-      "Position_Y": 1.40578,
-      "Velocity_Y": -2.36202,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -1.0776,
+      "Initial_Spacer_F_x": -0.2034,
+      "Right_Hard_Stop_f": 0.0,
       "time": 1.9
     },
     {
-      "Position_X": 2.52,
-      "Position_Y": 1.07148,
-      "Velocity_Y": -3.34302,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -1.015,
+      "Initial_Spacer_F_x": -0.3052,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.0
     },
     {
-      "Position_X": 2.64,
-      "Position_Y": 0.63908,
-      "Velocity_Y": -4.32402,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.9342,
+      "Initial_Spacer_F_x": -0.3985,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.1
     },
     {
-      "Position_X": 2.76,
-      "Position_Y": 0.10858,
-      "Velocity_Y": -5.30502,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.8371,
+      "Initial_Spacer_F_x": -0.4819,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.2
     },
     {
-      "Position_X": 2.88,
-      "Position_Y": 0.0,
-      "Velocity_Y": 4.9031,
-      "Contact_Impulse": 4.9031,
+      "Initial_Spacer_F_v": -0.726,
+      "Initial_Spacer_F_x": -0.554,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.3
     },
     {
-      "Position_X": 3.0,
-      "Position_Y": 0.39221,
-      "Velocity_Y": 3.9221,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.6034,
+      "Initial_Spacer_F_x": -0.6135,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.4
     },
     {
-      "Position_X": 3.12,
-      "Position_Y": 0.68632,
-      "Velocity_Y": 2.9411,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.4719,
+      "Initial_Spacer_F_x": -0.6597,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.5
     },
     {
-      "Position_X": 3.24,
-      "Position_Y": 0.88233,
-      "Velocity_Y": 1.9601,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.3344,
+      "Initial_Spacer_F_x": -0.6919,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.6
     },
     {
-      "Position_X": 3.36,
-      "Position_Y": 0.98024,
-      "Velocity_Y": 0.9791,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.1936,
+      "Initial_Spacer_F_x": -0.7099,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.7
     },
     {
-      "Position_X": 3.48,
-      "Position_Y": 0.98005,
-      "Velocity_Y": -0.0019,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": -0.0524,
+      "Initial_Spacer_F_x": -0.7136,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.8
     },
     {
-      "Position_X": 3.6,
-      "Position_Y": 0.88176,
-      "Velocity_Y": -0.9829,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.0865,
+      "Initial_Spacer_F_x": -0.7034,
+      "Right_Hard_Stop_f": 0.0,
       "time": 2.9
     },
     {
-      "Position_X": 3.72,
-      "Position_Y": 0.68537,
-      "Velocity_Y": -1.9639,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.2204,
+      "Initial_Spacer_F_x": -0.6797,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.0
     },
     {
-      "Position_X": 3.84,
-      "Position_Y": 0.39088,
-      "Velocity_Y": -2.9449,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.3468,
+      "Initial_Spacer_F_x": -0.6433,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.1
     },
     {
-      "Position_X": 3.96,
-      "Position_Y": 0.0,
-      "Velocity_Y": 3.06221,
-      "Contact_Impulse": 3.06221,
+      "Initial_Spacer_F_v": 0.4635,
+      "Initial_Spacer_F_x": -0.5952,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.2
     },
     {
-      "Position_X": 4.08,
-      "Position_Y": 0.20812,
-      "Velocity_Y": 2.08121,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.5684,
+      "Initial_Spacer_F_x": -0.5367,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.3
     },
     {
-      "Position_X": 4.2,
-      "Position_Y": 0.31814,
-      "Velocity_Y": 1.10021,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.6598,
+      "Initial_Spacer_F_x": -0.4692,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.4
     },
     {
-      "Position_X": 4.32,
-      "Position_Y": 0.33006,
-      "Velocity_Y": 0.11921,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.7361,
+      "Initial_Spacer_F_x": -0.3941,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.5
     },
     {
-      "Position_X": 4.44,
-      "Position_Y": 0.24388,
-      "Velocity_Y": -0.86179,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.7962,
+      "Initial_Spacer_F_x": -0.3131,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.6
     },
     {
-      "Position_X": 4.56,
-      "Position_Y": 0.0596,
-      "Velocity_Y": -1.84279,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.8395,
+      "Initial_Spacer_F_x": -0.2279,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.7
     },
     {
-      "Position_X": 4.68,
-      "Position_Y": 0.0,
-      "Velocity_Y": 2.20256,
-      "Contact_Impulse": 2.20256,
+      "Initial_Spacer_F_v": 0.8653,
+      "Initial_Spacer_F_x": -0.1403,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.8
     },
     {
-      "Position_X": 4.8,
-      "Position_Y": 0.12216,
-      "Velocity_Y": 1.22156,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.8737,
+      "Initial_Spacer_F_x": -0.052,
+      "Right_Hard_Stop_f": 0.0,
       "time": 3.9
     },
     {
-      "Position_X": 4.92,
-      "Position_Y": 0.14621,
-      "Velocity_Y": 0.24056,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.8649,
+      "Initial_Spacer_F_x": 0.0351,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.0
     },
     {
-      "Position_X": 5.04,
-      "Position_Y": 0.07217,
-      "Velocity_Y": -0.74044,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.8394,
+      "Initial_Spacer_F_x": 0.1196,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.1
     },
     {
-      "Position_X": 5.16,
-      "Position_Y": 0.0,
-      "Velocity_Y": 1.34272,
-      "Contact_Impulse": 1.34272,
+      "Initial_Spacer_F_v": 0.7982,
+      "Initial_Spacer_F_x": 0.1996,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.2
     },
     {
-      "Position_X": 5.28,
-      "Position_Y": 0.03617,
-      "Velocity_Y": 0.36172,
-      "Contact_Impulse": 0.0,
+      "Initial_Spacer_F_v": 0.7425,
+      "Initial_Spacer_F_x": 0.2739,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.3
     },
     {
-      "Position_X": 5.4,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.48304,
-      "Contact_Impulse": 0.48304,
+      "Initial_Spacer_F_v": 0.6735,
+      "Initial_Spacer_F_x": 0.3412,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.4
     },
     {
-      "Position_X": 5.52,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.38841,
-      "Contact_Impulse": 0.38841,
+      "Initial_Spacer_F_v": 0.5931,
+      "Initial_Spacer_F_x": 0.4001,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.5
     },
     {
-      "Position_X": 5.64,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.46222,
-      "Contact_Impulse": 0.46222,
+      "Initial_Spacer_F_v": 0.5031,
+      "Initial_Spacer_F_x": 0.4499,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.6
     },
     {
-      "Position_X": 5.76,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.40465,
-      "Contact_Impulse": 0.40465,
+      "Initial_Spacer_F_v": 0.4054,
+      "Initial_Spacer_F_x": 0.4897,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.7
     },
     {
-      "Position_X": 5.88,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.44955,
-      "Contact_Impulse": 0.44955,
+      "Initial_Spacer_F_v": 0.3021,
+      "Initial_Spacer_F_x": 0.5191,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.8
     },
     {
-      "Position_X": 6.0,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.41453,
-      "Contact_Impulse": 0.41453,
+      "Initial_Spacer_F_v": 0.1954,
+      "Initial_Spacer_F_x": 0.5376,
+      "Right_Hard_Stop_f": 0.0,
       "time": 4.9
     },
     {
-      "Position_X": 6.12,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.28324,
-      "Contact_Impulse": 0.28324,
+      "Initial_Spacer_F_v": 0.0616,
+      "Initial_Spacer_F_x": 0.3842,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.0
     },
     {
-      "Position_X": 6.24,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.34888,
-      "Contact_Impulse": 0.34888,
+      "Initial_Spacer_F_v": -0.0138,
+      "Initial_Spacer_F_x": 0.3793,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.1
     },
     {
-      "Position_X": 6.36,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.31606,
-      "Contact_Impulse": 0.31606,
+      "Initial_Spacer_F_v": -0.0861,
+      "Initial_Spacer_F_x": 0.3672,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.2
     },
     {
-      "Position_X": 6.48,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.33247,
-      "Contact_Impulse": 0.33247,
+      "Initial_Spacer_F_v": -0.1541,
+      "Initial_Spacer_F_x": 0.3483,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.3
     },
     {
-      "Position_X": 6.6,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32426,
-      "Contact_Impulse": 0.32426,
+      "Initial_Spacer_F_v": -0.2165,
+      "Initial_Spacer_F_x": 0.3234,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.4
     },
     {
-      "Position_X": 6.72,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32837,
-      "Contact_Impulse": 0.32837,
+      "Initial_Spacer_F_v": -0.2723,
+      "Initial_Spacer_F_x": 0.293,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.5
     },
     {
-      "Position_X": 6.84,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32632,
-      "Contact_Impulse": 0.32632,
+      "Initial_Spacer_F_v": -0.3207,
+      "Initial_Spacer_F_x": 0.2581,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.6
     },
     {
-      "Position_X": 6.96,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32734,
-      "Contact_Impulse": 0.32734,
+      "Initial_Spacer_F_v": -0.3611,
+      "Initial_Spacer_F_x": 0.2194,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.7
     },
     {
-      "Position_X": 7.08,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32683,
-      "Contact_Impulse": 0.32683,
+      "Initial_Spacer_F_v": -0.3929,
+      "Initial_Spacer_F_x": 0.1778,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.8
     },
     {
-      "Position_X": 7.2,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32709,
-      "Contact_Impulse": 0.32709,
+      "Initial_Spacer_F_v": -0.4158,
+      "Initial_Spacer_F_x": 0.1343,
+      "Right_Hard_Stop_f": 0.0,
       "time": 5.9
     },
     {
-      "Position_X": 7.32,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32696,
-      "Contact_Impulse": 0.32696,
+      "Initial_Spacer_F_v": -0.4297,
+      "Initial_Spacer_F_x": 0.0899,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.0
     },
     {
-      "Position_X": 7.44,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32702,
-      "Contact_Impulse": 0.32702,
+      "Initial_Spacer_F_v": -0.4347,
+      "Initial_Spacer_F_x": 0.0453,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.1
     },
     {
-      "Position_X": 7.56,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32699,
-      "Contact_Impulse": 0.32699,
+      "Initial_Spacer_F_v": -0.431,
+      "Initial_Spacer_F_x": 0.0015,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.2
     },
     {
-      "Position_X": 7.68,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.32701,
-      "Contact_Impulse": 0.32701,
+      "Initial_Spacer_F_v": -0.4191,
+      "Initial_Spacer_F_x": -0.0407,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.3
     },
     {
-      "Position_X": 7.8,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.3994,
+      "Initial_Spacer_F_x": -0.0806,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.4
     },
     {
-      "Position_X": 7.92,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.3726,
+      "Initial_Spacer_F_x": -0.1173,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.5
     },
     {
-      "Position_X": 8.04,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.3395,
+      "Initial_Spacer_F_x": -0.1504,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.6
     },
     {
-      "Position_X": 8.16,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.301,
+      "Initial_Spacer_F_x": -0.1793,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.7
     },
     {
-      "Position_X": 8.28,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.2581,
+      "Initial_Spacer_F_x": -0.2037,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.8
     },
     {
-      "Position_X": 8.4,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.2117,
+      "Initial_Spacer_F_x": -0.2231,
+      "Right_Hard_Stop_f": 0.0,
       "time": 6.9
     },
     {
-      "Position_X": 8.52,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.1629,
+      "Initial_Spacer_F_x": -0.2375,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.0
     },
     {
-      "Position_X": 8.64,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.1128,
+      "Initial_Spacer_F_x": -0.2467,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.1
     },
     {
-      "Position_X": 8.76,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.0623,
+      "Initial_Spacer_F_x": -0.2507,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.2
     },
     {
-      "Position_X": 8.88,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": -0.0124,
+      "Initial_Spacer_F_x": -0.2497,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.3
     },
     {
-      "Position_X": 9.0,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": 0.0358,
+      "Initial_Spacer_F_x": -0.2438,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.4
     },
     {
-      "Position_X": 9.12,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": 0.0815,
+      "Initial_Spacer_F_x": -0.2334,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.5
     },
     {
-      "Position_X": 9.24,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": 0.1239,
+      "Initial_Spacer_F_x": -0.2188,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.6
     },
     {
-      "Position_X": 9.36,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": 0.1623,
+      "Initial_Spacer_F_x": -0.2004,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.7
     },
     {
-      "Position_X": 9.48,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": 0.1961,
+      "Initial_Spacer_F_x": -0.1789,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.8
     },
     {
-      "Position_X": 9.6,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
+      "Initial_Spacer_F_v": 0.2248,
+      "Initial_Spacer_F_x": -0.1546,
+      "Right_Hard_Stop_f": 0.0,
       "time": 7.9
-    },
-    {
-      "Position_X": 9.72,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.0
-    },
-    {
-      "Position_X": 9.84,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.1
-    },
-    {
-      "Position_X": 9.96,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.2
-    },
-    {
-      "Position_X": 10.08,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.3
-    },
-    {
-      "Position_X": 10.2,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.4
-    },
-    {
-      "Position_X": 10.32,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.5
-    },
-    {
-      "Position_X": 10.44,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.6
-    },
-    {
-      "Position_X": 10.56,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.7
-    },
-    {
-      "Position_X": 10.68,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.8
-    },
-    {
-      "Position_X": 10.8,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 8.9
-    },
-    {
-      "Position_X": 10.92,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.0
-    },
-    {
-      "Position_X": 11.04,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.1
-    },
-    {
-      "Position_X": 11.16,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.2
-    },
-    {
-      "Position_X": 11.28,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.3
-    },
-    {
-      "Position_X": 11.4,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.4
-    },
-    {
-      "Position_X": 11.52,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.5
-    },
-    {
-      "Position_X": 11.64,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.6
-    },
-    {
-      "Position_X": 11.76,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.7
-    },
-    {
-      "Position_X": 11.88,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.8
-    },
-    {
-      "Position_X": 12.0,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 9.9
-    },
-    {
-      "Position_X": 12.12,
-      "Position_Y": 0.0,
-      "Velocity_Y": 0.327,
-      "Contact_Impulse": 0.327,
-      "time": 10.0
     }
-  ]
+  ],
+  "run_id": "bounceball-sample-2",
+  "source": "tsENV_questions/BounceBall/dataframes/bounceball-sample-2.parquet"
 }

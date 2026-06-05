@@ -1,0 +1,4 @@
+claude-4-opus-high
+gemini-3-1-pro-high
+gpt-5-5-codex-high
+minimax-m2-7

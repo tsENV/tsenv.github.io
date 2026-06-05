@@ -1,4 +1,16 @@
 {
+  "axes": [
+    "noise",
+    "context",
+    "examples"
+  ],
+  "canonical_scope": {
+    "context": "High",
+    "examples": "Three Examples",
+    "noise": "Low",
+    "required_seeds_per_simulator": 5,
+    "task_mode": "Code"
+  },
   "num_simulators": 3,
   "simulators": [
     "BallDrop",
@@ -8,17 +20,5 @@
   "task_modes": [
     "Code",
     "Direct"
-  ],
-  "axes": [
-    "noise",
-    "context",
-    "examples"
-  ],
-  "canonical_scope": {
-    "task_mode": "Code",
-    "noise": "Low",
-    "context": "High",
-    "examples": "Three Examples",
-    "required_seeds_per_simulator": 5
-  }
+  ]
 }
