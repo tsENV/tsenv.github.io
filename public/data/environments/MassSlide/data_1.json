@@ -1,495 +1,3009 @@
 {
-  "answer": "gravity acceleration",
+  "answer": "coulomb_friction_coefficient",
   "columns": [
     "mass_velocity",
     "friction_force",
     "normal_force",
     "time"
   ],
-  "intervention_parameter": "gravity acceleration",
+  "intervention_parameter": "coulomb_friction_coefficient",
   "intervention_time": 5,
   "rows": [
     {
-      "friction_force": 0.5246,
-      "mass_velocity": 0.1266,
-      "normal_force": 9.2542,
-      "time": 0.0
+      "friction_force": -32.863495,
+      "mass_velocity": 1.114752,
+      "normal_force": 42.426399,
+      "time": 0.02
     },
     {
-      "friction_force": 0.521,
-      "mass_velocity": 0.1727,
-      "normal_force": 9.2652,
+      "friction_force": -32.863495,
+      "mass_velocity": 1.229504,
+      "normal_force": 42.426399,
+      "time": 0.04
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.344257,
+      "normal_force": 42.426399,
+      "time": 0.06
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.459009,
+      "normal_force": 42.426399,
+      "time": 0.08
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.573761,
+      "normal_force": 42.426399,
       "time": 0.1
     },
     {
-      "friction_force": 0.5165,
-      "mass_velocity": 0.2165,
-      "normal_force": 9.2758,
+      "friction_force": -32.863495,
+      "mass_velocity": 1.688513,
+      "normal_force": 42.426399,
+      "time": 0.12
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.803265,
+      "normal_force": 42.426399,
+      "time": 0.14
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.918018,
+      "normal_force": 42.426399,
+      "time": 0.16
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 2.03277,
+      "normal_force": 42.426399,
+      "time": 0.18
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.88219,
+      "normal_force": 42.426399,
       "time": 0.2
     },
     {
-      "friction_force": 0.5112,
-      "mass_velocity": 0.2574,
-      "normal_force": 9.2859,
+      "friction_force": -32.863495,
+      "mass_velocity": 1.73161,
+      "normal_force": 42.426399,
+      "time": 0.22
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.58103,
+      "normal_force": 42.426399,
+      "time": 0.24
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.430451,
+      "normal_force": 42.426399,
+      "time": 0.26
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.279871,
+      "normal_force": 42.426399,
+      "time": 0.28
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.129291,
+      "normal_force": 42.426399,
       "time": 0.3
     },
     {
-      "friction_force": 0.5052,
-      "mass_velocity": 0.2949,
-      "normal_force": 9.2955,
+      "friction_force": -32.863495,
+      "mass_velocity": 0.978711,
+      "normal_force": 42.426399,
+      "time": 0.32
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.828131,
+      "normal_force": 42.426399,
+      "time": 0.34
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.677552,
+      "normal_force": 42.426399,
+      "time": 0.36
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.526972,
+      "normal_force": 42.426399,
+      "time": 0.38
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.376392,
+      "normal_force": 42.426399,
       "time": 0.4
     },
     {
-      "friction_force": 0.4985,
-      "mass_velocity": 0.3287,
-      "normal_force": 9.3044,
+      "friction_force": -32.863495,
+      "mass_velocity": 0.225812,
+      "normal_force": 42.426399,
+      "time": 0.42
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.075232,
+      "normal_force": 42.426399,
+      "time": 0.44
+    },
+    {
+      "friction_force": 4.742314,
+      "mass_velocity": -0.000136,
+      "normal_force": 42.426399,
+      "time": 0.46
+    },
+    {
+      "friction_force": 40.630157,
+      "mass_velocity": -0.003728,
+      "normal_force": 42.426399,
+      "time": 0.48
+    },
+    {
+      "friction_force": 42.026573,
+      "mass_velocity": -0.004528,
+      "normal_force": 42.426399,
       "time": 0.5
     },
     {
-      "friction_force": 0.4912,
-      "mass_velocity": 0.3583,
-      "normal_force": 9.3127,
+      "friction_force": 42.331127,
+      "mass_velocity": -0.004719,
+      "normal_force": 42.426399,
+      "time": 0.52
+    },
+    {
+      "friction_force": 42.403332,
+      "mass_velocity": -0.004765,
+      "normal_force": 42.426399,
+      "time": 0.54
+    },
+    {
+      "friction_force": 42.420795,
+      "mass_velocity": -0.004776,
+      "normal_force": 42.426399,
+      "time": 0.56
+    },
+    {
+      "friction_force": 42.425041,
+      "mass_velocity": -0.004779,
+      "normal_force": 42.426399,
+      "time": 0.58
+    },
+    {
+      "friction_force": 42.426075,
+      "mass_velocity": -0.004779,
+      "normal_force": 42.426399,
       "time": 0.6
     },
     {
-      "friction_force": 0.4834,
-      "mass_velocity": 0.3835,
-      "normal_force": 9.3202,
+      "friction_force": 42.426327,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.62
+    },
+    {
+      "friction_force": 42.426388,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.64
+    },
+    {
+      "friction_force": 42.426403,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 0.7
     },
     {
-      "friction_force": 0.4752,
-      "mass_velocity": 0.4039,
-      "normal_force": 9.327,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 0.8
     },
     {
-      "friction_force": 0.4667,
-      "mass_velocity": 0.4194,
-      "normal_force": 9.333,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.82
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.84
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.86
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.88
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 0.9
     },
     {
-      "friction_force": 0.4581,
-      "mass_velocity": 0.43,
-      "normal_force": 9.3381,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.92
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.94
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.96
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 0.98
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.0
     },
     {
-      "friction_force": 0.4493,
-      "mass_velocity": 0.4355,
-      "normal_force": 9.3423,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.02
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.04
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.06
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.08
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.1
     },
     {
-      "friction_force": 0.4405,
-      "mass_velocity": 0.436,
-      "normal_force": 9.3457,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.12
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.14
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.16
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.18
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.2
     },
     {
-      "friction_force": 0.4318,
-      "mass_velocity": 0.4317,
-      "normal_force": 9.3481,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.22
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.24
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.26
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.28
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.3
     },
     {
-      "friction_force": 0.4234,
-      "mass_velocity": 0.4226,
-      "normal_force": 9.3495,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.32
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.34
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.36
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.38
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.4
     },
     {
-      "friction_force": 0.4153,
-      "mass_velocity": 0.409,
-      "normal_force": 9.35,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.42
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.44
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.46
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.48
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.5
     },
     {
-      "friction_force": 0.4076,
-      "mass_velocity": 0.3913,
-      "normal_force": 9.3495,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.6
     },
     {
-      "friction_force": 0.4004,
-      "mass_velocity": 0.3698,
-      "normal_force": 9.3481,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.62
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.64
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.7
     },
     {
-      "friction_force": 0.3938,
-      "mass_velocity": 0.345,
-      "normal_force": 9.3457,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.8
     },
     {
-      "friction_force": 0.3879,
-      "mass_velocity": 0.3172,
-      "normal_force": 9.3424,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.82
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.84
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.86
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.88
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 1.9
     },
     {
-      "friction_force": 0.3827,
-      "mass_velocity": 0.2871,
-      "normal_force": 9.3382,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.92
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 1.94
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.109973,
+      "normal_force": 42.426399,
+      "time": 1.96
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.224725,
+      "normal_force": 42.426399,
+      "time": 1.98
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.339477,
+      "normal_force": 42.426399,
       "time": 2.0
     },
     {
-      "friction_force": 0.3784,
-      "mass_velocity": 0.2551,
-      "normal_force": 9.3331,
+      "friction_force": -32.863495,
+      "mass_velocity": 0.454229,
+      "normal_force": 42.426399,
+      "time": 2.02
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.568981,
+      "normal_force": 42.426399,
+      "time": 2.04
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.683734,
+      "normal_force": 42.426399,
+      "time": 2.06
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.798486,
+      "normal_force": 42.426399,
+      "time": 2.08
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.913238,
+      "normal_force": 42.426399,
       "time": 2.1
     },
     {
-      "friction_force": 0.3749,
-      "mass_velocity": 0.2219,
-      "normal_force": 9.3272,
+      "friction_force": -32.863495,
+      "mass_velocity": 1.02799,
+      "normal_force": 42.426399,
+      "time": 2.12
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 1.142742,
+      "normal_force": 42.426399,
+      "time": 2.14
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.992163,
+      "normal_force": 42.426399,
+      "time": 2.16
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.841583,
+      "normal_force": 42.426399,
+      "time": 2.18
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.691003,
+      "normal_force": 42.426399,
       "time": 2.2
     },
     {
-      "friction_force": 0.3723,
-      "mass_velocity": 0.1881,
-      "normal_force": 9.3204,
+      "friction_force": -32.863495,
+      "mass_velocity": 0.540423,
+      "normal_force": 42.426399,
+      "time": 2.22
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.389843,
+      "normal_force": 42.426399,
+      "time": 2.24
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.239264,
+      "normal_force": 42.426399,
+      "time": 2.26
+    },
+    {
+      "friction_force": -32.863495,
+      "mass_velocity": 0.088684,
+      "normal_force": 42.426399,
+      "time": 2.28
+    },
+    {
+      "friction_force": -1.888561,
+      "mass_velocity": 5.4e-05,
+      "normal_force": 42.426399,
       "time": 2.3
     },
     {
-      "friction_force": 0.3707,
-      "mass_velocity": 0.1541,
-      "normal_force": 9.3128,
+      "friction_force": 40.555183,
+      "mass_velocity": -0.003689,
+      "normal_force": 42.426399,
+      "time": 2.32
+    },
+    {
+      "friction_force": 42.011368,
+      "mass_velocity": -0.004519,
+      "normal_force": 42.426399,
+      "time": 2.34
+    },
+    {
+      "friction_force": 42.327579,
+      "mass_velocity": -0.004716,
+      "normal_force": 42.426399,
+      "time": 2.36
+    },
+    {
+      "friction_force": 42.402477,
+      "mass_velocity": -0.004764,
+      "normal_force": 42.426399,
+      "time": 2.38
+    },
+    {
+      "friction_force": 42.420589,
+      "mass_velocity": -0.004776,
+      "normal_force": 42.426399,
       "time": 2.4
     },
     {
-      "friction_force": 0.37,
-      "mass_velocity": 0.1208,
-      "normal_force": 9.3046,
+      "friction_force": 42.424992,
+      "mass_velocity": -0.004779,
+      "normal_force": 42.426399,
+      "time": 2.42
+    },
+    {
+      "friction_force": 42.426064,
+      "mass_velocity": -0.004779,
+      "normal_force": 42.426399,
+      "time": 2.44
+    },
+    {
+      "friction_force": 42.426323,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.46
+    },
+    {
+      "friction_force": 42.426388,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.48
+    },
+    {
+      "friction_force": 42.426403,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 2.5
     },
     {
-      "friction_force": 0.3703,
-      "mass_velocity": 0.0885,
-      "normal_force": 9.2957,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 2.6
     },
     {
-      "friction_force": 0.3716,
-      "mass_velocity": 0.058,
-      "normal_force": 9.2861,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.62
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.64
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 2.7
     },
     {
-      "friction_force": 0.3738,
-      "mass_velocity": 0.0297,
-      "normal_force": 9.276,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 2.8
     },
     {
-      "friction_force": 0.3769,
-      "mass_velocity": 0.0043,
-      "normal_force": 9.2655,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.82
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.84
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.86
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.88
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 2.9
     },
     {
-      "friction_force": 0.3809,
-      "mass_velocity": -0.0179,
-      "normal_force": 9.2545,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.92
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.94
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.96
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 2.98
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 3.0
     },
     {
-      "friction_force": 0.3858,
-      "mass_velocity": -0.0364,
-      "normal_force": 9.2431,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.02
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.04
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.06
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.08
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 3.1
     },
     {
-      "friction_force": 0.3914,
-      "mass_velocity": -0.0508,
-      "normal_force": 9.2315,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.12
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.14
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.16
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.18
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 3.2
     },
     {
-      "friction_force": 0.3977,
-      "mass_velocity": -0.0607,
-      "normal_force": 9.2197,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.22
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.24
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.26
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.28
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 3.3
     },
     {
-      "friction_force": 0.4047,
-      "mass_velocity": -0.066,
-      "normal_force": 9.2077,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.32
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.34
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.36
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.38
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 3.4
     },
     {
-      "friction_force": 0.4122,
-      "mass_velocity": -0.0665,
-      "normal_force": 9.1957,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.42
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.44
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.46
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.48
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 3.5
     },
     {
-      "friction_force": 0.4201,
-      "mass_velocity": -0.0619,
-      "normal_force": 9.1838,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
+      "time": 3.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.00478,
+      "normal_force": 42.426399,
       "time": 3.6
     },
     {
-      "friction_force": 0.4285,
-      "mass_velocity": -0.0523,
-      "normal_force": 9.1719,
+      "friction_force": 42.575775,
+      "mass_velocity": -0.001767,
+      "normal_force": 42.426399,
+      "time": 3.62
+    },
+    {
+      "friction_force": 42.439217,
+      "mass_velocity": -0.001742,
+      "normal_force": 42.426399,
+      "time": 3.64
+    },
+    {
+      "friction_force": 42.427483,
+      "mass_velocity": -0.00174,
+      "normal_force": 42.426399,
+      "time": 3.66
+    },
+    {
+      "friction_force": 42.426498,
+      "mass_velocity": -0.00174,
+      "normal_force": 42.426399,
+      "time": 3.68
+    },
+    {
+      "friction_force": 42.426414,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 3.7
     },
     {
-      "friction_force": 0.4371,
-      "mass_velocity": -0.0377,
-      "normal_force": 9.1602,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 3.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 3.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 3.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 3.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 3.8
     },
     {
-      "friction_force": 0.4458,
-      "mass_velocity": -0.0182,
-      "normal_force": 9.1488,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 3.82
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 3.84
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 3.86
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 3.88
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 3.9
     },
     {
-      "friction_force": 0.4546,
-      "mass_velocity": 0.006,
-      "normal_force": 9.1377,
+      "friction_force": -44.547726,
+      "mass_velocity": 0.089644,
+      "normal_force": 42.426399,
+      "time": 3.92
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.181028,
+      "normal_force": 42.426399,
+      "time": 3.94
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.272412,
+      "normal_force": 42.426399,
+      "time": 3.96
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.363795,
+      "normal_force": 42.426399,
+      "time": 3.98
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.455179,
+      "normal_force": 42.426399,
       "time": 4.0
     },
     {
-      "friction_force": 0.4633,
-      "mass_velocity": 0.0348,
-      "normal_force": 9.127,
+      "friction_force": -44.547726,
+      "mass_velocity": 0.546563,
+      "normal_force": 42.426399,
+      "time": 4.02
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.637947,
+      "normal_force": 42.426399,
+      "time": 4.04
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.72933,
+      "normal_force": 42.426399,
+      "time": 4.06
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.820714,
+      "normal_force": 42.426399,
+      "time": 4.08
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.912098,
+      "normal_force": 42.426399,
       "time": 4.1
     },
     {
-      "friction_force": 0.4719,
-      "mass_velocity": 0.0678,
-      "normal_force": 9.1167,
+      "friction_force": -44.547726,
+      "mass_velocity": 0.73815,
+      "normal_force": 42.426399,
+      "time": 4.12
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.564201,
+      "normal_force": 42.426399,
+      "time": 4.14
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.390253,
+      "normal_force": 42.426399,
+      "time": 4.16
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.216305,
+      "normal_force": 42.426399,
+      "time": 4.18
+    },
+    {
+      "friction_force": -44.549438,
+      "mass_velocity": 0.042353,
+      "normal_force": 42.426399,
       "time": 4.2
     },
     {
-      "friction_force": 0.4802,
-      "mass_velocity": 0.1046,
-      "normal_force": 9.107,
+      "friction_force": 20.996304,
+      "mass_velocity": -0.000507,
+      "normal_force": 42.426399,
+      "time": 4.22
+    },
+    {
+      "friction_force": 41.857883,
+      "mass_velocity": -0.001644,
+      "normal_force": 42.426399,
+      "time": 4.24
+    },
+    {
+      "friction_force": 42.382717,
+      "mass_velocity": -0.001732,
+      "normal_force": 42.426399,
+      "time": 4.26
+    },
+    {
+      "friction_force": 42.422775,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.28
+    },
+    {
+      "friction_force": 42.426102,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 4.3
     },
     {
-      "friction_force": 0.4882,
-      "mass_velocity": 0.1449,
-      "normal_force": 9.0979,
+      "friction_force": 42.42638,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.32
+    },
+    {
+      "friction_force": 42.426403,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.34
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.36
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.38
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 4.4
     },
     {
-      "friction_force": 0.4957,
-      "mass_velocity": 0.1882,
-      "normal_force": 9.0895,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.42
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.44
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.46
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.48
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 4.5
     },
     {
-      "friction_force": 0.5026,
-      "mass_velocity": 0.2339,
-      "normal_force": 9.0817,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 4.6
     },
     {
-      "friction_force": 0.5089,
-      "mass_velocity": 0.2816,
-      "normal_force": 9.0747,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.62
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.64
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 4.7
     },
     {
-      "friction_force": 0.5145,
-      "mass_velocity": 0.3306,
-      "normal_force": 9.0685,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 4.8
     },
     {
-      "friction_force": 0.5193,
-      "mass_velocity": 0.3804,
-      "normal_force": 9.0632,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.82
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.84
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.86
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.88
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 4.9
     },
     {
-      "friction_force": 0.6033,
-      "mass_velocity": 0.6503,
-      "normal_force": 8.8587,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.92
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.94
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.96
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 4.98
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.0
     },
     {
-      "friction_force": 0.6064,
-      "mass_velocity": 0.7043,
-      "normal_force": 8.8551,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.02
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.04
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.06
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.08
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.1
     },
     {
-      "friction_force": 0.6085,
-      "mass_velocity": 0.7572,
-      "normal_force": 8.8525,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.12
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.14
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.16
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.18
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.2
     },
     {
-      "friction_force": 0.6097,
-      "mass_velocity": 0.8084,
-      "normal_force": 8.8508,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.22
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.24
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.26
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.28
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.3
     },
     {
-      "friction_force": 0.61,
-      "mass_velocity": 0.8575,
-      "normal_force": 8.85,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.32
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.34
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.36
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.38
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.4
     },
     {
-      "friction_force": 0.6093,
-      "mass_velocity": 0.9039,
-      "normal_force": 8.8502,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.42
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.44
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.46
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.48
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.5
     },
     {
-      "friction_force": 0.6076,
-      "mass_velocity": 0.9471,
-      "normal_force": 8.8514,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.6
     },
     {
-      "friction_force": 0.605,
-      "mass_velocity": 0.9867,
-      "normal_force": 8.8535,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.62
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.64
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.7
     },
     {
-      "friction_force": 0.6014,
-      "mass_velocity": 1.0222,
-      "normal_force": 8.8566,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 5.8
     },
     {
-      "friction_force": 0.5971,
-      "mass_velocity": 1.0534,
-      "normal_force": 8.8606,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.82
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.84
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 5.86
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.089644,
+      "normal_force": 42.426399,
+      "time": 5.88
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.181028,
+      "normal_force": 42.426399,
       "time": 5.9
     },
     {
-      "friction_force": 0.5919,
-      "mass_velocity": 1.08,
-      "normal_force": 8.8654,
+      "friction_force": -44.547726,
+      "mass_velocity": 0.272412,
+      "normal_force": 42.426399,
+      "time": 5.92
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.363795,
+      "normal_force": 42.426399,
+      "time": 5.94
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.455179,
+      "normal_force": 42.426399,
+      "time": 5.96
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.546563,
+      "normal_force": 42.426399,
+      "time": 5.98
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.637947,
+      "normal_force": 42.426399,
       "time": 6.0
     },
     {
-      "friction_force": 0.5859,
-      "mass_velocity": 1.1017,
-      "normal_force": 8.8712,
+      "friction_force": -44.547726,
+      "mass_velocity": 0.72933,
+      "normal_force": 42.426399,
+      "time": 6.02
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.820714,
+      "normal_force": 42.426399,
+      "time": 6.04
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.646766,
+      "normal_force": 42.426399,
+      "time": 6.06
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.472818,
+      "normal_force": 42.426399,
+      "time": 6.08
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.298869,
+      "normal_force": 42.426399,
       "time": 6.1
     },
     {
-      "friction_force": 0.5793,
-      "mass_velocity": 1.1185,
-      "normal_force": 8.8777,
+      "friction_force": -44.547726,
+      "mass_velocity": 0.124921,
+      "normal_force": 42.426399,
+      "time": 6.12
+    },
+    {
+      "friction_force": -19.79735,
+      "mass_velocity": 0.000474,
+      "normal_force": 42.426399,
+      "time": 6.14
+    },
+    {
+      "friction_force": 41.400776,
+      "mass_velocity": -0.001578,
+      "normal_force": 42.426399,
+      "time": 6.16
+    },
+    {
+      "friction_force": 42.352234,
+      "mass_velocity": -0.001726,
+      "normal_force": 42.426399,
+      "time": 6.18
+    },
+    {
+      "friction_force": 42.420273,
+      "mass_velocity": -0.001738,
+      "normal_force": 42.426399,
       "time": 6.2
     },
     {
-      "friction_force": 0.5721,
-      "mass_velocity": 1.1302,
-      "normal_force": 8.885,
+      "friction_force": 42.425896,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.22
+    },
+    {
+      "friction_force": 42.426365,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.24
+    },
+    {
+      "friction_force": 42.426403,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.26
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.28
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 6.3
     },
     {
-      "friction_force": 0.5644,
-      "mass_velocity": 1.1369,
-      "normal_force": 8.8931,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.32
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.34
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.36
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.38
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 6.4
     },
     {
-      "friction_force": 0.5562,
-      "mass_velocity": 1.1387,
-      "normal_force": 8.9019,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.42
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.44
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.46
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.48
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 6.5
     },
     {
-      "friction_force": 0.5478,
-      "mass_velocity": 1.1357,
-      "normal_force": 8.9112,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 6.6
     },
     {
-      "friction_force": 0.5391,
-      "mass_velocity": 1.1281,
-      "normal_force": 8.9212,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.62
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.64
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 6.7
     },
     {
-      "friction_force": 0.5303,
-      "mass_velocity": 1.1162,
-      "normal_force": 8.9316,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 6.8
     },
     {
-      "friction_force": 0.5215,
-      "mass_velocity": 1.1004,
-      "normal_force": 8.9425,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.82
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.84
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.86
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.88
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 6.9
     },
     {
-      "friction_force": 0.5129,
-      "mass_velocity": 1.0811,
-      "normal_force": 8.9538,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.92
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.94
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.96
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 6.98
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.0
     },
     {
-      "friction_force": 0.5044,
-      "mass_velocity": 1.0588,
-      "normal_force": 8.9653,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.02
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.04
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.06
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.08
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.1
     },
     {
-      "friction_force": 0.4962,
-      "mass_velocity": 1.0338,
-      "normal_force": 8.9771,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.12
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.14
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.16
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.18
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.2
     },
     {
-      "friction_force": 0.4885,
-      "mass_velocity": 1.0069,
-      "normal_force": 8.989,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.22
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.24
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.26
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.28
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.3
     },
     {
-      "friction_force": 0.4812,
-      "mass_velocity": 0.9785,
-      "normal_force": 9.001,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.32
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.34
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.36
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.38
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.4
     },
     {
-      "friction_force": 0.4745,
-      "mass_velocity": 0.9492,
-      "normal_force": 9.013,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.42
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.44
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.46
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.48
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.5
     },
     {
-      "friction_force": 0.4685,
-      "mass_velocity": 0.9196,
-      "normal_force": 9.0249,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.6
     },
     {
-      "friction_force": 0.4633,
-      "mass_velocity": 0.8903,
-      "normal_force": 9.0366,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.62
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.64
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.7
     },
     {
-      "friction_force": 0.4588,
-      "mass_velocity": 0.862,
-      "normal_force": 9.0482,
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 7.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
       "time": 7.8
     },
     {
-      "friction_force": 0.4553,
-      "mass_velocity": 0.8352,
-      "normal_force": 9.0594,
+      "friction_force": -44.547726,
+      "mass_velocity": 0.089644,
+      "normal_force": 42.426399,
+      "time": 7.82
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.181028,
+      "normal_force": 42.426399,
+      "time": 7.84
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.272412,
+      "normal_force": 42.426399,
+      "time": 7.86
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.363795,
+      "normal_force": 42.426399,
+      "time": 7.88
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.455179,
+      "normal_force": 42.426399,
       "time": 7.9
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.546563,
+      "normal_force": 42.426399,
+      "time": 7.92
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.637947,
+      "normal_force": 42.426399,
+      "time": 7.94
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.72933,
+      "normal_force": 42.426399,
+      "time": 7.96
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.820714,
+      "normal_force": 42.426399,
+      "time": 7.98
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.912098,
+      "normal_force": 42.426399,
+      "time": 8.0
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.73815,
+      "normal_force": 42.426399,
+      "time": 8.02
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.564201,
+      "normal_force": 42.426399,
+      "time": 8.04
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.390253,
+      "normal_force": 42.426399,
+      "time": 8.06
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.216305,
+      "normal_force": 42.426399,
+      "time": 8.08
+    },
+    {
+      "friction_force": -44.549438,
+      "mass_velocity": 0.042353,
+      "normal_force": 42.426399,
+      "time": 8.1
+    },
+    {
+      "friction_force": 20.996304,
+      "mass_velocity": -0.000507,
+      "normal_force": 42.426399,
+      "time": 8.12
+    },
+    {
+      "friction_force": 41.857883,
+      "mass_velocity": -0.001644,
+      "normal_force": 42.426399,
+      "time": 8.14
+    },
+    {
+      "friction_force": 42.382717,
+      "mass_velocity": -0.001732,
+      "normal_force": 42.426399,
+      "time": 8.16
+    },
+    {
+      "friction_force": 42.422775,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.18
+    },
+    {
+      "friction_force": 42.426102,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.2
+    },
+    {
+      "friction_force": 42.42638,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.22
+    },
+    {
+      "friction_force": 42.426403,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.24
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.26
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.28
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.3
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.32
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.34
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.36
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.38
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.4
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.42
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.44
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.46
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.48
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.5
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.6
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.62
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.64
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.7
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.76
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.78
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.8
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.82
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.84
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.86
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.88
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.9
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.92
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.94
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.96
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 8.98
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.0
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.02
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.04
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.06
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.08
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.1
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.12
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.14
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.16
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.18
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.2
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.22
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.24
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.26
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.28
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.3
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.32
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.34
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.36
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.38
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.4
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.42
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.44
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.46
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.48
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.5
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.52
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.54
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.56
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.58
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.6
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.62
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.64
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.66
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.68
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.7
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.72
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.74
+    },
+    {
+      "friction_force": 42.426407,
+      "mass_velocity": -0.001739,
+      "normal_force": 42.426399,
+      "time": 9.76
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.089644,
+      "normal_force": 42.426399,
+      "time": 9.78
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.181028,
+      "normal_force": 42.426399,
+      "time": 9.8
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.272412,
+      "normal_force": 42.426399,
+      "time": 9.82
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.363795,
+      "normal_force": 42.426399,
+      "time": 9.84
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.455179,
+      "normal_force": 42.426399,
+      "time": 9.86
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.546563,
+      "normal_force": 42.426399,
+      "time": 9.88
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.637947,
+      "normal_force": 42.426399,
+      "time": 9.9
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.72933,
+      "normal_force": 42.426399,
+      "time": 9.92
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.820714,
+      "normal_force": 42.426399,
+      "time": 9.94
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.912098,
+      "normal_force": 42.426399,
+      "time": 9.96
+    },
+    {
+      "friction_force": -44.547726,
+      "mass_velocity": 0.73815,
+      "normal_force": 42.426399,
+      "time": 9.98
     }
   ],
-  "run_id": "massslide-sample-1",
-  "source": "tsENV_questions/MassSlide/dataframes/massslide-sample-1.parquet"
+  "run_id": "1f0a940c521643948cd6a4a3f8c15067",
+  "source": "questions/MassSlide/dataframes/1f0a940c521643948cd6a4a3f8c15067.parquet"
 }

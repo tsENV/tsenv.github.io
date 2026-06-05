@@ -1,495 +1,4815 @@
 {
-  "answer": "coefficient of restitution",
+  "answer": "mass",
   "columns": [
     "Position",
     "Velocity",
     "Hard_Stop_f",
     "time"
   ],
-  "intervention_parameter": "coefficient of restitution",
+  "intervention_parameter": "mass",
   "intervention_time": 5,
   "rows": [
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.6983,
-      "Velocity": 0.3032,
-      "time": 0.0
+      "Position": 5.282851,
+      "Velocity": -9.739738,
+      "time": 0.0025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.7307,
-      "Velocity": 0.2643,
-      "time": 0.1
+      "Position": 5.160649,
+      "Velocity": -9.800432,
+      "time": 0.015
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.7582,
-      "Velocity": 0.2245,
-      "time": 0.2
+      "Position": 5.037688,
+      "Velocity": -9.861126,
+      "time": 0.0275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.7807,
-      "Velocity": 0.184,
-      "time": 0.3
+      "Position": 4.913969,
+      "Velocity": -9.92182,
+      "time": 0.04
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.7982,
-      "Velocity": 0.1432,
-      "time": 0.4
+      "Position": 4.789491,
+      "Velocity": -9.982513,
+      "time": 0.0525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.8105,
-      "Velocity": 0.1022,
-      "time": 0.5
+      "Position": 4.664254,
+      "Velocity": -10.043207,
+      "time": 0.065
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.8178,
-      "Velocity": 0.0613,
-      "time": 0.6
+      "Position": 4.538259,
+      "Velocity": -10.103901,
+      "time": 0.0775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.82,
-      "Velocity": 0.0208,
-      "time": 0.7
+      "Position": 4.411505,
+      "Velocity": -10.164595,
+      "time": 0.09
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.8173,
-      "Velocity": -0.0192,
-      "time": 0.8
+      "Position": 4.283992,
+      "Velocity": -10.225288,
+      "time": 0.1025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.8096,
-      "Velocity": -0.0583,
-      "time": 0.9
+      "Position": 4.155721,
+      "Velocity": -10.285982,
+      "time": 0.115
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.7971,
-      "Velocity": -0.0964,
-      "time": 1.0
+      "Position": 4.026691,
+      "Velocity": -10.346676,
+      "time": 0.1275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.7801,
-      "Velocity": -0.1331,
-      "time": 1.1
+      "Position": 3.896902,
+      "Velocity": -10.40737,
+      "time": 0.14
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.7587,
-      "Velocity": -0.1684,
-      "time": 1.2
+      "Position": 3.766355,
+      "Velocity": -10.468063,
+      "time": 0.1525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.733,
-      "Velocity": -0.202,
-      "time": 1.3
+      "Position": 3.635049,
+      "Velocity": -10.528757,
+      "time": 0.165
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.7035,
-      "Velocity": -0.2338,
-      "time": 1.4
+      "Position": 3.502984,
+      "Velocity": -10.589451,
+      "time": 0.1775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.6702,
-      "Velocity": -0.2635,
-      "time": 1.5
+      "Position": 3.370161,
+      "Velocity": -10.650145,
+      "time": 0.19
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.6336,
-      "Velocity": -0.2911,
-      "time": 1.6
+      "Position": 3.236579,
+      "Velocity": -10.710838,
+      "time": 0.2025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.5939,
-      "Velocity": -0.3164,
-      "time": 1.7
+      "Position": 3.102238,
+      "Velocity": -10.771532,
+      "time": 0.215
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.5515,
-      "Velocity": -0.3393,
-      "time": 1.8
+      "Position": 2.967139,
+      "Velocity": -10.832226,
+      "time": 0.2275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.5067,
-      "Velocity": -0.3598,
-      "time": 1.9
+      "Position": 2.831281,
+      "Velocity": -10.89292,
+      "time": 0.24
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.4599,
-      "Velocity": -0.3779,
-      "time": 2.0
+      "Position": 2.694664,
+      "Velocity": -10.953613,
+      "time": 0.2525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.4113,
-      "Velocity": -0.3934,
-      "time": 2.1
+      "Position": 2.557289,
+      "Velocity": -11.014308,
+      "time": 0.265
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.3613,
-      "Velocity": -0.4065,
-      "time": 2.2
+      "Position": 2.419155,
+      "Velocity": -11.075002,
+      "time": 0.2775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.3104,
-      "Velocity": -0.417,
-      "time": 2.3
+      "Position": 2.280262,
+      "Velocity": -11.135695,
+      "time": 0.29
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.2588,
-      "Velocity": -0.4252,
-      "time": 2.4
+      "Position": 2.140611,
+      "Velocity": -11.196389,
+      "time": 0.3025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.2068,
-      "Velocity": -0.4311,
-      "time": 2.5
+      "Position": 2.000201,
+      "Velocity": -11.257083,
+      "time": 0.315
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.1548,
-      "Velocity": -0.4347,
-      "time": 2.6
+      "Position": 1.859032,
+      "Velocity": -11.317777,
+      "time": 0.3275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.1031,
-      "Velocity": -0.4362,
-      "time": 2.7
+      "Position": 1.717105,
+      "Velocity": -11.37847,
+      "time": 0.34
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.052,
-      "Velocity": -0.4358,
-      "time": 2.8
+      "Position": 1.574418,
+      "Velocity": -11.439164,
+      "time": 0.3525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 12.0016,
-      "Velocity": -0.4335,
-      "time": 2.9
+      "Position": 1.430974,
+      "Velocity": -11.499858,
+      "time": 0.365
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.9524,
-      "Velocity": -0.4297,
-      "time": 3.0
+      "Position": 1.28677,
+      "Velocity": -11.560552,
+      "time": 0.3775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.9044,
-      "Velocity": -0.4244,
-      "time": 3.1
+      "Position": 1.141808,
+      "Velocity": -11.621245,
+      "time": 0.39
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.858,
-      "Velocity": -0.4179,
-      "time": 3.2
+      "Position": 0.996087,
+      "Velocity": -11.681939,
+      "time": 0.4025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.8131,
-      "Velocity": -0.4105,
-      "time": 3.3
+      "Position": 0.849608,
+      "Velocity": -11.742633,
+      "time": 0.415
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.7699,
-      "Velocity": -0.4023,
-      "time": 3.4
+      "Position": 0.70237,
+      "Velocity": -11.803327,
+      "time": 0.4275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.7286,
-      "Velocity": -0.3936,
-      "time": 3.5
+      "Position": 0.554373,
+      "Velocity": -11.86402,
+      "time": 0.44
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.6892,
-      "Velocity": -0.3846,
-      "time": 3.6
+      "Position": 0.405618,
+      "Velocity": -11.924714,
+      "time": 0.4525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.6517,
-      "Velocity": -0.3756,
-      "time": 3.7
+      "Position": 0.256103,
+      "Velocity": -11.985408,
+      "time": 0.465
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.616,
-      "Velocity": -0.3669,
-      "time": 3.8
+      "Position": 0.105831,
+      "Velocity": -12.046102,
+      "time": 0.4775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.5822,
-      "Velocity": -0.3587,
-      "time": 3.9
+      "Position": 0.045509,
+      "Velocity": 6.035189,
+      "time": 0.49
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.5501,
-      "Velocity": -0.3512,
-      "time": 4.0
+      "Position": 0.120494,
+      "Velocity": 5.974495,
+      "time": 0.5025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.5196,
-      "Velocity": -0.3447,
-      "time": 4.1
+      "Position": 0.19472,
+      "Velocity": 5.913802,
+      "time": 0.515
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.4907,
-      "Velocity": -0.3393,
-      "time": 4.2
+      "Position": 0.268187,
+      "Velocity": 5.853108,
+      "time": 0.5275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.463,
-      "Velocity": -0.3354,
-      "time": 4.3
+      "Position": 0.340896,
+      "Velocity": 5.792414,
+      "time": 0.54
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.4364,
-      "Velocity": -0.3331,
-      "time": 4.4
+      "Position": 0.412846,
+      "Velocity": 5.73172,
+      "time": 0.5525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.4106,
-      "Velocity": -0.3325,
-      "time": 4.5
+      "Position": 0.484037,
+      "Velocity": 5.671027,
+      "time": 0.565
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.3854,
-      "Velocity": -0.334,
-      "time": 4.6
+      "Position": 0.55447,
+      "Velocity": 5.610333,
+      "time": 0.5775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.3605,
-      "Velocity": -0.3375,
-      "time": 4.7
+      "Position": 0.624144,
+      "Velocity": 5.549639,
+      "time": 0.59
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.3356,
-      "Velocity": -0.3432,
-      "time": 4.8
+      "Position": 0.693059,
+      "Velocity": 5.488945,
+      "time": 0.6025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 11.3104,
-      "Velocity": -0.3513,
-      "time": 4.9
+      "Position": 0.761216,
+      "Velocity": 5.428252,
+      "time": 0.615
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.678,
-      "Velocity": -0.6809,
-      "time": 5.0
+      "Position": 0.828614,
+      "Velocity": 5.367558,
+      "time": 0.6275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.6188,
-      "Velocity": -0.7023,
-      "time": 5.1
+      "Position": 0.895253,
+      "Velocity": 5.306864,
+      "time": 0.64
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.5574,
-      "Velocity": -0.7261,
-      "time": 5.2
+      "Position": 0.961133,
+      "Velocity": 5.246171,
+      "time": 0.6525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.4934,
-      "Velocity": -0.7524,
-      "time": 5.3
+      "Position": 1.026255,
+      "Velocity": 5.185477,
+      "time": 0.665
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.4266,
-      "Velocity": -0.7812,
-      "time": 5.4
+      "Position": 1.090619,
+      "Velocity": 5.124783,
+      "time": 0.6775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.3566,
-      "Velocity": -0.8124,
-      "time": 5.5
+      "Position": 1.154223,
+      "Velocity": 5.064089,
+      "time": 0.69
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.283,
-      "Velocity": -0.846,
-      "time": 5.6
+      "Position": 1.217069,
+      "Velocity": 5.003396,
+      "time": 0.7025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.2055,
-      "Velocity": -0.8819,
-      "time": 5.7
+      "Position": 1.279156,
+      "Velocity": 4.942702,
+      "time": 0.715
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.1238,
-      "Velocity": -0.9199,
-      "time": 5.8
+      "Position": 1.340485,
+      "Velocity": 4.882008,
+      "time": 0.7275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 10.0376,
-      "Velocity": -0.96,
-      "time": 5.9
+      "Position": 1.401055,
+      "Velocity": 4.821314,
+      "time": 0.74
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.9466,
-      "Velocity": -1.0019,
-      "time": 6.0
+      "Position": 1.460866,
+      "Velocity": 4.760621,
+      "time": 0.7525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.8507,
-      "Velocity": -1.0455,
-      "time": 6.1
+      "Position": 1.519919,
+      "Velocity": 4.699927,
+      "time": 0.765
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.7495,
-      "Velocity": -1.0906,
-      "time": 6.2
+      "Position": 1.578212,
+      "Velocity": 4.639233,
+      "time": 0.7775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.6428,
-      "Velocity": -1.137,
-      "time": 6.3
+      "Position": 1.635748,
+      "Velocity": 4.578539,
+      "time": 0.79
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.5306,
-      "Velocity": -1.1845,
-      "time": 6.4
+      "Position": 1.692524,
+      "Velocity": 4.517846,
+      "time": 0.8025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.4127,
-      "Velocity": -1.2328,
-      "time": 6.5
+      "Position": 1.748542,
+      "Velocity": 4.457152,
+      "time": 0.815
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.2889,
-      "Velocity": -1.2817,
-      "time": 6.6
+      "Position": 1.803801,
+      "Velocity": 4.396458,
+      "time": 0.8275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.1592,
-      "Velocity": -1.331,
-      "time": 6.7
+      "Position": 1.858302,
+      "Velocity": 4.335764,
+      "time": 0.84
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 9.0235,
-      "Velocity": -1.3804,
-      "time": 6.8
+      "Position": 1.912044,
+      "Velocity": 4.275071,
+      "time": 0.8525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 8.882,
-      "Velocity": -1.4296,
-      "time": 6.9
+      "Position": 1.965027,
+      "Velocity": 4.214377,
+      "time": 0.865
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 8.7345,
-      "Velocity": -1.4785,
-      "time": 7.0
+      "Position": 2.017251,
+      "Velocity": 4.153683,
+      "time": 0.8775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 8.5812,
-      "Velocity": -1.5267,
-      "time": 7.1
+      "Position": 2.068717,
+      "Velocity": 4.092989,
+      "time": 0.89
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 8.4222,
-      "Velocity": -1.5741,
-      "time": 7.2
+      "Position": 2.119424,
+      "Velocity": 4.032296,
+      "time": 0.9025
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 8.2577,
-      "Velocity": -1.6204,
-      "time": 7.3
+      "Position": 2.169373,
+      "Velocity": 3.971602,
+      "time": 0.915
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 8.0877,
-      "Velocity": -1.6653,
-      "time": 7.4
+      "Position": 2.218563,
+      "Velocity": 3.910908,
+      "time": 0.9275
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 7.9125,
-      "Velocity": -1.7087,
-      "time": 7.5
+      "Position": 2.266994,
+      "Velocity": 3.850214,
+      "time": 0.94
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 7.7323,
-      "Velocity": -1.7504,
-      "time": 7.6
+      "Position": 2.314666,
+      "Velocity": 3.789521,
+      "time": 0.9525
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 7.5474,
-      "Velocity": -1.7902,
-      "time": 7.7
+      "Position": 2.36158,
+      "Velocity": 3.728827,
+      "time": 0.965
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 7.358,
-      "Velocity": -1.828,
-      "time": 7.8
+      "Position": 2.407735,
+      "Velocity": 3.668133,
+      "time": 0.9775
     },
     {
       "Hard_Stop_f": 0.0,
-      "Position": 7.1645,
-      "Velocity": -1.8636,
-      "time": 7.9
+      "Position": 2.453132,
+      "Velocity": 3.607439,
+      "time": 0.99
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.497769,
+      "Velocity": 3.546746,
+      "time": 1.0025
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.541649,
+      "Velocity": 3.486052,
+      "time": 1.015
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.584769,
+      "Velocity": 3.425358,
+      "time": 1.0275
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.627131,
+      "Velocity": 3.364664,
+      "time": 1.04
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.668734,
+      "Velocity": 3.303971,
+      "time": 1.0525
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.709578,
+      "Velocity": 3.243277,
+      "time": 1.065
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.749664,
+      "Velocity": 3.182583,
+      "time": 1.0775
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.788991,
+      "Velocity": 3.121889,
+      "time": 1.09
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.827559,
+      "Velocity": 3.061196,
+      "time": 1.1025
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.865369,
+      "Velocity": 3.000502,
+      "time": 1.115
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.90242,
+      "Velocity": 2.939808,
+      "time": 1.1275
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.938713,
+      "Velocity": 2.879114,
+      "time": 1.14
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.974247,
+      "Velocity": 2.818421,
+      "time": 1.1525
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.009022,
+      "Velocity": 2.757727,
+      "time": 1.165
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.043038,
+      "Velocity": 2.697033,
+      "time": 1.1775
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.076296,
+      "Velocity": 2.636339,
+      "time": 1.19
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.108795,
+      "Velocity": 2.575646,
+      "time": 1.2025
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.140535,
+      "Velocity": 2.514952,
+      "time": 1.215
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.171517,
+      "Velocity": 2.454258,
+      "time": 1.2275
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.20174,
+      "Velocity": 2.393564,
+      "time": 1.24
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.231204,
+      "Velocity": 2.332871,
+      "time": 1.2525
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.25991,
+      "Velocity": 2.272177,
+      "time": 1.265
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.287857,
+      "Velocity": 2.211483,
+      "time": 1.2775
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.315045,
+      "Velocity": 2.150789,
+      "time": 1.29
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.341475,
+      "Velocity": 2.090096,
+      "time": 1.3025
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.367146,
+      "Velocity": 2.029402,
+      "time": 1.315
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.392058,
+      "Velocity": 1.968708,
+      "time": 1.3275
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.416212,
+      "Velocity": 1.908014,
+      "time": 1.34
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.439607,
+      "Velocity": 1.847321,
+      "time": 1.3525
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.462243,
+      "Velocity": 1.786627,
+      "time": 1.365
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.484121,
+      "Velocity": 1.725933,
+      "time": 1.3775
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.50524,
+      "Velocity": 1.665239,
+      "time": 1.39
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.5256,
+      "Velocity": 1.604546,
+      "time": 1.4025
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.545202,
+      "Velocity": 1.543852,
+      "time": 1.415
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.564044,
+      "Velocity": 1.483158,
+      "time": 1.4275
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.582129,
+      "Velocity": 1.422464,
+      "time": 1.44
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.599454,
+      "Velocity": 1.361771,
+      "time": 1.4525
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.616021,
+      "Velocity": 1.301077,
+      "time": 1.465
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.63183,
+      "Velocity": 1.240383,
+      "time": 1.4775
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.646879,
+      "Velocity": 1.179689,
+      "time": 1.49
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.66117,
+      "Velocity": 1.118996,
+      "time": 1.5025
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.674702,
+      "Velocity": 1.058302,
+      "time": 1.515
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.687476,
+      "Velocity": 0.997608,
+      "time": 1.5275
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.699491,
+      "Velocity": 0.936914,
+      "time": 1.54
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.710747,
+      "Velocity": 0.876221,
+      "time": 1.5525
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.721245,
+      "Velocity": 0.815527,
+      "time": 1.565
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.730983,
+      "Velocity": 0.754833,
+      "time": 1.5775
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.739964,
+      "Velocity": 0.694139,
+      "time": 1.59
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.748185,
+      "Velocity": 0.633446,
+      "time": 1.6025
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.755648,
+      "Velocity": 0.572752,
+      "time": 1.615
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.762352,
+      "Velocity": 0.512058,
+      "time": 1.6275
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.768298,
+      "Velocity": 0.451364,
+      "time": 1.64
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.773485,
+      "Velocity": 0.390671,
+      "time": 1.6525
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.777913,
+      "Velocity": 0.329977,
+      "time": 1.665
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.782225,
+      "Velocity": 0.257144,
+      "time": 1.68
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.784984,
+      "Velocity": 0.196451,
+      "time": 1.6925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.786985,
+      "Velocity": 0.135757,
+      "time": 1.705
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.788226,
+      "Velocity": 0.075063,
+      "time": 1.7175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.78871,
+      "Velocity": 0.014369,
+      "time": 1.73
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.788434,
+      "Velocity": -0.046324,
+      "time": 1.7425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.7874,
+      "Velocity": -0.107018,
+      "time": 1.755
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.785607,
+      "Velocity": -0.167712,
+      "time": 1.7675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.783055,
+      "Velocity": -0.228406,
+      "time": 1.78
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.779745,
+      "Velocity": -0.289099,
+      "time": 1.7925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.775676,
+      "Velocity": -0.349793,
+      "time": 1.805
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.770848,
+      "Velocity": -0.410487,
+      "time": 1.8175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.765262,
+      "Velocity": -0.471181,
+      "time": 1.83
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.758917,
+      "Velocity": -0.531874,
+      "time": 1.8425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.751813,
+      "Velocity": -0.592568,
+      "time": 1.855
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.743951,
+      "Velocity": -0.653262,
+      "time": 1.8675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.73533,
+      "Velocity": -0.713956,
+      "time": 1.88
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.72595,
+      "Velocity": -0.774649,
+      "time": 1.8925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.715812,
+      "Velocity": -0.835343,
+      "time": 1.905
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.704915,
+      "Velocity": -0.896037,
+      "time": 1.9175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.693259,
+      "Velocity": -0.956731,
+      "time": 1.93
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.680845,
+      "Velocity": -1.017424,
+      "time": 1.9425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.667672,
+      "Velocity": -1.078118,
+      "time": 1.955
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.653741,
+      "Velocity": -1.138812,
+      "time": 1.9675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.63905,
+      "Velocity": -1.199506,
+      "time": 1.98
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.623601,
+      "Velocity": -1.260199,
+      "time": 1.9925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.607394,
+      "Velocity": -1.320893,
+      "time": 2.005
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.590427,
+      "Velocity": -1.381587,
+      "time": 2.0175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.572702,
+      "Velocity": -1.442281,
+      "time": 2.03
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.554218,
+      "Velocity": -1.502974,
+      "time": 2.0425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.534976,
+      "Velocity": -1.563668,
+      "time": 2.055
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.514975,
+      "Velocity": -1.624362,
+      "time": 2.0675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.494215,
+      "Velocity": -1.685056,
+      "time": 2.08
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.472697,
+      "Velocity": -1.745749,
+      "time": 2.0925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.45042,
+      "Velocity": -1.806443,
+      "time": 2.105
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.427384,
+      "Velocity": -1.867137,
+      "time": 2.1175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.403589,
+      "Velocity": -1.927831,
+      "time": 2.13
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.379036,
+      "Velocity": -1.988524,
+      "time": 2.1425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.353725,
+      "Velocity": -2.049218,
+      "time": 2.155
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.327654,
+      "Velocity": -2.109912,
+      "time": 2.1675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.300825,
+      "Velocity": -2.170606,
+      "time": 2.18
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.273237,
+      "Velocity": -2.231299,
+      "time": 2.1925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.244891,
+      "Velocity": -2.291993,
+      "time": 2.205
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.215786,
+      "Velocity": -2.352687,
+      "time": 2.2175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.185922,
+      "Velocity": -2.413381,
+      "time": 2.23
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.1553,
+      "Velocity": -2.474074,
+      "time": 2.2425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.123919,
+      "Velocity": -2.534768,
+      "time": 2.255
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.091779,
+      "Velocity": -2.595462,
+      "time": 2.2675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.05888,
+      "Velocity": -2.656156,
+      "time": 2.28
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 3.025223,
+      "Velocity": -2.716849,
+      "time": 2.2925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.990807,
+      "Velocity": -2.777543,
+      "time": 2.305
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.955633,
+      "Velocity": -2.838237,
+      "time": 2.3175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.9197,
+      "Velocity": -2.898931,
+      "time": 2.33
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.883008,
+      "Velocity": -2.959624,
+      "time": 2.3425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.845557,
+      "Velocity": -3.020318,
+      "time": 2.355
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.807348,
+      "Velocity": -3.081012,
+      "time": 2.3675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.76838,
+      "Velocity": -3.141706,
+      "time": 2.38
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.728654,
+      "Velocity": -3.202399,
+      "time": 2.3925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.688169,
+      "Velocity": -3.263093,
+      "time": 2.405
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.646924,
+      "Velocity": -3.323787,
+      "time": 2.4175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.604922,
+      "Velocity": -3.384481,
+      "time": 2.43
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.562161,
+      "Velocity": -3.445174,
+      "time": 2.4425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.518641,
+      "Velocity": -3.505868,
+      "time": 2.455
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.474362,
+      "Velocity": -3.566562,
+      "time": 2.4675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.429325,
+      "Velocity": -3.627256,
+      "time": 2.48
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.383529,
+      "Velocity": -3.687949,
+      "time": 2.4925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.336975,
+      "Velocity": -3.748643,
+      "time": 2.505
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.289661,
+      "Velocity": -3.809337,
+      "time": 2.5175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.24159,
+      "Velocity": -3.870031,
+      "time": 2.53
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.192759,
+      "Velocity": -3.930724,
+      "time": 2.5425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.14317,
+      "Velocity": -3.991418,
+      "time": 2.555
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.092822,
+      "Velocity": -4.052112,
+      "time": 2.5675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 2.041715,
+      "Velocity": -4.112806,
+      "time": 2.58
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.98985,
+      "Velocity": -4.1735,
+      "time": 2.5925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.937226,
+      "Velocity": -4.234193,
+      "time": 2.605
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.883843,
+      "Velocity": -4.294887,
+      "time": 2.6175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.829702,
+      "Velocity": -4.355581,
+      "time": 2.63
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.774802,
+      "Velocity": -4.416275,
+      "time": 2.6425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.719144,
+      "Velocity": -4.476968,
+      "time": 2.655
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.662726,
+      "Velocity": -4.537662,
+      "time": 2.6675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.60555,
+      "Velocity": -4.598356,
+      "time": 2.68
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.547616,
+      "Velocity": -4.65905,
+      "time": 2.6925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.488922,
+      "Velocity": -4.719743,
+      "time": 2.705
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.42947,
+      "Velocity": -4.780437,
+      "time": 2.7175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.36926,
+      "Velocity": -4.841131,
+      "time": 2.73
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.30829,
+      "Velocity": -4.901824,
+      "time": 2.7425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.246562,
+      "Velocity": -4.962518,
+      "time": 2.755
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.184075,
+      "Velocity": -5.023212,
+      "time": 2.7675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.12083,
+      "Velocity": -5.083906,
+      "time": 2.78
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 1.056826,
+      "Velocity": -5.144599,
+      "time": 2.7925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.992063,
+      "Velocity": -5.205293,
+      "time": 2.805
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.926542,
+      "Velocity": -5.265987,
+      "time": 2.8175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.860262,
+      "Velocity": -5.326681,
+      "time": 2.83
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.793223,
+      "Velocity": -5.387374,
+      "time": 2.8425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.725426,
+      "Velocity": -5.448068,
+      "time": 2.855
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.65687,
+      "Velocity": -5.508762,
+      "time": 2.8675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.587555,
+      "Velocity": -5.569456,
+      "time": 2.88
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.517482,
+      "Velocity": -5.630149,
+      "time": 2.8925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.44665,
+      "Velocity": -5.690843,
+      "time": 2.905
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.375059,
+      "Velocity": -5.751537,
+      "time": 2.9175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.30271,
+      "Velocity": -5.812231,
+      "time": 2.93
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.229601,
+      "Velocity": -5.872924,
+      "time": 2.9425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.155735,
+      "Velocity": -5.933618,
+      "time": 2.955
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.081109,
+      "Velocity": -5.994312,
+      "time": 2.9675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.005725,
+      "Velocity": -6.055006,
+      "time": 2.98
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.043341,
+      "Velocity": 2.985017,
+      "time": 2.9925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.080199,
+      "Velocity": 2.924323,
+      "time": 3.005
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.116298,
+      "Velocity": 2.86363,
+      "time": 3.0175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.151638,
+      "Velocity": 2.802936,
+      "time": 3.03
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.186219,
+      "Velocity": 2.742242,
+      "time": 3.0425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.220042,
+      "Velocity": 2.681548,
+      "time": 3.055
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.253106,
+      "Velocity": 2.620855,
+      "time": 3.0675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.285412,
+      "Velocity": 2.560161,
+      "time": 3.08
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.316959,
+      "Velocity": 2.499467,
+      "time": 3.0925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.347747,
+      "Velocity": 2.438773,
+      "time": 3.105
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.377776,
+      "Velocity": 2.37808,
+      "time": 3.1175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.407047,
+      "Velocity": 2.317386,
+      "time": 3.13
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.435559,
+      "Velocity": 2.256692,
+      "time": 3.1425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.463313,
+      "Velocity": 2.195998,
+      "time": 3.155
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.490307,
+      "Velocity": 2.135305,
+      "time": 3.1675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.516544,
+      "Velocity": 2.074611,
+      "time": 3.18
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.542021,
+      "Velocity": 2.013917,
+      "time": 3.1925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.56674,
+      "Velocity": 1.953223,
+      "time": 3.205
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.5907,
+      "Velocity": 1.89253,
+      "time": 3.2175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.613901,
+      "Velocity": 1.831836,
+      "time": 3.23
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.636344,
+      "Velocity": 1.771142,
+      "time": 3.2425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.658028,
+      "Velocity": 1.710448,
+      "time": 3.255
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.678953,
+      "Velocity": 1.649755,
+      "time": 3.2675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.69912,
+      "Velocity": 1.589061,
+      "time": 3.28
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.718528,
+      "Velocity": 1.528367,
+      "time": 3.2925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.737178,
+      "Velocity": 1.467673,
+      "time": 3.305
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.755068,
+      "Velocity": 1.40698,
+      "time": 3.3175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.7722,
+      "Velocity": 1.346286,
+      "time": 3.33
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.788574,
+      "Velocity": 1.285592,
+      "time": 3.3425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.804188,
+      "Velocity": 1.224898,
+      "time": 3.355
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.819044,
+      "Velocity": 1.164205,
+      "time": 3.3675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.833142,
+      "Velocity": 1.103511,
+      "time": 3.38
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.84648,
+      "Velocity": 1.042817,
+      "time": 3.3925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.859061,
+      "Velocity": 0.982123,
+      "time": 3.405
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.870882,
+      "Velocity": 0.92143,
+      "time": 3.4175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.881944,
+      "Velocity": 0.860736,
+      "time": 3.43
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.892249,
+      "Velocity": 0.800042,
+      "time": 3.4425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.901794,
+      "Velocity": 0.739348,
+      "time": 3.455
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.91058,
+      "Velocity": 0.678655,
+      "time": 3.4675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.918608,
+      "Velocity": 0.617961,
+      "time": 3.48
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.925878,
+      "Velocity": 0.557267,
+      "time": 3.4925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.932388,
+      "Velocity": 0.496573,
+      "time": 3.505
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.93814,
+      "Velocity": 0.43588,
+      "time": 3.5175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.943134,
+      "Velocity": 0.375186,
+      "time": 3.53
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.947368,
+      "Velocity": 0.314492,
+      "time": 3.5425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.950844,
+      "Velocity": 0.253798,
+      "time": 3.555
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.953561,
+      "Velocity": 0.193105,
+      "time": 3.5675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.95552,
+      "Velocity": 0.132411,
+      "time": 3.58
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.95672,
+      "Velocity": 0.071717,
+      "time": 3.5925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.957161,
+      "Velocity": 0.011023,
+      "time": 3.605
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.956844,
+      "Velocity": -0.04967,
+      "time": 3.6175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.955768,
+      "Velocity": -0.110364,
+      "time": 3.63
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.953933,
+      "Velocity": -0.171058,
+      "time": 3.6425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.95134,
+      "Velocity": -0.231752,
+      "time": 3.655
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.947988,
+      "Velocity": -0.292445,
+      "time": 3.6675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.943877,
+      "Velocity": -0.353139,
+      "time": 3.68
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.939007,
+      "Velocity": -0.413833,
+      "time": 3.6925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.933379,
+      "Velocity": -0.474527,
+      "time": 3.705
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.926992,
+      "Velocity": -0.53522,
+      "time": 3.7175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.919847,
+      "Velocity": -0.595914,
+      "time": 3.73
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.911943,
+      "Velocity": -0.656608,
+      "time": 3.7425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.90328,
+      "Velocity": -0.717302,
+      "time": 3.755
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.893859,
+      "Velocity": -0.777995,
+      "time": 3.7675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.883678,
+      "Velocity": -0.838689,
+      "time": 3.78
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.87274,
+      "Velocity": -0.899383,
+      "time": 3.7925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.861042,
+      "Velocity": -0.960077,
+      "time": 3.805
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.848586,
+      "Velocity": -1.02077,
+      "time": 3.8175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.835371,
+      "Velocity": -1.081464,
+      "time": 3.83
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.821398,
+      "Velocity": -1.142158,
+      "time": 3.8425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.806665,
+      "Velocity": -1.202852,
+      "time": 3.855
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.791175,
+      "Velocity": -1.263545,
+      "time": 3.8675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.774925,
+      "Velocity": -1.324239,
+      "time": 3.88
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.757917,
+      "Velocity": -1.384933,
+      "time": 3.8925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.74015,
+      "Velocity": -1.445627,
+      "time": 3.905
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.721624,
+      "Velocity": -1.50632,
+      "time": 3.9175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.70234,
+      "Velocity": -1.567014,
+      "time": 3.93
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.682297,
+      "Velocity": -1.627708,
+      "time": 3.9425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.661496,
+      "Velocity": -1.688402,
+      "time": 3.955
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.639936,
+      "Velocity": -1.749095,
+      "time": 3.9675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.617617,
+      "Velocity": -1.809789,
+      "time": 3.98
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.594539,
+      "Velocity": -1.870483,
+      "time": 3.9925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.570703,
+      "Velocity": -1.931177,
+      "time": 4.005
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.546108,
+      "Velocity": -1.99187,
+      "time": 4.0175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.520754,
+      "Velocity": -2.052564,
+      "time": 4.03
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.494642,
+      "Velocity": -2.113258,
+      "time": 4.0425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.467771,
+      "Velocity": -2.173952,
+      "time": 4.055
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.440142,
+      "Velocity": -2.234645,
+      "time": 4.0675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.411753,
+      "Velocity": -2.295339,
+      "time": 4.08
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.382606,
+      "Velocity": -2.356033,
+      "time": 4.0925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.352701,
+      "Velocity": -2.416727,
+      "time": 4.105
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.322037,
+      "Velocity": -2.47742,
+      "time": 4.1175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.290614,
+      "Velocity": -2.538114,
+      "time": 4.13
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.258432,
+      "Velocity": -2.598808,
+      "time": 4.1425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.225492,
+      "Velocity": -2.659502,
+      "time": 4.155
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.191793,
+      "Velocity": -2.720195,
+      "time": 4.1675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.157335,
+      "Velocity": -2.780889,
+      "time": 4.18
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.122119,
+      "Velocity": -2.841583,
+      "time": 4.1925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.086144,
+      "Velocity": -2.902277,
+      "time": 4.205
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.04941,
+      "Velocity": -2.96297,
+      "time": 4.2175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.011918,
+      "Velocity": -3.023664,
+      "time": 4.23
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.019386,
+      "Velocity": 1.487555,
+      "time": 4.2425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.037525,
+      "Velocity": 1.426861,
+      "time": 4.255
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.054906,
+      "Velocity": 1.366167,
+      "time": 4.2675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.071528,
+      "Velocity": 1.305473,
+      "time": 4.28
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.087391,
+      "Velocity": 1.24478,
+      "time": 4.2925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.102495,
+      "Velocity": 1.184086,
+      "time": 4.305
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.116841,
+      "Velocity": 1.123392,
+      "time": 4.3175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.130428,
+      "Velocity": 1.062698,
+      "time": 4.33
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.143257,
+      "Velocity": 1.002005,
+      "time": 4.3425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.155327,
+      "Velocity": 0.941311,
+      "time": 4.355
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.166638,
+      "Velocity": 0.880617,
+      "time": 4.3675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.17719,
+      "Velocity": 0.819923,
+      "time": 4.38
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.186984,
+      "Velocity": 0.75923,
+      "time": 4.3925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.196019,
+      "Velocity": 0.698536,
+      "time": 4.405
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.204296,
+      "Velocity": 0.637842,
+      "time": 4.4175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.211814,
+      "Velocity": 0.577148,
+      "time": 4.43
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.218573,
+      "Velocity": 0.516455,
+      "time": 4.4425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.224573,
+      "Velocity": 0.455761,
+      "time": 4.455
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.229815,
+      "Velocity": 0.395067,
+      "time": 4.4675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.234298,
+      "Velocity": 0.334373,
+      "time": 4.48
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.238023,
+      "Velocity": 0.27368,
+      "time": 4.4925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.240989,
+      "Velocity": 0.212986,
+      "time": 4.505
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.243196,
+      "Velocity": 0.152292,
+      "time": 4.5175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.244644,
+      "Velocity": 0.091598,
+      "time": 4.53
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.245334,
+      "Velocity": 0.030905,
+      "time": 4.5425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.245265,
+      "Velocity": -0.029789,
+      "time": 4.555
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.244437,
+      "Velocity": -0.090483,
+      "time": 4.5675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.242851,
+      "Velocity": -0.151177,
+      "time": 4.58
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.240506,
+      "Velocity": -0.21187,
+      "time": 4.5925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.237403,
+      "Velocity": -0.272564,
+      "time": 4.605
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.23354,
+      "Velocity": -0.333258,
+      "time": 4.6175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.22892,
+      "Velocity": -0.393952,
+      "time": 4.63
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.22354,
+      "Velocity": -0.454645,
+      "time": 4.6425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.217402,
+      "Velocity": -0.515339,
+      "time": 4.655
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.210505,
+      "Velocity": -0.576033,
+      "time": 4.6675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.202849,
+      "Velocity": -0.636727,
+      "time": 4.68
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.194435,
+      "Velocity": -0.69742,
+      "time": 4.6925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.185262,
+      "Velocity": -0.758114,
+      "time": 4.705
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.17533,
+      "Velocity": -0.818808,
+      "time": 4.7175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.16464,
+      "Velocity": -0.879502,
+      "time": 4.73
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.153191,
+      "Velocity": -0.940195,
+      "time": 4.7425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.140983,
+      "Velocity": -1.000889,
+      "time": 4.755
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.128017,
+      "Velocity": -1.061583,
+      "time": 4.7675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.114292,
+      "Velocity": -1.122277,
+      "time": 4.78
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.099808,
+      "Velocity": -1.182971,
+      "time": 4.7925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.084566,
+      "Velocity": -1.243664,
+      "time": 4.805
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.068565,
+      "Velocity": -1.304358,
+      "time": 4.8175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.051805,
+      "Velocity": -1.365052,
+      "time": 4.83
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.034287,
+      "Velocity": -1.425745,
+      "time": 4.8425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.01601,
+      "Velocity": -1.486439,
+      "time": 4.855
+    },
+    {
+      "Hard_Stop_f": 17527.871094,
+      "Position": 0.002776,
+      "Velocity": 0.773566,
+      "time": 4.8675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.01199,
+      "Velocity": 0.712873,
+      "time": 4.88
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.020446,
+      "Velocity": 0.652179,
+      "time": 4.8925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.028143,
+      "Velocity": 0.591485,
+      "time": 4.905
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.035081,
+      "Velocity": 0.530791,
+      "time": 4.9175
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.041261,
+      "Velocity": 0.470098,
+      "time": 4.93
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.046682,
+      "Velocity": 0.409404,
+      "time": 4.9425
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.051345,
+      "Velocity": 0.34871,
+      "time": 4.955
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.055248,
+      "Velocity": 0.288016,
+      "time": 4.9675
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.058393,
+      "Velocity": 0.227323,
+      "time": 4.98
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.06078,
+      "Velocity": 0.166629,
+      "time": 4.9925
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.062642,
+      "Velocity": 0.093796,
+      "time": 5.0075
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.063359,
+      "Velocity": 0.033103,
+      "time": 5.02
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.063318,
+      "Velocity": -0.027591,
+      "time": 5.0325
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.062517,
+      "Velocity": -0.088285,
+      "time": 5.045
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.060959,
+      "Velocity": -0.148979,
+      "time": 5.0575
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.058641,
+      "Velocity": -0.209672,
+      "time": 5.07
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.055565,
+      "Velocity": -0.270366,
+      "time": 5.0825
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.05173,
+      "Velocity": -0.33106,
+      "time": 5.095
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.047137,
+      "Velocity": -0.391754,
+      "time": 5.1075
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.041785,
+      "Velocity": -0.452447,
+      "time": 5.12
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.035674,
+      "Velocity": -0.513141,
+      "time": 5.1325
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.028805,
+      "Velocity": -0.573835,
+      "time": 5.145
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.021176,
+      "Velocity": -0.634529,
+      "time": 5.1575
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.01279,
+      "Velocity": -0.695222,
+      "time": 5.17
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.003644,
+      "Velocity": -0.755916,
+      "time": 5.1825
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.005443,
+      "Velocity": 0.353681,
+      "time": 5.195
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.009409,
+      "Velocity": 0.292987,
+      "time": 5.2075
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.012616,
+      "Velocity": 0.232293,
+      "time": 5.22
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.015064,
+      "Velocity": 0.171599,
+      "time": 5.2325
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.016754,
+      "Velocity": 0.110906,
+      "time": 5.245
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.017685,
+      "Velocity": 0.050212,
+      "time": 5.2575
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.017858,
+      "Velocity": -0.010482,
+      "time": 5.27
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.017271,
+      "Velocity": -0.071176,
+      "time": 5.2825
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.015926,
+      "Velocity": -0.131869,
+      "time": 5.295
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.013823,
+      "Velocity": -0.192563,
+      "time": 5.3075
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.010961,
+      "Velocity": -0.253257,
+      "time": 5.32
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.00734,
+      "Velocity": -0.313951,
+      "time": 5.3325
+    },
+    {
+      "Hard_Stop_f": 0.0,
+      "Position": 0.00296,
+      "Velocity": -0.374644,
+      "time": 5.345
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.3575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.37
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.3825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.395
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.4075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.42
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.4325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.445
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.4575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.47
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.4825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.495
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.5075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.52
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.5325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.545
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.5575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.57
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.5825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.595
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.6075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.62
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.6325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.645
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.6575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.67
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.6825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.695
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.7075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.72
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.7325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.745
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.7575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.77
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.7825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.795
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.8075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.82
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.8325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.845
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.8575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.87
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.8825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.895
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.9075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.92
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.9325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.945
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.9575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.97
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.9825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 5.995
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.0075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.02
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.0325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.045
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.0575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.07
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.0825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.095
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.1075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.12
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.1325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.145
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.1575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.17
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.1825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.195
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.2075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.22
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.2325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.245
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.2575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.27
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.2825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.295
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.3075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.32
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.3325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.345
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.3575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.37
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.3825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.395
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.4075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.42
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.4325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.445
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.4575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.47
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.4825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.495
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.5075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.52
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.5325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.545
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.5575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.57
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.5825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.595
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.6075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.62
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.6325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.645
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.6575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.67
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.6825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.695
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.7075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.72
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.7325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.745
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.7575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.77
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.7825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.795
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.8075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.82
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.8325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.845
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.8575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.87
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.8825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.895
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.9075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.92
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.9325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.945
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.9575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.97
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.9825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 6.995
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.0075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.02
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.0325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.045
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.0575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.07
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.0825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.095
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.1075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.12
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.1325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.145
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.1575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.17
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.1825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.195
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.2075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.22
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.2325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.245
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.2575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.27
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.2825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.295
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.3075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.32
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.3325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.345
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.3575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.37
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.3825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.395
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.4075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.42
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.4325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.445
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.4575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.47
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.4825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.495
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.5075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.52
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.5325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.545
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.5575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.57
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.5825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.595
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.6075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.62
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.6325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.645
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.6575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.67
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.6825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.695
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.7075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.72
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.7325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.745
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.7575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.77
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.7825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.795
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.8075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.82
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.8325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.845
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.8575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.87
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.8825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.895
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.9075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.92
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.9325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.945
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.9575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.97
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.9825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 7.995
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.0075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.02
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.0325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.045
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.0575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.07
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.0825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.095
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.1075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.12
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.1325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.145
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.1575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.17
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.1825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.195
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.2075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.22
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.2325
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.245
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.2575
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.27
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.2825
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.295
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.3075
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.32
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.335
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.3475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.36
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.3725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.385
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.3975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.41
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.4225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.435
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.4475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.46
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.4725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.485
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.4975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.51
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.5225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.535
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.5475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.56
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.5725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.585
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.5975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.61
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.6225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.635
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.6475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.66
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.6725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.685
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.6975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.71
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.7225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.735
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.7475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.76
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.7725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.785
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.7975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.81
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.8225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.835
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.8475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.86
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.8725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.885
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.8975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.91
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.9225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.935
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.9475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.96
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.9725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.985
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 8.9975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.01
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.0225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.035
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.0475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.06
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.0725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.085
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.0975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.11
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.1225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.135
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.1475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.16
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.1725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.185
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.1975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.21
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.2225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.235
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.2475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.26
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.2725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.285
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.2975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.31
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.3225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.335
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.3475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.36
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.3725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.385
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.3975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.41
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.4225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.435
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.4475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.46
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.4725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.485
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.4975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.51
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.5225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.535
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.5475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.56
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.5725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.585
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.5975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.61
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.6225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.635
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.6475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.66
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.6725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.685
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.6975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.71
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.7225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.735
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.7475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.76
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.7725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.785
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.7975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.81
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.8225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.835
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.8475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.86
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.8725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.885
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.8975
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.91
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.9225
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.935
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.9475
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.96
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.9725
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.985
+    },
+    {
+      "Hard_Stop_f": 91.682037,
+      "Position": 0.000996,
+      "Velocity": 0.0,
+      "time": 9.9975
     }
   ],
-  "run_id": "balldrop-sample-3",
-  "source": "tsENV_questions/BallDrop/dataframes/balldrop-sample-3.parquet"
+  "run_id": "18e695472b2d52058cf6deee57c49cf8",
+  "source": "questions/BallDrop/dataframes/18e695472b2d52058cf6deee57c49cf8.parquet"
 }
