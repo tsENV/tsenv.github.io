@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import os
 import shutil
+import ssl
 import sys
 import urllib.error
 import urllib.request
@@ -20,6 +21,14 @@ DATA = ROOT / "public" / "data"
 DEFAULT_REPO = "TommasoBendinelli/tsenv-benchmark"
 TOP_LEVEL_FILES = ("summary.json", "leaderboard.json")
 SIMULATORS = ("BallDrop", "BounceBall", "MassSlide")
+
+
+def ssl_context() -> ssl.SSLContext | None:
+    try:
+        import certifi
+    except ImportError:
+        return None
+    return ssl.create_default_context(cafile=certifi.where())
 
 
 def copy_tree(source: Path, destination: Path) -> None:
@@ -41,7 +50,7 @@ def download_file(url: str, destination: Path) -> None:
         headers["Authorization"] = f"Bearer {hf_token}"
     request = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
+        with urllib.request.urlopen(request, timeout=30, context=ssl_context()) as response:
             destination.write_bytes(response.read())
     except urllib.error.HTTPError as exc:
         raise RuntimeError(f"failed to download {url}: HTTP {exc.code}") from exc
