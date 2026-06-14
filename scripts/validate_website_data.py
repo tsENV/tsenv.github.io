@@ -91,13 +91,13 @@ def validate_environments(data_dir: Path, summary: dict[str, Any]) -> None:
 def validate_site_metadata(root: Path = ROOT) -> None:
     site = read_json(root / "site.json")
     require(isinstance(site, dict), "site.json must be an object")
-    for key in ("website_url", "code_url", "hf_repo", "hf_dataset_url", "issues_url", "affiliation_url", "paper_url", "authors", "contact", "citation"):
+    for key in ("website_url", "code_url", "hf_repo", "hf_dataset_url", "issues_url", "affiliation_url", "paper_url", "contributors", "contact", "citation"):
         require(key in site, f"site.json missing {key}")
-    require(isinstance(site["authors"], list) and site["authors"], "site.json authors must be a non-empty list")
-    for author in site["authors"]:
-        require(isinstance(author, dict), "site.json author entries must be objects")
-        require(author.get("name"), "site.json author missing name")
-        require("affiliation" in author, "site.json author missing affiliation")
+    require(isinstance(site["contributors"], list) and site["contributors"], "site.json contributors must be a non-empty list")
+    for contributor in site["contributors"]:
+        require(isinstance(contributor, dict), "site.json contributor entries must be objects")
+        require(contributor.get("name"), "site.json contributor missing name")
+        require("affiliation" in contributor, "site.json contributor missing affiliation")
     require(isinstance(site["contact"], dict), "site.json contact must be an object")
     require(site["contact"].get("label"), "site.json contact missing label")
     require(site["contact"].get("url"), "site.json contact missing url")

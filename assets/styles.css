@@ -132,6 +132,17 @@ button, select { font: inherit; }
 .muted { color: var(--muted); }
 .small { font-size: 13px; }
 
+.ball-drop-section {
+  padding-top: 36px;
+}
+.ball-drop-gif {
+  display: block;
+  width: min(100%, 720px);
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
 .stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

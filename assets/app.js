@@ -120,7 +120,7 @@ function routeInfo() {
     return { name: "environment-detail", path, environmentId: parts[1] };
   }
   if (path === "/get-started/") return { name: "get-started", path };
-  if (path === "/authors/") return { name: "authors", path };
+  if (path === "/contributors/") return { name: "contributors", path };
   return { name: "not-found", path };
 }
 
@@ -142,9 +142,10 @@ function shell(content) {
           <a href="/results/" data-link class="${navActive("results") ? "active" : ""}">Results</a>
           <a href="/environments/" data-link class="${navActive("environments") ? "active" : ""}">Environments</a>
           <a href="/get-started/" data-link class="${navActive("get-started") ? "active" : ""}">Get Started</a>
-          <a href="/authors/" data-link class="${navActive("authors") ? "active" : ""}">Authors</a>
+          <a href="/contributors/" data-link class="${navActive("contributors") ? "active" : ""}">Contributors</a>
           <a class="external" href="${siteHref("paper_url")}" target="_blank" rel="noreferrer">Paper (arXiv)</a>
           <a class="external" href="${siteHref("code_url")}" target="_blank" rel="noreferrer">Code</a>
+          <a class="external" href="${siteHref("hf_dataset_url")}" target="_blank" rel="noreferrer">Hugging Face</a>
         </nav>
       </div>
     </header>
@@ -393,6 +394,10 @@ async function renderHome() {
       <h1>TSENV: Controllable Time-Series Exploration Benchmark</h1>
       <p>A benchmark for evaluating whether tool-using agents can perform evidence-grounded analysis of multivariate time series.</p>
       <p>Tasks are generated from physical simulators with known interventions. Agents must combine textual descriptions, noisy observations, and optional labeled examples to identify what changed, or that no intervention occurred.</p>
+    </section>
+
+    <section class="section ball-drop-section" aria-label="BallDrop simulator animation">
+      <img class="ball-drop-gif" src="/assets/media/ball-drop-bounce.gif" alt="Animated bouncing ball from the BallDrop simulator" />
     </section>
 
     <section class="section" aria-labelledby="stats-title">
@@ -780,19 +785,19 @@ python workflows/rollout/question_run_orchestrator.py \\
   commit(content);
 }
 
-function renderAuthors() {
-  const authors = Array.isArray(state.site?.authors) ? state.site.authors : [];
+function renderContributors() {
+  const contributors = Array.isArray(state.site?.contributors) ? state.site.contributors : [];
   const contact = state.site?.contact || {};
   const citation = siteValue("citation", "Citation coming soon.");
-  const authorHtml = authors.length
-    ? authors.map(author => {
-      const name = escapeHtml(author.name || "");
-      const affiliation = escapeHtml(author.affiliation || "");
-      const url = author.url ? escapeHtml(author.url) : "";
+  const contributorHtml = contributors.length
+    ? contributors.map(contributor => {
+      const name = escapeHtml(contributor.name || "");
+      const affiliation = escapeHtml(contributor.affiliation || "");
+      const url = contributor.url ? escapeHtml(contributor.url) : "";
       const nameHtml = url ? `<a href="${url}" target="_blank" rel="noreferrer">${name}</a>` : name;
       return `<p><strong>${nameHtml}</strong>${affiliation ? `, ${affiliation}` : ""}</p>`;
     }).join("")
-    : `<p><strong>TSENV authors to be announced</strong></p>`;
+    : `<p><strong>TSENV contributors to be announced</strong></p>`;
   const contactLinks = [
     contact.url ? [contact.label || "Contact", contact.url] : null,
     siteValue("code_url") ? ["Repository", siteValue("code_url")] : null,
@@ -800,12 +805,12 @@ function renderAuthors() {
   ].filter(Boolean);
   const content = `
     <section>
-      <h1 class="page-title">Authors, Citation, and Contact</h1>
-      <p class="page-subtitle">Project authorship, citable metadata, and collaboration links.</p>
+      <h1 class="page-title">Contributors, Citation, and Contact</h1>
+      <p class="page-subtitle">Project contributors, citable metadata, and collaboration links.</p>
 
       <section class="section">
-        <div class="section-header"><h2>Authors</h2></div>
-        ${authorHtml}
+        <div class="section-header"><h2>Contributors</h2></div>
+        ${contributorHtml}
       </section>
 
       <section class="section">
@@ -859,7 +864,7 @@ async function render() {
     if (route.name === "environments") return await renderEnvironments();
     if (route.name === "environment-detail") return await renderEnvironmentDetail(route.environmentId);
     if (route.name === "get-started") return renderGetStarted();
-    if (route.name === "authors") return renderAuthors();
+    if (route.name === "contributors") return renderContributors();
     return renderNotFound();
   } catch (error) {
     console.error(error);
