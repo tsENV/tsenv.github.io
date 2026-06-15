@@ -1,267 +1,403 @@
 #!/usr/bin/env python3
-"""Generate the homepage BallDrop GIF plus video exports.
+"""Deterministic 1D BallDrop animation and synchronized position-time trace.
 
-The animation is intentionally deterministic and minimal: a 1D bouncing ball
-on the left and its position-time trace on the right.
+Outputs:
+  ball-drop-bounce.gif
+  ball-drop-bounce.mp4
+  ball-drop-bounce.webm
+
+The plotted trace endpoint and the simulator ball position are generated from the
+same analytic trajectory at each animation frame.  The bounce coefficient `e`
+below is a bounce-height coefficient: each rebound peak height is e times the
+previous peak height.
 """
 
 from __future__ import annotations
 
 import math
+import os
 import shutil
 import subprocess
-import tempfile
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Iterable, Sequence
 
+import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-
+# -----------------------------------------------------------------------------
+# Output and animation constants
+# -----------------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parents[1]
-MEDIA_DIR = ROOT / "assets" / "media"
-GIF_PATH = MEDIA_DIR / "ball-drop-bounce.gif"
-MP4_PATH = MEDIA_DIR / "ball-drop-bounce.mp4"
-WEBM_PATH = MEDIA_DIR / "ball-drop-bounce.webm"
+OUT_DIR = ROOT / "assets" / "media"
+GIF_NAME = OUT_DIR / "ball-drop-bounce.gif"
+MP4_NAME = OUT_DIR / "ball-drop-bounce.mp4"
+WEBM_NAME = OUT_DIR / "ball-drop-bounce.webm"
 
-WIDTH = 800
-HEIGHT = 450
-FPS = 18
-DURATION_SECONDS = 4.0
-FRAME_COUNT = int(FPS * DURATION_SECONDS)
-INITIAL_HEIGHT = 2.2
-RESET_FRAMES = 8
+BASE_WIDTH, BASE_HEIGHT = 800, 450
+OUTPUT_SCALE = 4
+WIDTH, HEIGHT = BASE_WIDTH * OUTPUT_SCALE, BASE_HEIGHT * OUTPUT_SCALE
+DURATION_S = 4.0
+FPS = 25
+N_FRAMES = int(DURATION_S * FPS)
+FRAME_TIMES = np.arange(N_FRAMES, dtype=float) / FPS
 
+# Coordinates are authored in the 800x450 base canvas and rendered at 4x.
+AA_SCALE = OUTPUT_SCALE
+
+# -----------------------------------------------------------------------------
+# Physics constants in normalized position units
+# -----------------------------------------------------------------------------
+G = 13.5
+INITIAL_HEIGHT = 1.0
+Y_MAX = 1.05
+PRE_INTERVENTION_E = 0.9      # bounce-height coefficient for the first 3 rebounds
+POST_INTERVENTION_E = 0.2     # bounce-height coefficient after intervention
+NEGLIGIBLE_HEIGHT = 0.005 * Y_MAX
+
+# -----------------------------------------------------------------------------
+# Minimal color palette
+# -----------------------------------------------------------------------------
 WHITE = (255, 255, 255)
-BLACK = (17, 17, 17)
-GRAY = (95, 99, 104)
-LIGHT_GRAY = (217, 222, 227)
-SOFT_GRAY = (238, 241, 244)
-BLUE = (31, 95, 191)
-ORANGE = (217, 121, 23)
+BLACK = (20, 20, 20)
+GRAY = (110, 110, 110)
+LIGHT_GRAY = (218, 218, 218)
+BLUE = (31, 119, 180)
+ORANGE = (217, 95, 2)
 
 
-def font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
-    candidates = [
-        "/System/Library/Fonts/Supplemental/Arial.ttf",
-        "/Library/Fonts/Arial.ttf",
-        "/System/Library/Fonts/Helvetica.ttc",
-    ]
-    for candidate in candidates:
-        try:
-            return ImageFont.truetype(candidate, size)
-        except OSError:
-            pass
-    return ImageFont.load_default()
+@dataclass(frozen=True)
+class Segment:
+    kind: str
+    start: float
+    end: float
+    peak: float
 
 
-FONT_11 = font(11)
-FONT_12 = font(12)
-FONT_13 = font(13)
+def build_trajectory_segments() -> tuple[list[Segment], float, float]:
+    """Build deterministic ballistic segments.
 
-
-def build_trajectory() -> tuple[list[float], list[float], list[int], float]:
-    """Return sampled time, position, bounce-frame indices, and intervention time."""
-
-    g = 9.81
-    initial_height = INITIAL_HEIGHT
+    The initial segment is a drop from rest.  The next three rebounds use
+    e = 0.9 as a height multiplier.  The intervention time is placed at the
+    ground impact immediately after that third e = 0.9 rebound.  Subsequent
+    rebounds use e = 0.2 until the next peak would be visually negligible.
+    """
+    segments: list[Segment] = []
     t = 0.0
-    v = 0.0
-    y = initial_height
-    dt = 1.0 / FPS
-    samples_t: list[float] = []
-    samples_y: list[float] = []
-    bounce_frames: list[int] = []
-    # User-facing bounce coefficient is a rebound-height ratio. Velocity
-    # restitution is therefore sqrt(coefficient) for parabolic motion.
-    restitution = math.sqrt(0.9)
-    bounce_count = 0
-    intervention_t: float | None = None
 
-    for frame in range(FRAME_COUNT):
-        samples_t.append(frame * dt)
-        samples_y.append(max(0.0, y))
+    # Initial drop from rest at INITIAL_HEIGHT.
+    fall_time = math.sqrt(2.0 * INITIAL_HEIGHT / G)
+    segments.append(Segment("drop", t, t + fall_time, INITIAL_HEIGHT))
+    t += fall_time
 
-        v -= g * dt
-        y += v * dt
+    previous_peak = INITIAL_HEIGHT
 
-        if y <= 0.0 and v < 0.0:
-            impact_v = abs(v)
-            y = 0.0
-            bounce_count += 1
-            bounce_frames.append(frame)
-            if bounce_count == 3:
-                intervention_t = frame * dt
-                restitution = math.sqrt(0.2)
-            v = impact_v * restitution
+    # Three pre-intervention rebounds, with peak heights 90% of the previous.
+    for _ in range(3):
+        peak = PRE_INTERVENTION_E * previous_peak
+        bounce_time = 2.0 * math.sqrt(2.0 * peak / G)
+        segments.append(Segment("bounce", t, t + bounce_time, peak))
+        t += bounce_time
+        previous_peak = peak
 
-            if bounce_count >= 4:
-                # The post-intervention low bounce has happened; settle cleanly.
-                v = 0.0
+    intervention_time = t
 
-        if bounce_count >= 4:
-            y = 0.0
-            v = 0.0
+    # Repeated post-intervention rebounds with e = 0.2.
+    while POST_INTERVENTION_E * previous_peak >= NEGLIGIBLE_HEIGHT:
+        peak = POST_INTERVENTION_E * previous_peak
+        bounce_time = 2.0 * math.sqrt(2.0 * peak / G)
+        segments.append(Segment("bounce", t, t + bounce_time, peak))
+        t += bounce_time
+        previous_peak = peak
 
-        t += dt
-
-    if intervention_t is None:
-        raise RuntimeError("trajectory never reached intervention")
-
-    # Add a quiet reset ramp at the end so the loop returns to the initial state
-    # without changing the physical bounce sequence.
-    hold_start = FRAME_COUNT - RESET_FRAMES
-    for frame in range(hold_start, FRAME_COUNT):
-        u = (frame - hold_start + 1) / RESET_FRAMES
-        eased = u * u * (3 - 2 * u)
-        samples_y[frame] = initial_height * eased
-
-    return samples_t, samples_y, bounce_frames, intervention_t
+    rest_start_time = t
+    return segments, intervention_time, rest_start_time
 
 
-def map_range(value: float, src_min: float, src_max: float, dst_min: float, dst_max: float) -> float:
-    if src_max == src_min:
-        return dst_min
-    u = (value - src_min) / (src_max - src_min)
-    return dst_min + u * (dst_max - dst_min)
+SEGMENTS, INTERVENTION_TIME, REST_START_TIME = build_trajectory_segments()
 
 
-def draw_axes(draw: ImageDraw.ImageDraw, origin: tuple[int, int], size: tuple[int, int], x_label: str, y_label: str) -> None:
-    x0, y0 = origin
-    w, h = size
-    draw.line((x0, y0, x0 + w, y0), fill=BLACK, width=1)
-    draw.line((x0, y0, x0, y0 - h), fill=BLACK, width=1)
-    draw.text((x0 + w - 24, y0 + 12), x_label, fill=GRAY, font=FONT_12)
-    draw.text((x0 - 10, y0 - h - 24), y_label, fill=GRAY, font=FONT_12)
+def position_at(t: float | np.ndarray) -> float | np.ndarray:
+    """Return vertical position above the ground for scalar or array time t."""
+    scalar_input = np.isscalar(t)
+    t_arr = np.asarray(t, dtype=float)
+    y = np.zeros_like(t_arr, dtype=float)
+
+    for seg in SEGMENTS:
+        mask = (t_arr >= seg.start) & (t_arr < seg.end)
+        if not np.any(mask):
+            continue
+        tau = t_arr[mask] - seg.start
+        if seg.kind == "drop":
+            y[mask] = seg.peak - 0.5 * G * tau * tau
+        else:
+            duration = seg.end - seg.start
+            y[mask] = seg.peak - 0.5 * G * (tau - 0.5 * duration) ** 2
+
+    # Clamp tiny numerical roundoff at impacts.
+    y = np.clip(y, 0.0, None)
+    if scalar_input:
+        return float(y)
+    return y
 
 
-def polyline(points: list[tuple[float, float]]) -> list[tuple[int, int]]:
-    return [(round(x), round(y)) for x, y in points]
+# Dense, deterministic trace source. Segment boundaries are included so the
+# curve hits impacts exactly, while each frame also appends its exact endpoint.
+TRACE_TIMES_BASE = np.unique(
+    np.concatenate(
+        [
+            np.arange(0.0, DURATION_S + 1.0 / 400.0, 1.0 / 400.0),
+            np.array([s.start for s in SEGMENTS] + [s.end for s in SEGMENTS] + [DURATION_S]),
+        ]
+    )
+)
+TRACE_TIMES_BASE = TRACE_TIMES_BASE[(TRACE_TIMES_BASE >= 0.0) & (TRACE_TIMES_BASE <= DURATION_S)]
 
 
-def render_frame(
-    frame: int,
-    times: list[float],
-    positions: list[float],
-    bounce_frames: list[int],
-    intervention_t: float,
-) -> Image.Image:
-    image = Image.new("RGB", (WIDTH, HEIGHT), WHITE)
-    draw = ImageDraw.Draw(image)
+# -----------------------------------------------------------------------------
+# Drawing helpers
+# -----------------------------------------------------------------------------
 
-    left_x0, left_x1 = 58, 330
-    ground_y = 356
-    top_y = 78
-    axis_x = 102
-    ball_x = 222
-    max_height = INITIAL_HEIGHT
-
-    # Left simulator view.
-    draw.line((axis_x, ground_y, axis_x, top_y), fill=BLACK, width=1)
-    draw.line((left_x0, ground_y, left_x1, ground_y), fill=BLACK, width=1)
-    draw.text((left_x0, ground_y + 18), "1D BallDrop simulator", fill=GRAY, font=FONT_12)
-
-    y = positions[frame]
-    ball_y = map_range(y, 0.0, max_height, ground_y - 15, top_y + 15)
-    radius = 13
-    draw.ellipse((ball_x - radius, ball_y - radius, ball_x + radius, ball_y + radius), outline=BLUE, width=2)
-
-    if any(abs(frame - b) <= 1 for b in bounce_frames):
-        draw.line((ball_x - 18, ground_y + 4, ball_x + 18, ground_y + 4), fill=LIGHT_GRAY, width=2)
-
-    draw.text((left_x0, 48), "bounce coefficient", fill=GRAY, font=FONT_11)
-    current_e = "0.2" if times[frame] >= intervention_t else "0.9"
-    draw.text((left_x0, 65), f"e = {current_e}", fill=BLUE if current_e == "0.9" else ORANGE, font=FONT_13)
-
-    # Right time-series plot.
-    plot_x0, plot_y0 = 420, 356
-    plot_w, plot_h = 312, 278
-    draw_axes(draw, (plot_x0, plot_y0), (plot_w, plot_h), "time", "position")
-
-    for i in range(1, 4):
-        gy = plot_y0 - i * plot_h / 4
-        draw.line((plot_x0, gy, plot_x0 + plot_w, gy), fill=SOFT_GRAY, width=1)
-
-    intervention_x = map_range(intervention_t, 0.0, DURATION_SECONDS, plot_x0, plot_x0 + plot_w)
-    draw.line((intervention_x, plot_y0, intervention_x, plot_y0 - plot_h), fill=ORANGE, width=1)
-    draw.text((intervention_x + 5, plot_y0 - plot_h + 6), "intervention", fill=GRAY, font=FONT_11)
-    draw.text((intervention_x + 5, plot_y0 - plot_h + 21), "e: 0.9 -> 0.2", fill=GRAY, font=FONT_11)
-
-    reset_start = FRAME_COUNT - RESET_FRAMES
-    if frame >= reset_start:
-        # During the reset, clear the trace back toward the opening state so
-        # the GIF loop is visually quiet instead of ending on a synthetic jump.
-        end = max(1, int((1 - (frame - reset_start + 1) / RESET_FRAMES) * reset_start))
-    else:
-        end = min(frame + 1, len(times))
-    points = []
-    for t, p in zip(times[:end], positions[:end], strict=False):
-        px = map_range(t, 0.0, DURATION_SECONDS, plot_x0, plot_x0 + plot_w)
-        py = map_range(p, 0.0, max_height, plot_y0, plot_y0 - plot_h)
-        points.append((px, py))
-    if len(points) > 1:
-        draw.line(polyline(points), fill=BLUE, width=2)
-    if points:
-        px, py = points[-1]
-        draw.ellipse((px - 3, py - 3, px + 3, py + 3), fill=BLUE)
-
-    draw.text((58, 405), "three high-restitution bounces, then intervention lowers rebound", fill=GRAY, font=FONT_12)
-    return image
+def scaled_image() -> Image.Image:
+    return Image.new("RGB", (BASE_WIDTH * AA_SCALE, BASE_HEIGHT * AA_SCALE), WHITE)
 
 
-def save_gif(frames: list[Image.Image]) -> None:
-    # Adaptive palette keeps the file compact while preserving clean linework.
-    paletted = [
-        frame.quantize(colors=64, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-        for frame in frames
-    ]
+def S(v: float) -> int:
+    return int(round(v * AA_SCALE))
+
+
+def coords(values: Iterable[float]) -> tuple[int, ...]:
+    return tuple(S(v) for v in values)
+
+
+def load_font(size: int) -> ImageFont.ImageFont:
+    try:
+        return ImageFont.truetype("DejaVuSans.ttf", size * AA_SCALE)
+    except OSError:
+        return ImageFont.load_default()
+
+
+FONT_TICK = load_font(10)
+FONT_LABEL = load_font(13)
+FONT_MARKER = load_font(12)
+
+# Layout: narrow simulator panel at left, wide trace plot at right.
+SIM_X0, SIM_X1 = 28, 206
+SIM_GROUND_Y = 386
+SIM_TOP_Y = 56
+BALL_R = 13
+BALL_X = 117
+DIVIDER_X = 226
+
+PLOT_X0, PLOT_X1 = 288, 766
+PLOT_Y0, PLOT_Y1 = 62, 382
+
+
+def plot_xy(t: np.ndarray | float, y: np.ndarray | float) -> tuple[np.ndarray | float, np.ndarray | float]:
+    x_px = PLOT_X0 + (np.asarray(t) / DURATION_S) * (PLOT_X1 - PLOT_X0)
+    y_px = PLOT_Y1 - (np.asarray(y) / Y_MAX) * (PLOT_Y1 - PLOT_Y0)
+    return x_px, y_px
+
+
+def sim_y(y: float) -> float:
+    usable_height = SIM_GROUND_Y - BALL_R - SIM_TOP_Y
+    return SIM_GROUND_Y - BALL_R - (y / Y_MAX) * usable_height
+
+
+def draw_rotated_text(base: Image.Image, xy: tuple[int, int], text: str, font: ImageFont.ImageFont, fill: tuple[int, int, int]) -> None:
+    dummy = Image.new("RGBA", (1, 1), (255, 255, 255, 0))
+    dummy_draw = ImageDraw.Draw(dummy)
+    bbox = dummy_draw.textbbox((0, 0), text, font=font)
+    w, h = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    label = Image.new("RGBA", (w + 10 * AA_SCALE, h + 10 * AA_SCALE), (255, 255, 255, 0))
+    label_draw = ImageDraw.Draw(label)
+    label_draw.text((5 * AA_SCALE - bbox[0], 5 * AA_SCALE - bbox[1]), text, font=font, fill=fill)
+    label = label.rotate(90, expand=True)
+    base.paste(label, xy, label)
+
+
+def draw_axes(draw: ImageDraw.ImageDraw, frame: Image.Image) -> None:
+    # Axes
+    draw.line(coords([PLOT_X0, PLOT_Y1, PLOT_X1, PLOT_Y1]), fill=BLACK, width=S(1.1))
+    draw.line(coords([PLOT_X0, PLOT_Y0, PLOT_X0, PLOT_Y1]), fill=BLACK, width=S(1.1))
+
+    # x ticks and labels
+    for tick in [0, 1, 2, 3, 4]:
+        x, _ = plot_xy(float(tick), 0.0)
+        draw.line(coords([x, PLOT_Y1, x, PLOT_Y1 + 5]), fill=BLACK, width=S(0.9))
+        label = str(tick)
+        bbox = draw.textbbox((0, 0), label, font=FONT_TICK)
+        draw.text((S(x) - (bbox[2] - bbox[0]) // 2, S(PLOT_Y1 + 9)), label, fill=GRAY, font=FONT_TICK)
+
+    # y ticks and labels
+    for tick, label in [(0.0, "0"), (0.5, "0.5"), (1.0, "1.0")]:
+        _, y = plot_xy(0.0, tick)
+        draw.line(coords([PLOT_X0 - 5, y, PLOT_X0, y]), fill=BLACK, width=S(0.9))
+        bbox = draw.textbbox((0, 0), label, font=FONT_TICK)
+        draw.text((S(PLOT_X0 - 9) - (bbox[2] - bbox[0]), S(y) - (bbox[3] - bbox[1]) // 2), label, fill=GRAY, font=FONT_TICK)
+
+    # Axis labels
+    x_label = "time"
+    bbox = draw.textbbox((0, 0), x_label, font=FONT_LABEL)
+    draw.text((S((PLOT_X0 + PLOT_X1) / 2) - (bbox[2] - bbox[0]) // 2, S(421)), x_label, fill=BLACK, font=FONT_LABEL)
+    draw_rotated_text(frame, (S(244), S(205)), "position", FONT_LABEL, BLACK)
+
+
+def draw_simulator(draw: ImageDraw.ImageDraw, current_y: float) -> None:
+    # Ground line, no labels.
+    draw.line(coords([55, SIM_GROUND_Y, 179, SIM_GROUND_Y]), fill=BLACK, width=S(1.2))
+
+    # Ball is constrained to one horizontal coordinate.
+    cy = sim_y(current_y)
+    draw.ellipse(coords([BALL_X - BALL_R, cy - BALL_R, BALL_X + BALL_R, cy + BALL_R]), outline=BLUE, width=S(2.1), fill=WHITE)
+
+
+def draw_intervention_marker(draw: ImageDraw.ImageDraw) -> None:
+    x, _ = plot_xy(INTERVENTION_TIME, 0.0)
+    draw.line(coords([x, PLOT_Y0, x, PLOT_Y1]), fill=ORANGE, width=S(1.5))
+    draw.text((S(x + 8), S(76)), "intervention", fill=ORANGE, font=FONT_MARKER)
+    draw.text((S(x + 8), S(92)), "e: 0.9 -> 0.2", fill=ORANGE, font=FONT_MARKER)
+
+
+def draw_trace(draw: ImageDraw.ImageDraw, current_t: float) -> float:
+    visible_t = TRACE_TIMES_BASE[TRACE_TIMES_BASE <= current_t]
+    if len(visible_t) == 0 or visible_t[-1] < current_t:
+        visible_t = np.append(visible_t, current_t)
+    visible_y = position_at(visible_t)
+    x, y = plot_xy(visible_t, visible_y)
+    points = list(zip([S(v) for v in x], [S(v) for v in y]))
+    if len(points) >= 2:
+        draw.line(points, fill=BLUE, width=S(1.8), joint="curve")
+    elif len(points) == 1:
+        px, py = points[0]
+        r = S(1.2)
+        draw.ellipse((px - r, py - r, px + r, py + r), fill=BLUE)
+    return float(visible_y[-1])
+
+
+def render_frame(current_t: float) -> Image.Image:
+    frame = scaled_image()
+    draw = ImageDraw.Draw(frame)
+
+    # Panel divider: subtle gray line, no top captions or titles.
+    draw.line(coords([DIVIDER_X, 42, DIVIDER_X, 412]), fill=LIGHT_GRAY, width=S(0.9))
+
+    draw_axes(draw, frame)
+
+    if current_t >= INTERVENTION_TIME:
+        draw_intervention_marker(draw)
+
+    current_y = draw_trace(draw, current_t)
+    draw_simulator(draw, current_y)
+
+    return frame.resize((WIDTH, HEIGHT), Image.Resampling.LANCZOS)
+
+
+def generate_frames() -> list[Image.Image]:
+    return [render_frame(float(t)) for t in FRAME_TIMES]
+
+
+def save_gif(frames: Sequence[Image.Image]) -> None:
+    # Adaptive palette plus frame-layer optimization keeps the 800x450 GIF small.
+    # The ImageMagick pass is deterministic and preserves the loop and 40 ms frame delay.
+    paletted = [frame.convert("P", palette=Image.Palette.ADAPTIVE, colors=96) for frame in frames]
+    temp_gif = GIF_NAME.with_name(GIF_NAME.stem + "-unoptimized.gif")
     paletted[0].save(
-        GIF_PATH,
+        temp_gif,
         save_all=True,
         append_images=paletted[1:],
-        duration=round(1000 / FPS),
+        duration=int(1000 / FPS),
         loop=0,
         optimize=True,
         disposal=2,
     )
 
+    magick = shutil.which("magick")
+    if magick:
+        subprocess.run([magick, str(temp_gif), "-layers", "Optimize", str(GIF_NAME)], check=True)
+        temp_gif.unlink(missing_ok=True)
+    else:
+        temp_gif.replace(GIF_NAME)
 
-def run_ffmpeg(args: list[str]) -> None:
-    subprocess.run(args, check=True)
+
+def encode_video(frames: Sequence[Image.Image], output: Path, codec_args: Sequence[str]) -> None:
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-f",
+        "rawvideo",
+        "-vcodec",
+        "rawvideo",
+        "-pix_fmt",
+        "rgb24",
+        "-s",
+        f"{WIDTH}x{HEIGHT}",
+        "-r",
+        str(FPS),
+        "-i",
+        "-",
+        "-an",
+        *codec_args,
+        str(output),
+    ]
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    assert proc.stdin is not None
+    for frame in frames:
+        proc.stdin.write(frame.convert("RGB").tobytes())
+    proc.stdin.close()
+    return_code = proc.wait()
+    if return_code != 0:
+        raise RuntimeError(f"ffmpeg failed while writing {output}")
 
 
-def save_video_exports(frames: list[Image.Image]) -> None:
-    ffmpeg = shutil.which("ffmpeg")
-    if not ffmpeg:
-        print("ffmpeg not found; skipping MP4/WebM exports")
-        return
-
-    with tempfile.TemporaryDirectory(prefix="ball-drop-frames-") as tmp:
-        frame_dir = Path(tmp)
-        for index, frame in enumerate(frames):
-            frame.save(frame_dir / f"frame_{index:04d}.png")
-
-        pattern = str(frame_dir / "frame_%04d.png")
-        run_ffmpeg([
-            ffmpeg, "-y", "-framerate", str(FPS), "-i", pattern,
-            "-vf", "format=yuv420p", "-movflags", "+faststart",
-            "-c:v", "libx264", "-crf", "28", str(MP4_PATH),
-        ])
-        run_ffmpeg([
-            ffmpeg, "-y", "-framerate", str(FPS), "-i", pattern,
-            "-c:v", "libvpx-vp9", "-b:v", "0", "-crf", "38",
-            "-pix_fmt", "yuv420p", str(WEBM_PATH),
-        ])
+def save_videos(frames: Sequence[Image.Image]) -> None:
+    encode_video(
+        frames,
+        MP4_NAME,
+        [
+            "-c:v",
+            "libx264",
+            "-profile:v",
+            "main",
+            "-preset",
+            "slow",
+            "-crf",
+            "24",
+            "-pix_fmt",
+            "yuv420p",
+            "-movflags",
+            "+faststart",
+        ],
+    )
+    encode_video(
+        frames,
+        WEBM_NAME,
+        [
+            "-c:v",
+            "libvpx-vp9",
+            "-b:v",
+            "0",
+            "-crf",
+            "42",
+            "-pix_fmt",
+            "yuv420p",
+            "-row-mt",
+            "1",
+        ],
+    )
 
 
 def main() -> None:
-    MEDIA_DIR.mkdir(parents=True, exist_ok=True)
-    times, positions, bounce_frames, intervention_t = build_trajectory()
-    frames = [render_frame(i, times, positions, bounce_frames, intervention_t) for i in range(FRAME_COUNT)]
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    frames = generate_frames()
     save_gif(frames)
-    save_video_exports(frames)
+    save_videos(frames)
 
-    for path in (GIF_PATH, MP4_PATH, WEBM_PATH):
-        if path.exists():
-            print(f"{path.relative_to(ROOT)} {path.stat().st_size / 1024:.1f} KB")
+    print(f"intervention_time = {INTERVENTION_TIME:.6f} s")
+    print(f"rest_start_time    = {REST_START_TIME:.6f} s")
+    print(f"rest_duration      = {DURATION_S - REST_START_TIME:.6f} s")
+    for path in [GIF_NAME, MP4_NAME, WEBM_NAME]:
+        print(f"{path.name}: {os.path.getsize(path) / 1024:.1f} KiB")
 
 
 if __name__ == "__main__":
