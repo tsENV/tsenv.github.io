@@ -171,15 +171,23 @@ def coords(values: Iterable[float]) -> tuple[int, ...]:
 
 
 def load_font(size: int) -> ImageFont.ImageFont:
-    try:
-        return ImageFont.truetype("DejaVuSans.ttf", size * AA_SCALE)
-    except OSError:
-        return ImageFont.load_default()
+    candidates = [
+        "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/Library/Fonts/Arial.ttf",
+        "/System/Library/Fonts/Helvetica.ttc",
+        "DejaVuSans.ttf",
+    ]
+    for candidate in candidates:
+        try:
+            return ImageFont.truetype(candidate, size * AA_SCALE)
+        except OSError:
+            pass
+    return ImageFont.load_default()
 
 
-FONT_TICK = load_font(10)
-FONT_LABEL = load_font(13)
-FONT_MARKER = load_font(12)
+FONT_TICK = load_font(24)
+FONT_LABEL = load_font(30)
+FONT_MARKER = load_font(26)
 
 # Layout: narrow simulator panel at left, wide trace plot at right.
 SIM_X0, SIM_X1 = 28, 206
@@ -239,8 +247,8 @@ def draw_axes(draw: ImageDraw.ImageDraw, frame: Image.Image) -> None:
     # Axis labels
     x_label = "time"
     bbox = draw.textbbox((0, 0), x_label, font=FONT_LABEL)
-    draw.text((S((PLOT_X0 + PLOT_X1) / 2) - (bbox[2] - bbox[0]) // 2, S(421)), x_label, fill=BLACK, font=FONT_LABEL)
-    draw_rotated_text(frame, (S(244), S(205)), "position", FONT_LABEL, BLACK)
+    draw.text((S((PLOT_X0 + PLOT_X1) / 2) - (bbox[2] - bbox[0]) // 2, S(411)), x_label, fill=BLACK, font=FONT_LABEL)
+    draw_rotated_text(frame, (S(228), S(190)), "position", FONT_LABEL, BLACK)
 
 
 def draw_simulator(draw: ImageDraw.ImageDraw, current_y: float) -> None:
@@ -256,7 +264,7 @@ def draw_intervention_marker(draw: ImageDraw.ImageDraw) -> None:
     x, _ = plot_xy(INTERVENTION_TIME, 0.0)
     draw.line(coords([x, PLOT_Y0, x, PLOT_Y1]), fill=ORANGE, width=S(1.5))
     draw.text((S(x + 8), S(76)), "intervention", fill=ORANGE, font=FONT_MARKER)
-    draw.text((S(x + 8), S(92)), "e: 0.9 -> 0.2", fill=ORANGE, font=FONT_MARKER)
+    draw.text((S(x + 8), S(112)), "e: 0.9 -> 0.2", fill=ORANGE, font=FONT_MARKER)
 
 
 def draw_trace(draw: ImageDraw.ImageDraw, current_t: float) -> float:
