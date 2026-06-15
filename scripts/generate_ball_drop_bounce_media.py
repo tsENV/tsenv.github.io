@@ -34,15 +34,15 @@ GIF_NAME = OUT_DIR / "ball-drop-bounce.gif"
 MP4_NAME = OUT_DIR / "ball-drop-bounce.mp4"
 WEBM_NAME = OUT_DIR / "ball-drop-bounce.webm"
 
-BASE_WIDTH, BASE_HEIGHT = 800, 450
-OUTPUT_SCALE = 4
+BASE_WIDTH, BASE_HEIGHT = 1600, 600
+OUTPUT_SCALE = 3
 WIDTH, HEIGHT = BASE_WIDTH * OUTPUT_SCALE, BASE_HEIGHT * OUTPUT_SCALE
 DURATION_S = 4.0
 FPS = 25
 N_FRAMES = int(DURATION_S * FPS)
 FRAME_TIMES = np.arange(N_FRAMES, dtype=float) / FPS
 
-# Coordinates are authored in the 800x450 base canvas and rendered at 4x.
+# Coordinates are authored in the 1600x600 base canvas and rendered at 3x.
 AA_SCALE = OUTPUT_SCALE
 
 # -----------------------------------------------------------------------------
@@ -189,16 +189,16 @@ FONT_TICK = load_font(24)
 FONT_LABEL = load_font(30)
 FONT_MARKER = load_font(26)
 
-# Layout: narrow simulator panel at left, wide trace plot at right.
-SIM_X0, SIM_X1 = 28, 206
-SIM_GROUND_Y = 386
-SIM_TOP_Y = 56
-BALL_R = 13
-BALL_X = 117
-DIVIDER_X = 226
+# Layout: compact simulator panel at left, wide trace plot at right.
+SIM_X0, SIM_X1 = 52, 330
+SIM_GROUND_Y = 520
+SIM_TOP_Y = 80
+BALL_R = 22
+BALL_X = 190
+DIVIDER_X = 370
 
-PLOT_X0, PLOT_X1 = 288, 766
-PLOT_Y0, PLOT_Y1 = 62, 382
+PLOT_X0, PLOT_X1 = 485, 1540
+PLOT_Y0, PLOT_Y1 = 78, 500
 
 
 def plot_xy(t: np.ndarray | float, y: np.ndarray | float) -> tuple[np.ndarray | float, np.ndarray | float]:
@@ -235,25 +235,25 @@ def draw_axes(draw: ImageDraw.ImageDraw, frame: Image.Image) -> None:
         draw.line(coords([x, PLOT_Y1, x, PLOT_Y1 + 5]), fill=BLACK, width=S(0.9))
         label = str(tick)
         bbox = draw.textbbox((0, 0), label, font=FONT_TICK)
-        draw.text((S(x) - (bbox[2] - bbox[0]) // 2, S(PLOT_Y1 + 9)), label, fill=GRAY, font=FONT_TICK)
+        draw.text((S(x) - (bbox[2] - bbox[0]) // 2, S(PLOT_Y1 + 16)), label, fill=GRAY, font=FONT_TICK)
 
     # y ticks and labels
     for tick, label in [(0.0, "0"), (0.5, "0.5"), (1.0, "1.0")]:
         _, y = plot_xy(0.0, tick)
         draw.line(coords([PLOT_X0 - 5, y, PLOT_X0, y]), fill=BLACK, width=S(0.9))
         bbox = draw.textbbox((0, 0), label, font=FONT_TICK)
-        draw.text((S(PLOT_X0 - 9) - (bbox[2] - bbox[0]), S(y) - (bbox[3] - bbox[1]) // 2), label, fill=GRAY, font=FONT_TICK)
+        draw.text((S(PLOT_X0 - 18) - (bbox[2] - bbox[0]), S(y) - (bbox[3] - bbox[1]) // 2), label, fill=GRAY, font=FONT_TICK)
 
     # Axis labels
     x_label = "time"
     bbox = draw.textbbox((0, 0), x_label, font=FONT_LABEL)
-    draw.text((S((PLOT_X0 + PLOT_X1) / 2) - (bbox[2] - bbox[0]) // 2, S(411)), x_label, fill=BLACK, font=FONT_LABEL)
-    draw_rotated_text(frame, (S(228), S(190)), "position", FONT_LABEL, BLACK)
+    draw.text((S((PLOT_X0 + PLOT_X1) / 2) - (bbox[2] - bbox[0]) // 2, S(552)), x_label, fill=BLACK, font=FONT_LABEL)
+    draw_rotated_text(frame, (S(405), S(250)), "position", FONT_LABEL, BLACK)
 
 
 def draw_simulator(draw: ImageDraw.ImageDraw, current_y: float) -> None:
     # Ground line, no labels.
-    draw.line(coords([55, SIM_GROUND_Y, 179, SIM_GROUND_Y]), fill=BLACK, width=S(1.2))
+    draw.line(coords([80, SIM_GROUND_Y, 300, SIM_GROUND_Y]), fill=BLACK, width=S(1.2))
 
     # Ball is constrained to one horizontal coordinate.
     cy = sim_y(current_y)
@@ -263,8 +263,8 @@ def draw_simulator(draw: ImageDraw.ImageDraw, current_y: float) -> None:
 def draw_intervention_marker(draw: ImageDraw.ImageDraw) -> None:
     x, _ = plot_xy(INTERVENTION_TIME, 0.0)
     draw.line(coords([x, PLOT_Y0, x, PLOT_Y1]), fill=ORANGE, width=S(1.5))
-    draw.text((S(x + 8), S(76)), "intervention", fill=ORANGE, font=FONT_MARKER)
-    draw.text((S(x + 8), S(112)), "e: 0.9 -> 0.2", fill=ORANGE, font=FONT_MARKER)
+    draw.text((S(x + 14), S(96)), "intervention", fill=ORANGE, font=FONT_MARKER)
+    draw.text((S(x + 14), S(132)), "e: 0.9 -> 0.2", fill=ORANGE, font=FONT_MARKER)
 
 
 def draw_trace(draw: ImageDraw.ImageDraw, current_t: float) -> float:
@@ -288,7 +288,7 @@ def render_frame(current_t: float) -> Image.Image:
     draw = ImageDraw.Draw(frame)
 
     # Panel divider: subtle gray line, no top captions or titles.
-    draw.line(coords([DIVIDER_X, 42, DIVIDER_X, 412]), fill=LIGHT_GRAY, width=S(0.9))
+    draw.line(coords([DIVIDER_X, 54, DIVIDER_X, 546]), fill=LIGHT_GRAY, width=S(0.9))
 
     draw_axes(draw, frame)
 
