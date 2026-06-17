@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "public" / "data"
 REQUIRED_SEEDS = [0, 1, 2, 3, 4]
 REQUIRED_SIMULATORS = ["BallDrop", "BounceBall", "MassSlide"]
+HOMEPAGE_DATA_FILENAME = "data_main_page.json"
+HOMEPAGE_REQUIRED_COLUMNS = {"Position", "Velocity", "Hard_Stop_f", "time"}
 EXPECTED_PROMPT_COMBINATIONS = {
     (desc_level, task_type, training_samples)
     for desc_level in ("high", "none")
@@ -96,6 +98,35 @@ def validate_environments(data_dir: Path, summary: dict[str, Any]) -> None:
         require(actual_files == expected_files, f"{simulator} environment directory must contain only description.json and data_1.json through data_5.json")
 
 
+def validate_homepage_data(data_dir: Path) -> None:
+    homepage_data = read_json(data_dir / "environments" / HOMEPAGE_DATA_FILENAME)
+    require(isinstance(homepage_data, dict), f"{HOMEPAGE_DATA_FILENAME} must be an object")
+    require(homepage_data.get("run_id"), f"{HOMEPAGE_DATA_FILENAME} missing run_id")
+    require(
+        homepage_data.get("source") == "programmatic:ball-drop-bounce-gif",
+        f"{HOMEPAGE_DATA_FILENAME} source must identify the GIF-matching generator",
+    )
+    require(
+        homepage_data.get("intervention_time") is not None,
+        f"{HOMEPAGE_DATA_FILENAME} missing intervention_time",
+    )
+    require(homepage_data.get("intervention_parameter"), f"{HOMEPAGE_DATA_FILENAME} missing intervention_parameter")
+    require(homepage_data.get("answer"), f"{HOMEPAGE_DATA_FILENAME} missing answer")
+
+    columns = set(homepage_data.get("columns") or [])
+    require(
+        HOMEPAGE_REQUIRED_COLUMNS.issubset(columns),
+        f"{HOMEPAGE_DATA_FILENAME} columns must include {sorted(HOMEPAGE_REQUIRED_COLUMNS)}",
+    )
+    rows = homepage_data.get("rows")
+    require(isinstance(rows, list) and rows, f"{HOMEPAGE_DATA_FILENAME} must include non-empty rows")
+    for index, row in enumerate(rows):
+        require(isinstance(row, dict), f"{HOMEPAGE_DATA_FILENAME} rows[{index}] must be an object")
+        for column in HOMEPAGE_REQUIRED_COLUMNS:
+            require(column in row, f"{HOMEPAGE_DATA_FILENAME} rows[{index}] missing {column}")
+            require(isinstance(row[column], (int, float)), f"{HOMEPAGE_DATA_FILENAME} rows[{index}].{column} must be numeric")
+
+
 def validate_prompt_combinations(value: Any, simulator: str) -> None:
     require(isinstance(value, list) and value, f"{simulator}/description.json missing prompt_combinations")
     require(
@@ -150,6 +181,7 @@ def validate(data_dir: Path = DATA) -> None:
         require(key in canonical, f"canonical_scope missing {key}")
 
     validate_leaderboard(data_dir)
+    validate_homepage_data(data_dir)
     validate_environments(data_dir, summary)
 
 

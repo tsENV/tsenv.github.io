@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
 import shutil
@@ -13,6 +14,7 @@ import sys
 import tempfile
 import urllib.error
 import urllib.request
+from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import quote
 from typing import Any, Callable, Mapping, Sequence
@@ -25,6 +27,7 @@ DATA = ROOT / "public" / "data"
 DEFAULT_REPO = "TommasoBendinelli/tsenv-benchmark"
 TOP_LEVEL_FILES = ("summary.json", "leaderboard.json")
 SIMULATORS = ("BallDrop", "BounceBall", "MassSlide")
+HOMEPAGE_DATA_FILENAME = "data_main_page.json"
 PROMPT_DESC_LEVELS = ("high", "none")
 PROMPT_TASK_TYPES = ("direct", "code")
 PROMPT_TRAINING_SAMPLES = ("none", ">0")
@@ -50,8 +53,122 @@ TSENV_LEGACY_PROMPT_FIELDS = (
 )
 TSENV_PROMPT_PLACEHOLDER_RE = re.compile(r"\{([^{}\n]+)\}")
 
+MAIN_PAGE_DURATION_S = 4.0
+MAIN_PAGE_G = 13.5
+MAIN_PAGE_INITIAL_HEIGHT = 1.0
+MAIN_PAGE_PRE_INTERVENTION_E = 0.9
+MAIN_PAGE_POST_INTERVENTION_E = 0.2
+MAIN_PAGE_NEGLIGIBLE_HEIGHT = 0.005 * 1.05
+MAIN_PAGE_TRACE_HZ = 400
+
 
 PromptRenderer = Callable[..., str]
+
+
+@dataclass(frozen=True)
+class HomepageSegment:
+    kind: str
+    start: float
+    end: float
+    peak: float
+
+
+def build_homepage_segments() -> tuple[list[HomepageSegment], float]:
+    segments: list[HomepageSegment] = []
+    time_s = 0.0
+
+    fall_time = math.sqrt(2.0 * MAIN_PAGE_INITIAL_HEIGHT / MAIN_PAGE_G)
+    segments.append(HomepageSegment("drop", time_s, time_s + fall_time, MAIN_PAGE_INITIAL_HEIGHT))
+    time_s += fall_time
+
+    previous_peak = MAIN_PAGE_INITIAL_HEIGHT
+    for _ in range(3):
+        peak = MAIN_PAGE_PRE_INTERVENTION_E * previous_peak
+        bounce_time = 2.0 * math.sqrt(2.0 * peak / MAIN_PAGE_G)
+        segments.append(HomepageSegment("bounce", time_s, time_s + bounce_time, peak))
+        time_s += bounce_time
+        previous_peak = peak
+
+    intervention_time = time_s
+
+    while MAIN_PAGE_POST_INTERVENTION_E * previous_peak >= MAIN_PAGE_NEGLIGIBLE_HEIGHT:
+        peak = MAIN_PAGE_POST_INTERVENTION_E * previous_peak
+        bounce_time = 2.0 * math.sqrt(2.0 * peak / MAIN_PAGE_G)
+        segments.append(HomepageSegment("bounce", time_s, time_s + bounce_time, peak))
+        time_s += bounce_time
+        previous_peak = peak
+
+    return segments, intervention_time
+
+
+HOMEPAGE_SEGMENTS, HOMEPAGE_INTERVENTION_TIME = build_homepage_segments()
+
+
+def homepage_segment_at(time_s: float) -> HomepageSegment | None:
+    for segment in HOMEPAGE_SEGMENTS:
+        if segment.start <= time_s < segment.end:
+            return segment
+    return None
+
+
+def homepage_position_velocity(time_s: float) -> tuple[float, float]:
+    segment = homepage_segment_at(time_s)
+    if segment is None:
+        return 0.0, 0.0
+
+    tau = time_s - segment.start
+    if segment.kind == "drop":
+        position = segment.peak - 0.5 * MAIN_PAGE_G * tau * tau
+        velocity = -MAIN_PAGE_G * tau
+    else:
+        duration = segment.end - segment.start
+        centered = tau - 0.5 * duration
+        position = segment.peak - 0.5 * MAIN_PAGE_G * centered * centered
+        velocity = -MAIN_PAGE_G * centered
+
+    return max(position, 0.0), velocity
+
+
+def generate_homepage_data() -> dict[str, Any]:
+    impact_impulses = {
+        round(segment.end, 6): round(math.sqrt(2.0 * MAIN_PAGE_G * segment.peak), 6)
+        for segment in HOMEPAGE_SEGMENTS
+        if 0.0 <= segment.end <= MAIN_PAGE_DURATION_S
+    }
+    times = {
+        round(index / MAIN_PAGE_TRACE_HZ, 6)
+        for index in range(int(MAIN_PAGE_DURATION_S * MAIN_PAGE_TRACE_HZ) + 1)
+    }
+    times.update(round(segment.start, 6) for segment in HOMEPAGE_SEGMENTS)
+    times.update(round(segment.end, 6) for segment in HOMEPAGE_SEGMENTS)
+    times.add(round(MAIN_PAGE_DURATION_S, 6))
+
+    rows = []
+    for time_s in sorted(time for time in times if 0.0 <= time <= MAIN_PAGE_DURATION_S):
+        position, velocity = homepage_position_velocity(time_s)
+        rows.append(
+            {
+                "time": time_s,
+                "Position": round(position, 6),
+                "Velocity": round(velocity, 6),
+                "Hard_Stop_f": impact_impulses.get(time_s, 0.0),
+            }
+        )
+
+    return {
+        "run_id": "ball-drop-main-page",
+        "source": "programmatic:ball-drop-bounce-gif",
+        "columns": ["Position", "Velocity", "Hard_Stop_f", "time"],
+        "intervention_time": round(HOMEPAGE_INTERVENTION_TIME, 6),
+        "intervention_parameter": "coefficient of restitution",
+        "answer": "coefficient of restitution",
+        "rows": rows,
+    }
+
+
+def write_homepage_data(environments_dir: Path) -> None:
+    environments_dir.mkdir(parents=True, exist_ok=True)
+    write_json(environments_dir / HOMEPAGE_DATA_FILENAME, generate_homepage_data())
 
 
 def ssl_context() -> ssl.SSLContext | None:
@@ -498,6 +615,7 @@ def sync_from_hf(repo: str, revision: str, output_dir: Path, tsenv_root: Path | 
     environments_dir = output_dir / "environments"
     if environments_dir.exists():
         shutil.rmtree(environments_dir)
+    write_homepage_data(environments_dir)
     with tempfile.TemporaryDirectory() as tmp:
         tmp_dir = Path(tmp)
         for simulator in SIMULATORS:

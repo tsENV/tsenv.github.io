@@ -192,11 +192,16 @@ class WebsitePromptRenderingTest(unittest.TestCase):
                 description = json.loads(
                     (output_dir / "environments" / "BallDrop" / "description.json").read_text(encoding="utf-8")
                 )
+                homepage_data = json.loads(
+                    (output_dir / "environments" / "data_main_page.json").read_text(encoding="utf-8")
+                )
         finally:
             sync_hf_to_website_data.SIMULATORS = original_simulators
             sync_hf_to_website_data.download_file = original_download_file
             sync_hf_to_website_data.load_prompt_renderer = original_load_prompt_renderer
 
+        self.assertEqual(homepage_data["source"], "programmatic:ball-drop-bounce-gif")
+        self.assertTrue(homepage_data["rows"])
         combinations = description["prompt_combinations"]
         self.assertEqual(len(combinations), 8)
         self.assertNotEqual(combinations[0]["agent_instruction"], "stale deployed prompt")
@@ -223,6 +228,8 @@ class WebsitePromptRenderingTest(unittest.TestCase):
                 encoding="utf-8",
             )
             (root / "leaderboard.json").write_text(json.dumps({"rows": [], "filters": {}}), encoding="utf-8")
+            (root / "environments").mkdir()
+            sync_hf_to_website_data.write_homepage_data(root / "environments")
             for simulator in ("BallDrop", "BounceBall", "MassSlide"):
                 env_dir = root / "environments" / simulator
                 env_dir.mkdir(parents=True)
@@ -255,6 +262,29 @@ class WebsitePromptRenderingTest(unittest.TestCase):
                     )
 
             with self.assertRaises(validate_website_data.ValidationError):
+                validate_website_data.validate(root)
+
+    def test_validator_rejects_missing_homepage_data(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "summary.json").write_text(
+                json.dumps(
+                    {
+                        "simulators": ["BallDrop", "BounceBall", "MassSlide"],
+                        "canonical_scope": {
+                            "task_mode": "Code",
+                            "noise": "Low",
+                            "context": "High",
+                            "examples": "Three Examples",
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (root / "leaderboard.json").write_text(json.dumps({"rows": [], "filters": {}}), encoding="utf-8")
+            (root / "environments").mkdir()
+
+            with self.assertRaisesRegex(validate_website_data.ValidationError, "data_main_page.json"):
                 validate_website_data.validate(root)
 
     def test_validator_rejects_stale_deployed_prompt_prefix(self) -> None:

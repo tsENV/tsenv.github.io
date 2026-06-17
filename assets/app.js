@@ -32,6 +32,7 @@ const state = {
   leaderboard: null,
   envDescriptions: {},
   envData: {},
+  homeData: null,
   submissionDetails: {},
   home: { taskMode: "Code", noise: "Low", context: "High", examples: "Three Examples", reveal: false },
   results: {
@@ -367,6 +368,13 @@ async function getEnvironmentData(environmentId, sampleIndex = 0) {
   return state.envData[key];
 }
 
+async function getHomepageData() {
+  if (!state.homeData) {
+    state.homeData = await loadJson(`${DATA_ROOT}/environments/data_main_page.json`);
+  }
+  return state.homeData;
+}
+
 async function getSubmissionDetail(submissionId) {
   if (!state.submissionDetails[submissionId]) {
     state.submissionDetails[submissionId] = await loadJson(`${DATA_ROOT}/submissions/${submissionId}.json`);
@@ -539,7 +547,7 @@ function taskControls(prefix, controls, sampleControls = "") {
 
 async function renderHome() {
   const description = await getEnvironmentDescription("BallDrop");
-  const data = await getEnvironmentData("BallDrop", 1);
+  const data = await getHomepageData();
   const plotData = dataWithPlotNoise(data, description, state.home);
   const prompt = findPrompt(description, state.home);
 
