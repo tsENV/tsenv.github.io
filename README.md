@@ -46,7 +46,9 @@ python3 scripts/validate_website_data.py
 Regenerate from Hugging Face:
 
 ```bash
-python3 scripts/sync_hf_to_website_data.py --hf-repo TommasoBendinelli/tsenv-benchmark
+python3 scripts/sync_hf_to_website_data.py \
+  --hf-repo TommasoBendinelli/tsenv-benchmark \
+  --tsenv-root /Users/tbe/repos/public/tsEnv
 ```
 
 For local prepared data:

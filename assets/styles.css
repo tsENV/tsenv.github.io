@@ -200,6 +200,19 @@ button, select { font: inherit; }
   color: var(--muted);
   font-size: 13px;
 }
+.signal-hint {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 2px 0 12px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.2;
+  background: #fff;
+}
 .toggle-button,
 .copy-button,
 .compare-button,

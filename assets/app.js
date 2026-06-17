@@ -1,6 +1,24 @@
 
 const DATA_ROOT = "/public/data";
 const DEFAULT_SCOPE = { task_mode: "Code", noise: "Low", context: "High", examples: "Three Examples" };
+const TASK_MODE_OPTIONS = [
+  { value: "Code", label: "CODE" },
+  { value: "Direct", label: "DIRECT" },
+];
+const NOISE_OPTIONS = [
+  { value: "None", label: "NO NOISE" },
+  { value: "Low", label: "LOW NOISE" },
+  { value: "High", label: "HIGH NOISE" },
+];
+const CONTEXT_OPTIONS = [
+  { value: "None", label: "NO CONTEXT" },
+  { value: "High", label: "HIGH CONTEXT" },
+];
+const EXAMPLE_OPTIONS = [
+  { value: "None", label: "NO EXAMPLES" },
+  { value: "One Example", label: "ONE EXAMPLE" },
+  { value: "Three Examples", label: "MULTIPLE EXAMPLES" },
+];
 
 const state = {
   site: null,
@@ -9,7 +27,7 @@ const state = {
   envDescriptions: {},
   envData: {},
   submissionDetails: {},
-  home: { taskMode: "Code", axis: "NOISE", reveal: false },
+  home: { taskMode: "Code", noise: "Low", context: "High", examples: "Three Examples", reveal: false },
   results: {
     scope: { task_mode: "Code", noise: "Low", context: "High", examples: "Three Examples" },
     compare: false,
@@ -17,7 +35,7 @@ const state = {
     sortKey: "score",
     sortDir: "desc"
   },
-  env: { taskMode: "Code", axis: "CONTEXT", sampleIndex: {} }
+  env: { taskMode: "Code", noise: "Low", context: "High", examples: "Three Examples", sampleIndex: {} }
 };
 
 const app = document.getElementById("app");
@@ -351,10 +369,11 @@ function mountPlots() {
   });
 }
 
-function findPrompt(description, taskMode, axis, examplesLabel = "Three Examples") {
+function findPrompt(description, controls) {
+  const taskMode = controls.taskMode || "Code";
   const taskType = taskMode.toLowerCase();
-  const descLevel = axis === "CONTEXT" ? "high" : "none";
-  const trainingSamples = axis === "EXAMPLES" || examplesLabel !== "None" ? ">0" : "none";
+  const descLevel = controls.context === "High" ? "high" : "none";
+  const trainingSamples = controls.examples === "None" ? "none" : ">0";
   const candidates = description.prompt_combinations || [];
   return candidates.find(p => p.task_type === taskType && p.desc_level === descLevel && p.training_samples === trainingSamples)
       || candidates.find(p => p.task_type === taskType && p.training_samples === trainingSamples)
@@ -362,16 +381,30 @@ function findPrompt(description, taskMode, axis, examplesLabel = "Three Examples
       || candidates[0];
 }
 
-function taskControls(prefix, taskMode, axis, sampleControls = "") {
+function optionButtons(prefix, key, activeValue, options) {
+  return options.map(option => {
+    return `<button class="toggle-button ${option.value === activeValue ? "active" : ""}" data-action="set-${prefix}-control" data-key="${key}" data-value="${escapeHtml(option.value)}">${escapeHtml(option.label)}</button>`;
+  }).join("");
+}
+
+function taskControls(prefix, controls, sampleControls = "") {
   return `
     <div class="control-stack">
       <div class="control-row">
         <span class="control-label">Task:</span>
-        ${["Code", "Direct"].map(mode => `<button class="toggle-button ${mode === taskMode ? "active" : ""}" data-action="set-${prefix}-task" data-value="${mode}">${mode.toUpperCase()}</button>`).join("")}
+        ${optionButtons(prefix, "taskMode", controls.taskMode, TASK_MODE_OPTIONS)}
       </div>
       <div class="control-row">
-        <span class="control-label">Axis:</span>
-        ${["NOISE", "CONTEXT", "EXAMPLES"].map(item => `<button class="toggle-button ${item === axis ? "active" : ""}" data-action="set-${prefix}-axis" data-value="${item}">${item}</button>`).join("")}
+        <span class="control-label">Noise:</span>
+        ${optionButtons(prefix, "noise", controls.noise, NOISE_OPTIONS)}
+      </div>
+      <div class="control-row">
+        <span class="control-label">Context:</span>
+        ${optionButtons(prefix, "context", controls.context, CONTEXT_OPTIONS)}
+      </div>
+      <div class="control-row">
+        <span class="control-label">Examples:</span>
+        ${optionButtons(prefix, "examples", controls.examples, EXAMPLE_OPTIONS)}
       </div>
       ${sampleControls}
     </div>
@@ -381,7 +414,7 @@ function taskControls(prefix, taskMode, axis, sampleControls = "") {
 async function renderHome() {
   const description = await getEnvironmentDescription("BallDrop");
   const data = await getEnvironmentData("BallDrop", 1);
-  const prompt = findPrompt(description, state.home.taskMode, state.home.axis);
+  const prompt = findPrompt(description, state.home);
 
   const stats = [
     ["3 physical simulators", "BallDrop, BounceBall, MassSlide"],
@@ -413,8 +446,9 @@ async function renderHome() {
         <p class="page-subtitle">A compact BallDrop task with controls for answer interface and benchmark condition axes.</p>
       </div>
       <div class="panel">
-        ${taskControls("home", state.home.taskMode, state.home.axis)}
-        ${renderPlot(data, description, { axis: state.home.axis })}
+        ${taskControls("home", state.home)}
+        <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
+        ${renderPlot(data, description)}
         <div class="prompt-panel">
           <pre>${escapeHtml(prompt.agent_instruction)}</pre>
           <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>
@@ -687,7 +721,7 @@ async function renderEnvironmentDetail(environmentId) {
   const sampleCount = description.sample_count || 1;
   const selectedSample = state.env.sampleIndex[environmentId] || 1;
   const data = await getEnvironmentData(environmentId, Math.min(selectedSample, sampleCount));
-  const prompt = findPrompt(description, state.env.taskMode, state.env.axis);
+  const prompt = findPrompt(description, state.env);
   const sampleControls = `
     <div class="control-row">
       <span class="control-label">Sample:</span>
@@ -703,8 +737,8 @@ async function renderEnvironmentDetail(environmentId) {
       <h1 class="page-title">${escapeHtml(description.name)}</h1>
       <p class="page-subtitle">${escapeHtml(description.short_one_line_description)}</p>
       <div class="panel">
-        ${taskControls("env", state.env.taskMode, state.env.axis, sampleControls)}
-        ${renderPlot(data, description, { axis: state.env.axis })}
+        ${taskControls("env", state.env, sampleControls)}
+        ${renderPlot(data, description)}
       </div>
       <div class="prompt-panel">
         <h2>Agent prompt</h2>
@@ -893,12 +927,11 @@ document.addEventListener("click", event => {
   if (!button) return;
   const action = button.dataset.action;
 
-  if (action === "set-home-task") {
-    state.home.taskMode = button.dataset.value;
-    state.home.reveal = false;
-    render();
-  } else if (action === "set-home-axis") {
-    state.home.axis = button.dataset.value;
+  if (action === "set-home-control") {
+    const key = button.dataset.key;
+    if (key && key in state.home) {
+      state.home[key] = button.dataset.value;
+    }
     state.home.reveal = false;
     render();
   } else if (action === "toggle-reveal") {
@@ -916,11 +949,11 @@ document.addEventListener("click", event => {
       state.results.sortDir = key === "score" || key === "rank" ? "desc" : "asc";
     }
     render();
-  } else if (action === "set-env-task") {
-    state.env.taskMode = button.dataset.value;
-    render();
-  } else if (action === "set-env-axis") {
-    state.env.axis = button.dataset.value;
+  } else if (action === "set-env-control") {
+    const key = button.dataset.key;
+    if (key && key in state.env) {
+      state.env[key] = button.dataset.value;
+    }
     render();
   } else if (action === "copy-code") {
     const target = document.getElementById(button.dataset.copyTarget);
