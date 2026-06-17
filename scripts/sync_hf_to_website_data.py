@@ -4,14 +4,18 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
+import re
 import shutil
 import ssl
 import sys
+import tempfile
 import urllib.error
 import urllib.request
 from pathlib import Path
 from urllib.parse import quote
+from typing import Any, Callable, Mapping, Sequence
 
 from validate_website_data import validate
 
@@ -21,6 +25,33 @@ DATA = ROOT / "public" / "data"
 DEFAULT_REPO = "TommasoBendinelli/tsenv-benchmark"
 TOP_LEVEL_FILES = ("summary.json", "leaderboard.json")
 SIMULATORS = ("BallDrop", "BounceBall", "MassSlide")
+PROMPT_DESC_LEVELS = ("high", "none")
+PROMPT_TASK_TYPES = ("direct", "code")
+PROMPT_TRAINING_SAMPLES = ("none", ">0")
+TSENV_DOCUMENTED_PROMPT_FIELDS = (
+    "sample_source",
+    "environment_description",
+    "observed_columns",
+    "intervention_semantics",
+    "label_space",
+    "no_change_guidance",
+    "task_artifact",
+    "prediction_format",
+    "fewshot_context",
+    "mode_specific_requirements",
+    "evaluation",
+    "runtime_constraints",
+)
+TSENV_LEGACY_PROMPT_FIELDS = (
+    "first_sentence",
+    "model_description",
+    "shared_description",
+    "task_instruction",
+)
+TSENV_PROMPT_PLACEHOLDER_RE = re.compile(r"\{([^{}\n]+)\}")
+
+
+PromptRenderer = Callable[..., str]
 
 
 def ssl_context() -> ssl.SSLContext | None:
@@ -35,6 +66,288 @@ def copy_tree(source: Path, destination: Path) -> None:
     if destination.exists():
         shutil.rmtree(destination)
     shutil.copytree(source, destination)
+
+
+def read_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def write_json(path: Path, payload: Any) -> None:
+    path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def stringify_tsenv_prompt_value(value: Any) -> str:
+    if isinstance(value, (list, tuple)):
+        return json.dumps(list(value))
+    if isinstance(value, Mapping):
+        return json.dumps(dict(value), sort_keys=True)
+    return str(value or "")
+
+
+def default_prompt_field_entries(question_text: Mapping[str, Any]) -> list[tuple[str, str]]:
+    fields = (
+        TSENV_DOCUMENTED_PROMPT_FIELDS
+        if any(field in question_text for field in TSENV_DOCUMENTED_PROMPT_FIELDS)
+        else TSENV_LEGACY_PROMPT_FIELDS
+    )
+    return [(field, "\n\n" if index < len(fields) - 1 else "") for index, field in enumerate(fields)]
+
+
+def tsenv_prompt_field_entries(question_text: Mapping[str, Any]) -> list[tuple[str, str]]:
+    field_order_raw = question_text.get("ordered_field_agent_prompt")
+    if not (isinstance(field_order_raw, list) and field_order_raw):
+        return default_prompt_field_entries(question_text)
+
+    entries: list[tuple[str, str]] = []
+    for index, raw_entry in enumerate(field_order_raw):
+        if isinstance(raw_entry, (list, tuple)):
+            if not raw_entry:
+                continue
+            field = str(raw_entry[0]).strip()
+            separator = str(raw_entry[1]) if len(raw_entry) > 1 else "\n\n"
+        else:
+            field = str(raw_entry).strip()
+            separator = "\n\n"
+        if not field:
+            continue
+        if index == len(field_order_raw) - 1 and not isinstance(raw_entry, (list, tuple)):
+            separator = ""
+        entries.append((field, separator))
+    return entries or default_prompt_field_entries(question_text)
+
+
+def resolve_mapping_path(mapping: Mapping[str, Any], path: Sequence[str]) -> Any:
+    value: Any = mapping
+    for part in path:
+        key = str(part).strip()
+        if not key:
+            raise KeyError("empty placeholder path segment")
+        if not isinstance(value, Mapping) or key not in value:
+            raise KeyError(key)
+        value = value[key]
+    return value
+
+
+def question_text_for_placeholder(
+    *,
+    target_slug: str | None,
+    current_question_text: Mapping[str, Any],
+    current_question_slug: str | None,
+    questions_by_id: Mapping[str, Mapping[str, Any]] | None,
+) -> Mapping[str, Any]:
+    if not target_slug or target_slug == current_question_slug:
+        return current_question_text
+    if questions_by_id is None:
+        raise KeyError(target_slug)
+    target_question = questions_by_id.get(target_slug)
+    if not isinstance(target_question, Mapping):
+        raise KeyError(target_slug)
+    target_question_text = target_question.get("question_text")
+    if not isinstance(target_question_text, Mapping):
+        raise KeyError(f"{target_slug}.question_text")
+    return target_question_text
+
+
+def placeholder_target_slug(raw_slug: str | None, *, current_question_slug: str | None) -> str | None:
+    target_slug = str(raw_slug or "").strip()
+    if target_slug.startswith("<") and target_slug.endswith(">"):
+        target_slug = target_slug[1:-1].strip()
+    if target_slug == "question_slug":
+        return current_question_slug
+    return target_slug or current_question_slug
+
+
+def resolve_tsenv_question_text_placeholder(
+    *,
+    body: str,
+    target_slug: str | None,
+    field_path: str,
+    current_question_text: Mapping[str, Any],
+    current_question_slug: str | None,
+    questions_by_id: Mapping[str, Mapping[str, Any]] | None,
+    questions_metadata: Mapping[str, Any] | None,
+    stack: tuple[str, ...],
+) -> str:
+    if not field_path:
+        raise KeyError(body)
+    lookup_key = f"{target_slug or '<current>'}.question_text.{field_path}"
+    if lookup_key in stack:
+        raise ValueError(f"Recursive tsENV prompt placeholder: {lookup_key}")
+    source_text = question_text_for_placeholder(
+        target_slug=target_slug,
+        current_question_text=current_question_text,
+        current_question_slug=current_question_slug,
+        questions_by_id=questions_by_id,
+    )
+    try:
+        resolved_value = resolve_mapping_path(source_text, field_path.split("."))
+    except KeyError as exc:
+        raise KeyError(f"Could not resolve tsENV prompt placeholder {{{body}}}") from exc
+    return resolve_tsenv_prompt_placeholders(
+        resolved_value,
+        current_question_text=current_question_text,
+        current_question_slug=current_question_slug,
+        questions_by_id=questions_by_id,
+        questions_metadata=questions_metadata,
+        stack=(*stack, lookup_key),
+    )
+
+
+def resolve_tsenv_questions_namespace_placeholder(
+    *,
+    body: str,
+    current_question_text: Mapping[str, Any],
+    current_question_slug: str | None,
+    questions_by_id: Mapping[str, Mapping[str, Any]] | None,
+    questions_metadata: Mapping[str, Any] | None,
+    stack: tuple[str, ...],
+) -> str:
+    tail = body.removeprefix("questions.").strip()
+    if not tail:
+        raise KeyError(body)
+    target_slug, separator, field_path = tail.partition(".question_text.")
+    if separator:
+        return resolve_tsenv_question_text_placeholder(
+            body=body,
+            target_slug=placeholder_target_slug(target_slug, current_question_slug=current_question_slug),
+            field_path=field_path,
+            current_question_text=current_question_text,
+            current_question_slug=current_question_slug,
+            questions_by_id=questions_by_id,
+            questions_metadata=questions_metadata,
+            stack=stack,
+        )
+    if questions_metadata is None:
+        raise KeyError(body)
+    lookup_key = f"questions.{tail}"
+    if lookup_key in stack:
+        raise ValueError(f"Recursive tsENV prompt placeholder: {lookup_key}")
+    try:
+        resolved_value = resolve_mapping_path(questions_metadata, tail.split("."))
+    except KeyError as exc:
+        raise KeyError(f"Could not resolve tsENV prompt placeholder {{{body}}}") from exc
+    return resolve_tsenv_prompt_placeholders(
+        resolved_value,
+        current_question_text=current_question_text,
+        current_question_slug=current_question_slug,
+        questions_by_id=questions_by_id,
+        questions_metadata=questions_metadata,
+        stack=(*stack, lookup_key),
+    )
+
+
+def resolve_tsenv_prompt_placeholder_body(
+    body: str,
+    *,
+    current_question_text: Mapping[str, Any],
+    current_question_slug: str | None,
+    questions_by_id: Mapping[str, Mapping[str, Any]] | None,
+    questions_metadata: Mapping[str, Any] | None,
+    stack: tuple[str, ...],
+) -> str | None:
+    if body.startswith("questions."):
+        return resolve_tsenv_questions_namespace_placeholder(
+            body=body,
+            current_question_text=current_question_text,
+            current_question_slug=current_question_slug,
+            questions_by_id=questions_by_id,
+            questions_metadata=questions_metadata,
+            stack=stack,
+        )
+    if body.startswith("<question_slug>.question_text."):
+        return resolve_tsenv_question_text_placeholder(
+            body=body,
+            target_slug=current_question_slug,
+            field_path=body.removeprefix("<question_slug>.question_text."),
+            current_question_text=current_question_text,
+            current_question_slug=current_question_slug,
+            questions_by_id=questions_by_id,
+            questions_metadata=questions_metadata,
+            stack=stack,
+        )
+    if body.startswith("question_text."):
+        return resolve_tsenv_question_text_placeholder(
+            body=body,
+            target_slug=current_question_slug,
+            field_path=body.removeprefix("question_text."),
+            current_question_text=current_question_text,
+            current_question_slug=current_question_slug,
+            questions_by_id=questions_by_id,
+            questions_metadata=questions_metadata,
+            stack=stack,
+        )
+    target_slug, separator, field_path = body.partition(".question_text.")
+    if not separator:
+        return None
+    return resolve_tsenv_question_text_placeholder(
+        body=body,
+        target_slug=placeholder_target_slug(target_slug, current_question_slug=current_question_slug),
+        field_path=field_path,
+        current_question_text=current_question_text,
+        current_question_slug=current_question_slug,
+        questions_by_id=questions_by_id,
+        questions_metadata=questions_metadata,
+        stack=stack,
+    )
+
+
+def resolve_tsenv_prompt_placeholders(
+    value: Any,
+    *,
+    current_question_text: Mapping[str, Any],
+    current_question_slug: str | None,
+    questions_by_id: Mapping[str, Mapping[str, Any]] | None,
+    questions_metadata: Mapping[str, Any] | None,
+    stack: tuple[str, ...] = (),
+) -> str:
+    text = stringify_tsenv_prompt_value(value)
+    if "question_text." not in text and "{questions." not in text:
+        return text.strip()
+
+    def replace(match: re.Match[str]) -> str:
+        body = match.group(1).strip()
+        resolved = resolve_tsenv_prompt_placeholder_body(
+            body,
+            current_question_text=current_question_text,
+            current_question_slug=current_question_slug,
+            questions_by_id=questions_by_id,
+            questions_metadata=questions_metadata,
+            stack=stack,
+        )
+        return match.group(0) if resolved is None else resolved
+
+    return TSENV_PROMPT_PLACEHOLDER_RE.sub(replace, text).strip()
+
+
+def render_documented_tsenv_agent_prompt(
+    question_text: Mapping[str, Any],
+    *,
+    question_slug: str | None = None,
+    questions_by_id: Mapping[str, Mapping[str, Any]] | None = None,
+    questions_metadata: Mapping[str, Any] | None = None,
+) -> str:
+    prompt_parts: list[str] = []
+    pending_separator = ""
+    for field, separator in tsenv_prompt_field_entries(question_text):
+        if field not in question_text:
+            if prompt_parts:
+                pending_separator = separator
+            continue
+        rendered = resolve_tsenv_prompt_placeholders(
+            question_text.get(field),
+            current_question_text=question_text,
+            current_question_slug=str(question_slug or "").strip() or None,
+            questions_by_id=questions_by_id,
+            questions_metadata=questions_metadata,
+        )
+        if rendered:
+            if prompt_parts:
+                prompt_parts.append(pending_separator)
+            prompt_parts.append(rendered)
+            pending_separator = separator
+        elif prompt_parts:
+            pending_separator = separator
+    return "".join(prompt_parts)
 
 
 def hf_url(repo: str, path: str, revision: str) -> str:
@@ -58,18 +371,149 @@ def download_file(url: str, destination: Path) -> None:
         raise RuntimeError(f"failed to download {url}: {exc.reason}") from exc
 
 
-def sync_from_hf(repo: str, revision: str, output_dir: Path) -> None:
+def candidate_tsenv_roots(explicit_root: Path | None) -> list[Path]:
+    roots: list[Path] = []
+    if explicit_root is not None:
+        roots.append(explicit_root)
+    env_root = os.environ.get("TSENV_REPO_ROOT", "").strip()
+    if env_root:
+        roots.append(Path(env_root))
+    roots.extend(
+        [
+            ROOT / "_tsENV",
+            ROOT.parent / "tsENV",
+            ROOT.parent / "tsenv",
+        ]
+    )
+    deduped: list[Path] = []
+    seen: set[Path] = set()
+    for root in roots:
+        resolved = root.expanduser().resolve()
+        if resolved in seen:
+            continue
+        seen.add(resolved)
+        deduped.append(resolved)
+    return deduped
+
+
+def load_prompt_renderer(tsenv_root: Path | None) -> PromptRenderer:
+    checked: list[str] = []
+    for root in candidate_tsenv_roots(tsenv_root):
+        checked.append(str(root))
+        if not (root / "shared" / "prompts.py").is_file():
+            continue
+        if str(root) not in sys.path:
+            sys.path.insert(0, str(root))
+        try:
+            from shared.prompts import render_tsenv_agent_prompt
+        except Exception as exc:  # noqa: BLE001 - expose import failure with context.
+            raise RuntimeError(f"could not import TSENV prompt renderer from {root}: {exc}") from exc
+        return render_tsenv_agent_prompt
+    print(
+        "TSENV prompt renderer checkout not found; using local documented prompt renderer. "
+        f"Checked: {', '.join(checked)}",
+        file=sys.stderr,
+    )
+    return render_documented_tsenv_agent_prompt
+
+
+def sample_bucket(value: Any) -> str | None:
+    try:
+        count = int(value)
+    except (TypeError, ValueError):
+        return None
+    return ">0" if count > 0 else "none"
+
+
+def select_question(
+    questions: dict[str, Any],
+    *,
+    desc_level: str,
+    task_type: str,
+    training_samples: str,
+) -> tuple[str, dict[str, Any]]:
+    for question_slug in sorted(questions):
+        question = questions[question_slug]
+        if not isinstance(question, dict):
+            continue
+        recipe = question.get("recipe_info")
+        if not isinstance(recipe, dict):
+            continue
+        if str(recipe.get("desc_level") or "").strip().lower() != desc_level:
+            continue
+        if str(recipe.get("type_of_request") or "").strip().lower() != task_type:
+            continue
+        if sample_bucket(recipe.get("number_train_samples_per_class")) != training_samples:
+            continue
+        question_text = question.get("question_text")
+        if not isinstance(question_text, dict):
+            raise RuntimeError(f"question {question_slug} has no question_text object")
+        return question_slug, question
+    raise RuntimeError(
+        "could not find representative question for "
+        f"desc_level={desc_level!r}, task_type={task_type!r}, "
+        f"training_samples={training_samples!r}"
+    )
+
+
+def rendered_prompt_combinations(questions_path: Path, renderer: PromptRenderer) -> list[dict[str, str]]:
+    payload = read_json(questions_path)
+    questions = payload.get("questions") if isinstance(payload, dict) else None
+    if not isinstance(questions, dict) or not questions:
+        raise RuntimeError(f"{questions_path} must contain a non-empty questions object")
+
+    combinations: list[dict[str, str]] = []
+    for desc_level in PROMPT_DESC_LEVELS:
+        for task_type in PROMPT_TASK_TYPES:
+            for training_samples in PROMPT_TRAINING_SAMPLES:
+                question_slug, question = select_question(
+                    questions,
+                    desc_level=desc_level,
+                    task_type=task_type,
+                    training_samples=training_samples,
+                )
+                rendered = renderer(
+                    question["question_text"],
+                    question_slug=question_slug,
+                    questions_by_id=questions,
+                ).strip()
+                if not rendered:
+                    raise RuntimeError(f"rendered prompt for {question_slug} is empty")
+                combinations.append(
+                    {
+                        "desc_level": desc_level,
+                        "task_type": task_type,
+                        "training_samples": training_samples,
+                        "agent_instruction": rendered,
+                    }
+                )
+    return combinations
+
+
+def sync_from_hf(repo: str, revision: str, output_dir: Path, tsenv_root: Path | None) -> None:
+    renderer = load_prompt_renderer(tsenv_root)
     output_dir.mkdir(parents=True, exist_ok=True)
     for filename in TOP_LEVEL_FILES:
         download_file(hf_url(repo, f"website/{filename}", revision), output_dir / filename)
     environments_dir = output_dir / "environments"
     if environments_dir.exists():
         shutil.rmtree(environments_dir)
-    for simulator in SIMULATORS:
-        base = f"website/environments/{simulator}"
-        download_file(hf_url(repo, f"{base}/description.json", revision), output_dir / "environments" / simulator / "description.json")
-        for sample_number in range(1, 6):
-            download_file(hf_url(repo, f"{base}/data_{sample_number}.json", revision), output_dir / "environments" / simulator / f"data_{sample_number}.json")
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_dir = Path(tmp)
+        for simulator in SIMULATORS:
+            base = f"website/environments/{simulator}"
+            env_dir = output_dir / "environments" / simulator
+            description_path = env_dir / "description.json"
+            questions_path = tmp_dir / f"{simulator}_questions.json"
+            download_file(hf_url(repo, f"{base}/description.json", revision), description_path)
+            download_file(hf_url(repo, f"questions/{simulator}/questions.json", revision), questions_path)
+            description = read_json(description_path)
+            if not isinstance(description, dict):
+                raise RuntimeError(f"{description_path} must contain a JSON object")
+            description["prompt_combinations"] = rendered_prompt_combinations(questions_path, renderer)
+            write_json(description_path, description)
+            for sample_number in range(1, 6):
+                download_file(hf_url(repo, f"{base}/data_{sample_number}.json", revision), env_dir / f"data_{sample_number}.json")
 
     submissions_manifest = output_dir / "submissions_manifest.txt"
     try:
@@ -97,13 +541,14 @@ def main() -> None:
     parser.add_argument("--revision", default="main")
     parser.add_argument("--output-dir", type=Path, default=DATA)
     parser.add_argument("--source-dir", type=Path, help="Copy browser-ready data from a local directory instead of Hugging Face.")
+    parser.add_argument("--tsenv-root", type=Path, help="Path to a tsENV checkout containing shared/prompts.py.")
     parser.add_argument("--validate-only", action="store_true", help="Only validate the output directory.")
     args = parser.parse_args()
 
     if args.source_dir:
         copy_tree(args.source_dir, args.output_dir)
     elif not args.validate_only:
-        sync_from_hf(args.hf_repo, args.revision, args.output_dir)
+        sync_from_hf(args.hf_repo, args.revision, args.output_dir, args.tsenv_root)
 
     try:
         validate(args.output_dir)

@@ -13,6 +13,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "public" / "data"
 REQUIRED_SEEDS = [0, 1, 2, 3, 4]
 REQUIRED_SIMULATORS = ["BallDrop", "BounceBall", "MassSlide"]
+EXPECTED_PROMPT_COMBINATIONS = {
+    (desc_level, task_type, training_samples)
+    for desc_level in ("high", "none")
+    for task_type in ("direct", "code")
+    for training_samples in ("none", ">0")
+}
+MALFORMED_PROMPT_PREFIX = "You are given multivariate time-series observations"
 
 
 class ValidationError(Exception):
@@ -69,6 +76,7 @@ def validate_environments(data_dir: Path, summary: dict[str, Any]) -> None:
         require(isinstance(description, dict), f"{simulator}/description.json must be an object")
         require(description.get("name"), f"{simulator}/description.json missing name")
         require(description.get("short_one_line_description"), f"{simulator}/description.json missing short description")
+        validate_prompt_combinations(description.get("prompt_combinations"), simulator)
         expected_download_link = (
             "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/tree/main/questions/"
             f"{simulator}"
@@ -86,6 +94,34 @@ def validate_environments(data_dir: Path, summary: dict[str, Any]) -> None:
         expected_files = {"description.json"} | {f"data_{sample_number}.json" for sample_number in range(1, 6)}
         actual_files = {path.name for path in env_dir.glob("*.json")}
         require(actual_files == expected_files, f"{simulator} environment directory must contain only description.json and data_1.json through data_5.json")
+
+
+def validate_prompt_combinations(value: Any, simulator: str) -> None:
+    require(isinstance(value, list) and value, f"{simulator}/description.json missing prompt_combinations")
+    require(
+        len(value) == len(EXPECTED_PROMPT_COMBINATIONS),
+        f"{simulator}/description.json must contain exactly {len(EXPECTED_PROMPT_COMBINATIONS)} prompt combinations",
+    )
+    seen: set[tuple[str, str, str]] = set()
+    for index, item in enumerate(value):
+        require(isinstance(item, dict), f"{simulator} prompt_combinations[{index}] must be an object")
+        desc_level = str(item.get("desc_level") or "").strip()
+        task_type = str(item.get("task_type") or "").strip()
+        training_samples = str(item.get("training_samples") or "").strip()
+        agent_instruction = str(item.get("agent_instruction") or "").strip()
+        require(desc_level, f"{simulator} prompt_combinations[{index}] missing desc_level")
+        require(task_type, f"{simulator} prompt_combinations[{index}] missing task_type")
+        require(training_samples, f"{simulator} prompt_combinations[{index}] missing training_samples")
+        require(agent_instruction, f"{simulator} prompt_combinations[{index}] missing agent_instruction")
+        require(
+            not agent_instruction.startswith(MALFORMED_PROMPT_PREFIX),
+            f"{simulator} prompt_combinations[{index}] appears to contain stale pre-rendered website prompt text",
+        )
+        key = (desc_level, task_type, training_samples)
+        require(key not in seen, f"{simulator}/description.json has duplicate prompt combination: {key}")
+        seen.add(key)
+    missing = sorted(EXPECTED_PROMPT_COMBINATIONS - seen)
+    require(not missing, f"{simulator}/description.json missing prompt combinations: {missing}")
 
 
 def validate_site_metadata(root: Path = ROOT) -> None:
