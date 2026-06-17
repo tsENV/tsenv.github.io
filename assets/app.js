@@ -19,6 +19,12 @@ const EXAMPLE_OPTIONS = [
   { value: "One Example", label: "ONE EXAMPLE" },
   { value: "Three Examples", label: "MULTIPLE EXAMPLES" },
 ];
+const NOISE_RULES = { rollingWindowPoints: 11, sigmaFloorRatio: 0.0001 };
+const PLOT_NOISE_PROFILES = {
+  None: { adaptive: 0.0 },
+  Low: { adaptive: 0.002 },
+  High: { adaptive: 0.008 },
+};
 
 const state = {
   site: null,
@@ -78,6 +84,88 @@ function titleCase(value) {
     .replace(/[-_]+/g, " ")
     .trim()
     .replace(/\b\w/g, char => char.toUpperCase());
+}
+
+function noiseLabel(value) {
+  const normalized = titleCase(value || "None");
+  return normalized === "High" || normalized === "Low" ? `${normalized} Noise` : "No Noise";
+}
+
+function noiseProfile(value) {
+  const normalized = titleCase(value || "None");
+  return PLOT_NOISE_PROFILES[normalized] ? normalized : "None";
+}
+
+function hashString(value) {
+  let h = 2166136261 >>> 0;
+  for (const ch of String(value)) {
+    h ^= ch.charCodeAt(0);
+    h = Math.imul(h, 16777619) >>> 0;
+  }
+  return h >>> 0;
+}
+
+function seedForRun(baseSeed, runId) {
+  return (Number(baseSeed || 0) ^ hashString(String(runId || ""))) >>> 0;
+}
+
+function makeRng(seed) {
+  let t = Number(seed || 0) >>> 0;
+  return () => {
+    t = (t + 0x6D2B79F5) >>> 0;
+    let result = Math.imul(t ^ (t >>> 15), 1 | t);
+    result ^= result + Math.imul(result ^ (result >>> 7), 61 | result);
+    return ((result ^ (result >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function gaussianSample(rng) {
+  let u = 0.0;
+  let v = 0.0;
+  while (u === 0.0) u = rng();
+  while (v === 0.0) v = rng();
+  return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+}
+
+function rollingRms(values, windowPoints = NOISE_RULES.rollingWindowPoints) {
+  const n = values.length;
+  if (!n) return [];
+  let w = Math.max(1, Math.trunc(Number(windowPoints) || NOISE_RULES.rollingWindowPoints));
+  if (w % 2 === 0) w += 1;
+  const half = Math.floor(w / 2);
+  return values.map((_, index) => {
+    const start = Math.max(0, index - half);
+    const end = Math.min(n, index + half + 1);
+    let sum = 0.0;
+    let count = 0;
+    for (let i = start; i < end; i += 1) {
+      const value = Number(values[i]);
+      if (!Number.isFinite(value)) continue;
+      sum += value * value;
+      count += 1;
+    }
+    return count ? Math.sqrt(sum / count) : 0.0;
+  });
+}
+
+function applyAdaptiveAndBaseNoise(values, { adaptive = 0.0, base = 0.0, abs = 0.0, seedKey, seed = 0 } = {}) {
+  const arr = values.map(value => Number(value));
+  const finite = arr.filter(Number.isFinite);
+  if (!arr.length || (!adaptive && !base && !abs) || !finite.length) return arr;
+
+  const localRms = rollingRms(arr);
+  const globalRms = Math.sqrt(finite.reduce((sum, value) => sum + value * value, 0.0) / finite.length);
+  const sigmaFloor = NOISE_RULES.sigmaFloorRatio * globalRms;
+  const sigmaBase = base > 0.0 ? base * globalRms : 0.0;
+  const rng = makeRng(hashString(`${seedKey}:${Math.trunc(Number(seed) || 0)}`));
+
+  return arr.map((value, index) => {
+    if (!Number.isFinite(value)) return value;
+    const sigmaAdaptive = adaptive * Math.max(localRms[index], sigmaFloor);
+    const sigma = Math.hypot(sigmaAdaptive, sigmaBase, abs);
+    if (!Number.isFinite(sigma) || sigma <= 0.0) return value;
+    return value + gaussianSample(rng) * sigma;
+  });
 }
 
 function normalizeScope(scope = {}) {
@@ -286,6 +374,44 @@ async function getSubmissionDetail(submissionId) {
   return state.submissionDetails[submissionId];
 }
 
+function observedSignalIds(description, data) {
+  const channelDescriptions = description.observed_channels || description.observedChannels || [];
+  const fromDescription = channelDescriptions.map(ch => ch.id || ch).filter(Boolean);
+  const fromData = Array.isArray(data.columns) ? data.columns : Object.keys(data.rows?.[0] || {});
+  return [...new Set((fromDescription.length ? fromDescription : fromData).map(String))]
+    .filter(id => id !== "time");
+}
+
+function dataWithPlotNoise(data, description, controls) {
+  const profileName = noiseProfile(controls?.noise);
+  const profile = PLOT_NOISE_PROFILES[profileName] || PLOT_NOISE_PROFILES.None;
+  const rows = Array.isArray(data.rows) ? data.rows : [];
+  if (!rows.length || profileName === "None") {
+    return { ...data, rows: rows.map(row => ({ ...row })), plot_noise_profile: profileName };
+  }
+
+  const noisyRows = rows.map(row => ({ ...row }));
+  const runId = String(data.run_id || data.source || "website-sample");
+  const derivedSeed = seedForRun(0, runId);
+  for (const column of observedSignalIds(description, data)) {
+    if (!rows.some(row => Number.isFinite(Number(row[column])))) continue;
+    const values = rows.map(row => Number(row[column]));
+    const noisyValues = applyAdaptiveAndBaseNoise(values, {
+      adaptive: profile.adaptive,
+      seedKey: `signal:${runId}:${column}`,
+      seed: derivedSeed,
+    });
+    noisyValues.forEach((value, index) => {
+      if (Number.isFinite(value)) noisyRows[index][column] = value;
+    });
+  }
+  return { ...data, rows: noisyRows, plot_noise_profile: profileName };
+}
+
+function plotNoiseCue(controls) {
+  return `<div class="plot-noise-cue">Plot noise: ${escapeHtml(noiseLabel(controls?.noise))}</div>`;
+}
+
 function renderPlot(data, description, options = {}) {
   const rows = data.rows || [];
   if (!rows.length) return `<div class="plot-wrap"><p class="muted">No sample rows available.</p></div>`;
@@ -414,6 +540,7 @@ function taskControls(prefix, controls, sampleControls = "") {
 async function renderHome() {
   const description = await getEnvironmentDescription("BallDrop");
   const data = await getEnvironmentData("BallDrop", 1);
+  const plotData = dataWithPlotNoise(data, description, state.home);
   const prompt = findPrompt(description, state.home);
 
   const stats = [
@@ -448,7 +575,8 @@ async function renderHome() {
       <div class="panel">
         ${taskControls("home", state.home)}
         <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
-        ${renderPlot(data, description)}
+        ${plotNoiseCue(state.home)}
+        ${renderPlot(plotData, description)}
         <div class="prompt-panel">
           <pre>${escapeHtml(prompt.agent_instruction)}</pre>
           <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>
@@ -721,6 +849,7 @@ async function renderEnvironmentDetail(environmentId) {
   const sampleCount = description.sample_count || 1;
   const selectedSample = state.env.sampleIndex[environmentId] || 1;
   const data = await getEnvironmentData(environmentId, Math.min(selectedSample, sampleCount));
+  const plotData = dataWithPlotNoise(data, description, state.env);
   const prompt = findPrompt(description, state.env);
   const sampleControls = `
     <div class="control-row">
@@ -738,7 +867,8 @@ async function renderEnvironmentDetail(environmentId) {
       <p class="page-subtitle">${escapeHtml(description.short_one_line_description)}</p>
       <div class="panel">
         ${taskControls("env", state.env, sampleControls)}
-        ${renderPlot(data, description)}
+        ${plotNoiseCue(state.env)}
+        ${renderPlot(plotData, description)}
       </div>
       <div class="prompt-panel">
         <h2>Agent prompt</h2>
@@ -906,6 +1036,17 @@ async function render() {
   }
 }
 
+if (window.__TSENV_ENABLE_TEST_API__) {
+  window.__TSENV_TEST__ = {
+    applyAdaptiveAndBaseNoise,
+    dataWithPlotNoise,
+    findPrompt,
+    hashString,
+    noiseProfile,
+    seedForRun,
+  };
+}
+
 document.addEventListener("click", event => {
   const link = event.target.closest("a[data-link]");
   if (link) {
@@ -986,4 +1127,6 @@ document.addEventListener("change", event => {
 });
 
 window.addEventListener("popstate", render);
-render();
+if (!window.__TSENV_DISABLE_AUTORUN__) {
+  render();
+}

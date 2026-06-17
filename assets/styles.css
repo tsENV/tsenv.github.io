@@ -213,6 +213,11 @@ button, select { font: inherit; }
   line-height: 1.2;
   background: #fff;
 }
+.plot-noise-cue {
+  margin: -2px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
 .toggle-button,
 .copy-button,
 .compare-button,
