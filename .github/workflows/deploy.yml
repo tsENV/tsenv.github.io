@@ -25,15 +25,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/checkout@v4
+        with:
+          repository: TommasoBendinelli/tsENV
+          path: _tsENV
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - run: pip install -r requirements.txt
-      - run: python scripts/sync_hf_to_website_data.py --hf-repo TommasoBendinelli/tsenv-benchmark
+      - run: python scripts/sync_hf_to_website_data.py --hf-repo TommasoBendinelli/tsenv-benchmark --tsenv-root _tsENV
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
       - run: python scripts/validate_website_data.py
+      - run: rm -rf _tsENV
 
       - uses: actions/configure-pages@v5
 
