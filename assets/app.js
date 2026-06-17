@@ -34,7 +34,7 @@ const state = {
   envData: {},
   homeData: null,
   submissionDetails: {},
-  home: { taskMode: "Code", noise: "Low", context: "High", examples: "Three Examples", reveal: false },
+  home: { taskMode: "Code", noise: "None", context: "High", examples: "Three Examples", reveal: false },
   results: {
     scope: { task_mode: "Code", noise: "Low", context: "High", examples: "Three Examples" },
     compare: false,
@@ -438,12 +438,14 @@ function renderPlot(data, description, options = {}) {
   limitedChannels.forEach((channel, index) => {
     const channelMeta = channelDescriptions.find(ch => (ch.id || ch) === channel) || { label: channel, unit: "" };
     const values = rows.map(row => Number(row[channel]));
+    const isPrimary = !options.primaryChannel || channel === options.primaryChannel;
     traces.push({
       x,
       y: values,
       mode: "lines",
       name: `${channelMeta.label}${channelMeta.unit ? ` (${channelMeta.unit})` : ""}`,
       line: { color: colors[index] || colors[0], width: 2 },
+      visible: isPrimary ? true : "legendonly",
       hovertemplate: "time=%{x:.3f}s<br>%{y:.4f}<extra>%{fullData.name}</extra>",
     });
   });
@@ -459,7 +461,7 @@ function renderPlot(data, description, options = {}) {
       plot_bgcolor: "#ffffff",
       font: { family: "Inter, system-ui, sans-serif", color: "#111111", size: 12 },
       xaxis: { title: "time", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
-      yaxis: { title: "observed channels", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
+      yaxis: { title: options.yAxisTitle || "observed channels", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
       legend: { orientation: "h", x: 0, y: 1.14 },
       shapes: [{
         type: "line",
@@ -584,7 +586,7 @@ async function renderHome() {
         ${taskControls("home", state.home)}
         <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
         ${plotNoiseCue(state.home)}
-        ${renderPlot(plotData, description)}
+        ${renderPlot(plotData, description, { primaryChannel: "Position", yAxisTitle: "ball height" })}
         <div class="prompt-panel">
           <pre>${escapeHtml(prompt.agent_instruction)}</pre>
           <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>
