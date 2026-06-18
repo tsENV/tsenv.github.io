@@ -423,6 +423,7 @@ function plotNoiseCue(controls) {
 function renderPlot(data, description, options = {}) {
   const rows = data.rows || [];
   if (!rows.length) return `<div class="plot-wrap"><p class="muted">No sample rows available.</p></div>`;
+  const showInterventionMarker = options.showInterventionMarker !== false;
 
   const channelDescriptions = description.observed_channels || (description.observedChannels || []).map(item => (
     typeof item === "string" ? { id: item, label: item, unit: "" } : item
@@ -463,7 +464,7 @@ function renderPlot(data, description, options = {}) {
       xaxis: { title: "time", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
       yaxis: { title: options.yAxisTitle || "observed channels", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
       legend: { orientation: "h", x: 0, y: 1.14 },
-      shapes: [{
+      shapes: showInterventionMarker ? [{
         type: "line",
         x0: Number(data.intervention_time),
         x1: Number(data.intervention_time),
@@ -471,8 +472,8 @@ function renderPlot(data, description, options = {}) {
         y1: 1,
         yref: "paper",
         line: { color: "#d97917", width: 2, dash: "dash" },
-      }],
-      annotations: [{
+      }] : [],
+      annotations: showInterventionMarker ? [{
         x: Number(data.intervention_time),
         y: 1,
         yref: "paper",
@@ -481,12 +482,15 @@ function renderPlot(data, description, options = {}) {
         xanchor: "left",
         yanchor: "bottom",
         font: { color: "#5f6368", size: 12 },
-      }],
+      }] : [],
     },
     config: { responsive: true, displayModeBar: false },
   });
 
-  return `<div class="plot-wrap plotly-wrap"><div id="${plotId}" class="plotly-host" role="img" aria-label="Time-series Plotly plot with intervention marker"></div></div>`;
+  const ariaLabel = showInterventionMarker
+    ? "Time-series Plotly plot with intervention marker"
+    : "Time-series Plotly plot";
+  return `<div class="plot-wrap plotly-wrap"><div id="${plotId}" class="plotly-host" role="img" aria-label="${ariaLabel}"></div></div>`;
 }
 
 function mountPlots() {
@@ -570,13 +574,6 @@ async function renderHome() {
       <img class="ball-drop-gif" src="/assets/media/ball-drop-bounce.gif" alt="Animated bouncing ball from the BallDrop simulator" />
     </section>
 
-    <section class="section" aria-labelledby="stats-title">
-      <h2 id="stats-title">Benchmark structure</h2>
-      <div class="stats-row">
-        ${stats.map(([value, meaning]) => `<div class="stat-cell"><span class="stat-value">${value}</span><span class="stat-meaning">${meaning}</span></div>`).join("")}
-      </div>
-    </section>
-
     <section class="section" aria-labelledby="example-title">
       <div class="section-header">
         <h2 id="example-title">Example task visual</h2>
@@ -586,12 +583,19 @@ async function renderHome() {
         ${taskControls("home", state.home)}
         <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
         ${plotNoiseCue(state.home)}
-        ${renderPlot(plotData, description, { primaryChannel: "Position", yAxisTitle: "ball height" })}
+        ${renderPlot(plotData, description, { primaryChannel: "Position", yAxisTitle: "ball height", showInterventionMarker: false })}
         <div class="prompt-panel">
           <pre>${escapeHtml(prompt.agent_instruction)}</pre>
           <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>
           ${state.home.reveal ? `<div class="reveal-answer"><strong>Correct answer:</strong> ${escapeHtml(data.answer || data.intervention_parameter || "no intervention")} changed at the intervention marker.</div>` : ""}
         </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="stats-title">
+      <h2 id="stats-title">Benchmark structure</h2>
+      <div class="stats-row">
+        ${stats.map(([value, meaning]) => `<div class="stat-cell"><span class="stat-value">${value}</span><span class="stat-meaning">${meaning}</span></div>`).join("")}
       </div>
     </section>
 
