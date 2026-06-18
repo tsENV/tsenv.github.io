@@ -137,10 +137,8 @@ button, select { font: inherit; }
 }
 .ball-drop-gif {
   display: block;
-  width: min(100%, 720px);
-  margin: 0 auto;
-  border: 1px solid var(--line);
-  background: #fff;
+  width: 100%;
+  height: auto;
 }
 
 .stats-row {
