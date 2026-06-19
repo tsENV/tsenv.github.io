@@ -115,6 +115,13 @@ button, select { font: inherit; }
   padding-top: 30px;
   margin-bottom: 24px;
 }
+.first-home-section {
+  padding-top: 28px;
+}
+.first-home-section .section-header {
+  border-top: 0;
+  padding-top: 0;
+}
 .section h2,
 .detail-title h2 {
   font-size: clamp(26px, 3vw, 40px);
@@ -133,7 +140,7 @@ button, select { font: inherit; }
 .small { font-size: 13px; }
 
 .ball-drop-section {
-  padding-top: 36px;
+  padding-top: 18px;
 }
 .ball-drop-gif {
   display: block;

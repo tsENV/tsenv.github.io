@@ -569,7 +569,7 @@ async function renderHome() {
       <p>Tasks are generated from physical simulators with known interventions. Agents must combine textual descriptions, noisy observations, and optional labeled examples to identify what changed, or that no intervention occurred.</p>
     </section>
 
-    <section class="section" aria-labelledby="example-title">
+    <section class="section first-home-section" aria-labelledby="example-title">
       <div class="section-header">
         <h2 id="example-title">Illustrative Example</h2>
       </div>
