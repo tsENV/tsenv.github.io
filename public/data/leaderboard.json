@@ -32,9 +32,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
       },
       "model": "gpt-5.5",
       "rank": 1,
@@ -58,9 +58,9 @@
       "complete": true,
       "date": "2026-05-18",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
       },
       "model": "gemini_3_1_pro_high",
       "rank": 2,
@@ -84,9 +84,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
       },
       "model": "gpt-5.5",
       "rank": 1,
@@ -110,9 +110,9 @@
       "complete": true,
       "date": "2026-05-07",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
       },
       "model": "gemini_3_1_pro_high",
       "rank": 2,
@@ -136,9 +136,9 @@
       "complete": true,
       "date": "2026-05-19",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
       },
       "model": "openrouter/minimax/minimax-m2.7",
       "rank": 3,
@@ -162,9 +162,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
       },
       "model": "gpt-5.5",
       "rank": 1,
@@ -188,9 +188,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
       },
       "model": "gemini_3_1_pro_high",
       "rank": 2,
@@ -214,9 +214,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
       },
       "model": "gpt-5.5",
       "rank": 1,
@@ -240,9 +240,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
       },
       "model": "gemini_3_1_pro_high",
       "rank": 2,
@@ -266,9 +266,9 @@
       "complete": true,
       "date": "2026-05-07",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/claude-4-opus-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/claude-4-opus-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/claude-4-opus-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/claude-4-opus-high.zip"
       },
       "model": "claude-opus-4-6",
       "rank": 3,
@@ -292,9 +292,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
       },
       "model": "openrouter/minimax/minimax-m2.7",
       "rank": 4,
@@ -318,9 +318,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
       },
       "model": "gpt-5.5",
       "rank": 1,
@@ -344,9 +344,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
       },
       "model": "gemini_3_1_pro_high",
       "rank": 2,
@@ -370,9 +370,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
       },
       "model": "gpt-5.5",
       "rank": 1,
@@ -396,9 +396,9 @@
       "complete": true,
       "date": "2026-05-18",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/claude-4-opus-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/claude-4-opus-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/claude-4-opus-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/claude-4-opus-high.zip"
       },
       "model": "claude-opus-4-6",
       "rank": 2,
@@ -422,9 +422,9 @@
       "complete": true,
       "date": "2026-05-07",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
       },
       "model": "gemini_3_1_pro_high",
       "rank": 3,
@@ -448,9 +448,9 @@
       "complete": true,
       "date": "2026-05-19",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
       },
       "model": "openrouter/minimax/minimax-m2.7",
       "rank": 4,
@@ -474,9 +474,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
       },
       "model": "gpt-5.5",
       "rank": 1,
@@ -500,9 +500,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
       },
       "model": "gemini_3_1_pro_high",
       "rank": 2,
@@ -526,9 +526,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gpt-5-5-codex-high.zip"
       },
       "model": "gpt-5.5",
       "rank": 1,
@@ -552,9 +552,9 @@
       "complete": true,
       "date": "2026-05-07",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/claude-4-opus-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/claude-4-opus-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/claude-4-opus-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/claude-4-opus-high.zip"
       },
       "model": "claude-opus-4-6",
       "rank": 2,
@@ -578,9 +578,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/gemini-3-1-pro-high.zip"
       },
       "model": "gemini_3_1_pro_high",
       "rank": 3,
@@ -604,9 +604,9 @@
       "complete": true,
       "date": "2026-05-06",
       "links": {
-        "artifacts": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
-        "results": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-        "trajectories": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+        "artifacts": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
+        "results": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+        "trajectories": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
       },
       "model": "openrouter/minimax/minimax-m2.7",
       "rank": 4,

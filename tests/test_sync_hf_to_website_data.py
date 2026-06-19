@@ -239,7 +239,7 @@ class WebsitePromptRenderingTest(unittest.TestCase):
                             "name": simulator,
                             "short_one_line_description": "short",
                             "download_link": (
-                                "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/tree/main/"
+                                "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/tree/main/"
                                 f"questions/{simulator}"
                             ),
                             "prompt_combinations": [

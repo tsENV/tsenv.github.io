@@ -559,8 +559,7 @@ async function renderHome() {
 
   const stats = [
     ["3 physical simulators", "BallDrop, BounceBall, MassSlide"],
-    ["2 task modes", "Code and Direct"],
-    ["3 controllable axes", "noise, context, examples"],
+    ["4 experimental conditions", "Noise, Task output format, Context, Number of training examples"],
   ];
 
   const content = `
@@ -570,30 +569,36 @@ async function renderHome() {
       <p>Tasks are generated from physical simulators with known interventions. Agents must combine textual descriptions, noisy observations, and optional labeled examples to identify what changed, or that no intervention occurred.</p>
     </section>
 
-    <section class="section ball-drop-section" aria-label="BallDrop simulator animation">
-      <img class="ball-drop-gif" src="/assets/media/ball-drop-bounce.gif" alt="Animated bouncing ball from the BallDrop simulator" />
-    </section>
-
     <section class="section" aria-labelledby="example-title">
       <div class="section-header">
-        <h2 id="example-title">Example task visual</h2>
-        <p class="page-subtitle">A compact BallDrop task with controls for answer interface and benchmark condition axes.</p>
+        <h2 id="example-title">Illustrative Example</h2>
       </div>
-      <div class="panel">
-        ${taskControls("home", state.home)}
-        <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
-        ${plotNoiseCue(state.home)}
-        ${renderPlot(plotData, description, { primaryChannel: "Position", yAxisTitle: "ball height", showInterventionMarker: false })}
-        <div class="prompt-panel">
-          <pre>${escapeHtml(prompt.agent_instruction)}</pre>
-          <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>
-          ${state.home.reveal ? `<div class="reveal-answer"><strong>Correct answer:</strong> ${escapeHtml(data.answer || data.intervention_parameter || "no intervention")} changed at the intervention marker.</div>` : ""}
-        </div>
+      <div class="example-stack">
+        <section class="subsection ball-drop-section" aria-labelledby="data-simulation-title">
+          <h3 id="data-simulation-title">Data Simulation</h3>
+          <img class="ball-drop-gif" src="/assets/media/ball-drop-bounce.gif" alt="Animated bouncing ball from the BallDrop simulator" />
+        </section>
+
+        <section class="subsection" aria-labelledby="question-title">
+          <h3 id="question-title">Question</h3>
+          <p class="page-subtitle">A compact BallDrop task with controls for answer interface and benchmark condition axes.</p>
+          <div class="panel">
+            ${taskControls("home", state.home)}
+            <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
+            ${plotNoiseCue(state.home)}
+            ${renderPlot(plotData, description, { primaryChannel: "Position", yAxisTitle: "ball height", showInterventionMarker: false })}
+            <div class="prompt-panel">
+              <pre>${escapeHtml(prompt.agent_instruction)}</pre>
+              <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>
+              ${state.home.reveal ? `<div class="reveal-answer"><strong>Correct answer:</strong> ${escapeHtml(data.answer || data.intervention_parameter || "no intervention")} changed at the intervention marker.</div>` : ""}
+            </div>
+          </div>
+        </section>
       </div>
     </section>
 
     <section class="section" aria-labelledby="stats-title">
-      <h2 id="stats-title">Benchmark structure</h2>
+      <h2 id="stats-title">Statistic row</h2>
       <div class="stats-row">
         ${stats.map(([value, meaning]) => `<div class="stat-cell"><span class="stat-value">${value}</span><span class="stat-meaning">${meaning}</span></div>`).join("")}
       </div>

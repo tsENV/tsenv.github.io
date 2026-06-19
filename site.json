@@ -1,8 +1,8 @@
 {
   "website_url": "https://tsenv.github.io/",
   "code_url": "https://github.com/TommasoBendinelli/tsENV",
-  "hf_repo": "TommasoBendinelli/tsenv-benchmark",
-  "hf_dataset_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark",
+  "hf_repo": "eth-siplab/tsenvbenchmark",
+  "hf_dataset_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark",
   "issues_url": "https://github.com/TommasoBendinelli/tsENV/issues",
   "affiliation_url": "https://siplab.org/",
   "paper_url": "https://arxiv.org",

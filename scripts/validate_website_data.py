@@ -80,7 +80,7 @@ def validate_environments(data_dir: Path, summary: dict[str, Any]) -> None:
         require(description.get("short_one_line_description"), f"{simulator}/description.json missing short description")
         validate_prompt_combinations(description.get("prompt_combinations"), simulator)
         expected_download_link = (
-            "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/tree/main/questions/"
+            "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/tree/main/questions/"
             f"{simulator}"
         )
         require(

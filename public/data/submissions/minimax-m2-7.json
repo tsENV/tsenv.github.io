@@ -141,14 +141,14 @@
   ],
   "date": "2026-05-19",
   "downloads": {
-    "benchmark_dataset": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark",
-    "complete_results_table": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/results.parquet",
-    "trajectory_archive": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+    "benchmark_dataset": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark",
+    "complete_results_table": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/results.parquet",
+    "trajectory_archive": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
   },
   "model": "openrouter/minimax/minimax-m2.7",
   "per_seed_results": [
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_0",
       "scope": {
         "context": "High",
@@ -159,10 +159,10 @@
       "score": 0.2,
       "seed": 0,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_1",
       "scope": {
         "context": "High",
@@ -173,10 +173,10 @@
       "score": 0.3,
       "seed": 1,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_2",
       "scope": {
         "context": "High",
@@ -187,10 +187,10 @@
       "score": 0.6,
       "seed": 2,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_3",
       "scope": {
         "context": "High",
@@ -201,10 +201,10 @@
       "score": 0.4,
       "seed": 3,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_4",
       "scope": {
         "context": "High",
@@ -215,10 +215,10 @@
       "score": 0.2,
       "seed": 4,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_0",
       "scope": {
         "context": "High",
@@ -229,10 +229,10 @@
       "score": 0.2,
       "seed": 0,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_1",
       "scope": {
         "context": "High",
@@ -243,10 +243,10 @@
       "score": 0.3,
       "seed": 1,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_2",
       "scope": {
         "context": "High",
@@ -257,10 +257,10 @@
       "score": 0.2,
       "seed": 2,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_3",
       "scope": {
         "context": "High",
@@ -271,10 +271,10 @@
       "score": 0.1,
       "seed": 3,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_4",
       "scope": {
         "context": "High",
@@ -285,10 +285,10 @@
       "score": 0.2,
       "seed": 4,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_0",
       "scope": {
         "context": "High",
@@ -299,10 +299,10 @@
       "score": 0.6,
       "seed": 0,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_1",
       "scope": {
         "context": "High",
@@ -313,10 +313,10 @@
       "score": 0.3,
       "seed": 1,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_2",
       "scope": {
         "context": "High",
@@ -327,10 +327,10 @@
       "score": 0.3,
       "seed": 2,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_3",
       "scope": {
         "context": "High",
@@ -341,10 +341,10 @@
       "score": 0.5,
       "seed": 3,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-orbit_4",
       "scope": {
         "context": "High",
@@ -355,10 +355,10 @@
       "score": 0.9,
       "seed": 4,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_0",
       "scope": {
         "context": "High",
@@ -369,10 +369,10 @@
       "score": 0.3,
       "seed": 0,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_1",
       "scope": {
         "context": "High",
@@ -383,10 +383,10 @@
       "score": 0.0,
       "seed": 1,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_2",
       "scope": {
         "context": "High",
@@ -397,10 +397,10 @@
       "score": 0.2,
       "seed": 2,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_3",
       "scope": {
         "context": "High",
@@ -411,10 +411,10 @@
       "score": 0.1,
       "seed": 3,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_4",
       "scope": {
         "context": "High",
@@ -425,10 +425,10 @@
       "score": 0.3,
       "seed": 4,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_0",
       "scope": {
         "context": "High",
@@ -439,10 +439,10 @@
       "score": 0.3,
       "seed": 0,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_1",
       "scope": {
         "context": "High",
@@ -453,10 +453,10 @@
       "score": 0.1,
       "seed": 1,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_2",
       "scope": {
         "context": "High",
@@ -467,10 +467,10 @@
       "score": 0.2,
       "seed": 2,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_3",
       "scope": {
         "context": "High",
@@ -481,10 +481,10 @@
       "score": 0.2,
       "seed": 3,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_4",
       "scope": {
         "context": "High",
@@ -495,10 +495,10 @@
       "score": 0.1,
       "seed": 4,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_0",
       "scope": {
         "context": "High",
@@ -509,10 +509,10 @@
       "score": 0.6,
       "seed": 0,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_1",
       "scope": {
         "context": "High",
@@ -523,10 +523,10 @@
       "score": 0.5,
       "seed": 1,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_2",
       "scope": {
         "context": "High",
@@ -537,10 +537,10 @@
       "score": 0.3,
       "seed": 2,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_3",
       "scope": {
         "context": "High",
@@ -551,10 +551,10 @@
       "score": 0.7,
       "seed": 3,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-flame_4",
       "scope": {
         "context": "High",
@@ -565,10 +565,10 @@
       "score": 0.3,
       "seed": 4,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_0",
       "scope": {
         "context": "High",
@@ -579,10 +579,10 @@
       "score": 0.2,
       "seed": 0,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_1",
       "scope": {
         "context": "High",
@@ -593,10 +593,10 @@
       "score": 0.0,
       "seed": 1,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_2",
       "scope": {
         "context": "High",
@@ -607,10 +607,10 @@
       "score": 0.4,
       "seed": 2,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_3",
       "scope": {
         "context": "High",
@@ -621,10 +621,10 @@
       "score": 0.1,
       "seed": 3,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_4",
       "scope": {
         "context": "High",
@@ -635,10 +635,10 @@
       "score": 0.3,
       "seed": 4,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_0",
       "scope": {
         "context": "High",
@@ -649,10 +649,10 @@
       "score": 0.2,
       "seed": 0,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_1",
       "scope": {
         "context": "High",
@@ -663,10 +663,10 @@
       "score": 0.3,
       "seed": 1,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_2",
       "scope": {
         "context": "High",
@@ -677,10 +677,10 @@
       "score": 0.0,
       "seed": 2,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_3",
       "scope": {
         "context": "High",
@@ -691,10 +691,10 @@
       "score": 0.2,
       "seed": 3,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_4",
       "scope": {
         "context": "High",
@@ -705,10 +705,10 @@
       "score": 0.3,
       "seed": 4,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_0",
       "scope": {
         "context": "High",
@@ -719,10 +719,10 @@
       "score": 0.4,
       "seed": 0,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_1",
       "scope": {
         "context": "High",
@@ -733,10 +733,10 @@
       "score": 0.3,
       "seed": 1,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_2",
       "scope": {
         "context": "High",
@@ -747,10 +747,10 @@
       "score": 0.3,
       "seed": 2,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_3",
       "scope": {
         "context": "High",
@@ -761,10 +761,10 @@
       "score": 0.8,
       "seed": 3,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-pine_4",
       "scope": {
         "context": "High",
@@ -775,10 +775,10 @@
       "score": 0.7,
       "seed": 4,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_0",
       "scope": {
         "context": "High",
@@ -789,10 +789,10 @@
       "score": 0.0,
       "seed": 0,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_1",
       "scope": {
         "context": "High",
@@ -803,10 +803,10 @@
       "score": 0.2,
       "seed": 1,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_2",
       "scope": {
         "context": "High",
@@ -817,10 +817,10 @@
       "score": 0.1,
       "seed": 2,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_3",
       "scope": {
         "context": "High",
@@ -831,10 +831,10 @@
       "score": 0.2,
       "seed": 3,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_4",
       "scope": {
         "context": "High",
@@ -845,10 +845,10 @@
       "score": 0.3,
       "seed": 4,
       "simulator": "BallDrop",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_0",
       "scope": {
         "context": "High",
@@ -859,10 +859,10 @@
       "score": 0.0,
       "seed": 0,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_1",
       "scope": {
         "context": "High",
@@ -873,10 +873,10 @@
       "score": 0.3,
       "seed": 1,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_2",
       "scope": {
         "context": "High",
@@ -887,10 +887,10 @@
       "score": 0.3,
       "seed": 2,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_3",
       "scope": {
         "context": "High",
@@ -901,10 +901,10 @@
       "score": 0.0,
       "seed": 3,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_4",
       "scope": {
         "context": "High",
@@ -915,10 +915,10 @@
       "score": 0.3,
       "seed": 4,
       "simulator": "BounceBall",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_0",
       "scope": {
         "context": "High",
@@ -929,10 +929,10 @@
       "score": 0.3,
       "seed": 0,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_1",
       "scope": {
         "context": "High",
@@ -943,10 +943,10 @@
       "score": 0.5,
       "seed": 1,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_2",
       "scope": {
         "context": "High",
@@ -957,10 +957,10 @@
       "score": 0.6,
       "seed": 2,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_3",
       "scope": {
         "context": "High",
@@ -971,10 +971,10 @@
       "score": 0.6,
       "seed": 3,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     },
     {
-      "artifact_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip",
+      "artifact_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip",
       "question_id": "gentle_01234-cloud_4",
       "scope": {
         "context": "High",
@@ -985,7 +985,7 @@
       "score": 0.7,
       "seed": 4,
       "simulator": "MassSlide",
-      "trajectory_url": "https://huggingface.co/datasets/TommasoBendinelli/tsenv-benchmark/resolve/main/submissions/minimax-m2-7.zip"
+      "trajectory_url": "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/resolve/main/submissions/minimax-m2-7.zip"
     }
   ],
   "seed_coverage": {
