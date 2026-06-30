@@ -53,7 +53,7 @@ class WebsitePromptRenderingTest(unittest.TestCase):
         questions = {}
         for desc_level in ("high", "none"):
             for task_type in ("direct", "code"):
-                for samples in (0, 3):
+                for samples in (0, 1, 3):
                     questions[f"{desc_level}-{task_type}-{samples}"] = self.question(
                         desc_level=desc_level,
                         task_type=task_type,
@@ -72,7 +72,7 @@ class WebsitePromptRenderingTest(unittest.TestCase):
 
             combinations = sync_hf_to_website_data.rendered_prompt_combinations(questions_path, fake_renderer)
 
-        self.assertEqual(len(combinations), 8)
+        self.assertEqual(len(combinations), 12)
         by_key = {
             (item["desc_level"], item["task_type"], item["training_samples"]): item["agent_instruction"]
             for item in combinations
@@ -82,7 +82,11 @@ class WebsitePromptRenderingTest(unittest.TestCase):
             "rendered::high-direct-0::prompt source high-direct-0",
         )
         self.assertEqual(
-            by_key[("none", "code", ">0")],
+            by_key[("none", "code", "one")],
+            "rendered::none-code-1::prompt source none-code-1",
+        )
+        self.assertEqual(
+            by_key[("none", "code", "multiple")],
             "rendered::none-code-3::prompt source none-code-3",
         )
 
@@ -203,12 +207,34 @@ class WebsitePromptRenderingTest(unittest.TestCase):
         self.assertEqual(homepage_data["source"], "programmatic:ball-drop-bounce-gif")
         self.assertTrue(homepage_data["rows"])
         combinations = description["prompt_combinations"]
-        self.assertEqual(len(combinations), 8)
+        self.assertEqual(len(combinations), 12)
         self.assertNotEqual(combinations[0]["agent_instruction"], "stale deployed prompt")
         self.assertEqual(
             combinations[0]["agent_instruction"],
             "rendered::high-direct-0::prompt source high-direct-0",
         )
+
+    def test_positive_prompt_bucket_falls_back_when_exact_count_missing(self) -> None:
+        questions = {
+            "high-code-0": self.question(desc_level="high", task_type="code", samples=0),
+            "high-code-3": self.question(desc_level="high", task_type="code", samples=3),
+        }
+
+        selected_one_slug, _ = sync_hf_to_website_data.select_question(
+            questions,
+            desc_level="high",
+            task_type="code",
+            training_samples="one",
+        )
+        selected_multiple_slug, _ = sync_hf_to_website_data.select_question(
+            questions,
+            desc_level="high",
+            task_type="code",
+            training_samples="multiple",
+        )
+
+        self.assertEqual(selected_one_slug, "high-code-3")
+        self.assertEqual(selected_multiple_slug, "high-code-3")
 
     def test_validator_rejects_missing_prompt_combination(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

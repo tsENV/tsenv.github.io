@@ -505,13 +505,6 @@ tbody tr:last-child td { border-bottom: 0; }
   flex-wrap: wrap;
   margin-top: 12px;
 }
-.footer-rule {
-  border-top: 1px solid var(--line);
-  margin-top: 56px;
-  padding-top: 18px;
-  color: var(--muted);
-  font-size: 13px;
-}
 .error-box {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);

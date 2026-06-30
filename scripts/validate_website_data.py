@@ -19,7 +19,7 @@ EXPECTED_PROMPT_COMBINATIONS = {
     (desc_level, task_type, training_samples)
     for desc_level in ("high", "none")
     for task_type in ("direct", "code")
-    for training_samples in ("none", ">0")
+    for training_samples in ("none", "one", "multiple")
 }
 MALFORMED_PROMPT_PREFIX = "You are given multivariate time-series observations"
 

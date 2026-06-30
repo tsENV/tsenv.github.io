@@ -30,7 +30,7 @@ SIMULATORS = ("BallDrop", "BounceBall", "MassSlide")
 HOMEPAGE_DATA_FILENAME = "data_main_page.json"
 PROMPT_DESC_LEVELS = ("high", "none")
 PROMPT_TASK_TYPES = ("direct", "code")
-PROMPT_TRAINING_SAMPLES = ("none", ">0")
+PROMPT_TRAINING_SAMPLES = ("none", "one", "multiple")
 TSENV_DOCUMENTED_PROMPT_FIELDS = (
     "sample_source",
     "environment_description",
@@ -539,7 +539,11 @@ def sample_bucket(value: Any) -> str | None:
         count = int(value)
     except (TypeError, ValueError):
         return None
-    return ">0" if count > 0 else "none"
+    if count <= 0:
+        return "none"
+    if count == 1:
+        return "one"
+    return "multiple"
 
 
 def select_question(
@@ -549,23 +553,30 @@ def select_question(
     task_type: str,
     training_samples: str,
 ) -> tuple[str, dict[str, Any]]:
-    for question_slug in sorted(questions):
-        question = questions[question_slug]
-        if not isinstance(question, dict):
-            continue
+    def question_matches(question: dict[str, Any], *, allow_positive_fallback: bool = False) -> bool:
         recipe = question.get("recipe_info")
         if not isinstance(recipe, dict):
-            continue
+            return False
         if str(recipe.get("desc_level") or "").strip().lower() != desc_level:
-            continue
+            return False
         if str(recipe.get("type_of_request") or "").strip().lower() != task_type:
-            continue
-        if sample_bucket(recipe.get("number_train_samples_per_class")) != training_samples:
-            continue
-        question_text = question.get("question_text")
-        if not isinstance(question_text, dict):
-            raise RuntimeError(f"question {question_slug} has no question_text object")
-        return question_slug, question
+            return False
+        bucket = sample_bucket(recipe.get("number_train_samples_per_class"))
+        if bucket == training_samples:
+            return True
+        return allow_positive_fallback and training_samples in {"one", "multiple"} and bucket in {"one", "multiple"}
+
+    for allow_positive_fallback in (False, True):
+        for question_slug in sorted(questions):
+            question = questions[question_slug]
+            if not isinstance(question, dict):
+                continue
+            if not question_matches(question, allow_positive_fallback=allow_positive_fallback):
+                continue
+            question_text = question.get("question_text")
+            if not isinstance(question_text, dict):
+                raise RuntimeError(f"question {question_slug} has no question_text object")
+            return question_slug, question
     raise RuntimeError(
         "could not find representative question for "
         f"desc_level={desc_level!r}, task_type={task_type!r}, "

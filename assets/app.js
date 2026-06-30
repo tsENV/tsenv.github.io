@@ -420,6 +420,12 @@ function plotNoiseCue(controls) {
   return `<div class="plot-noise-cue">Plot noise: ${escapeHtml(noiseLabel(controls?.noise))}</div>`;
 }
 
+function trainingSamplesKey(examples) {
+  if (examples === "None") return "none";
+  if (examples === "One Example") return "one";
+  return "multiple";
+}
+
 function renderPlot(data, description, options = {}) {
   const rows = data.rows || [];
   if (!rows.length) return `<div class="plot-wrap"><p class="muted">No sample rows available.</p></div>`;
@@ -452,6 +458,7 @@ function renderPlot(data, description, options = {}) {
   });
 
   const plotId = `plotly-${++plotCounter}`;
+  const disableZoom = options.disableZoom === true;
   plotPayloads.set(plotId, {
     traces,
     layout: {
@@ -484,7 +491,22 @@ function renderPlot(data, description, options = {}) {
         font: { color: "#5f6368", size: 12 },
       }] : [],
     },
-    config: { responsive: true, displayModeBar: false },
+    config: disableZoom
+      ? {
+          responsive: true,
+          displayModeBar: false,
+          staticPlot: true,
+          scrollZoom: false,
+          doubleClick: false,
+        }
+      : {
+          responsive: true,
+          displayModeBar: true,
+          scrollZoom: true,
+          doubleClick: "reset",
+          modeBarButtonsToRemove: ["lasso2d", "select2d"],
+          displaylogo: false,
+        },
   });
 
   const ariaLabel = showInterventionMarker
@@ -513,10 +535,13 @@ function findPrompt(description, controls) {
   const taskMode = controls.taskMode || "Code";
   const taskType = taskMode.toLowerCase();
   const descLevel = controls.context === "High" ? "high" : "none";
-  const trainingSamples = controls.examples === "None" ? "none" : ">0";
+  const trainingSamples = trainingSamplesKey(controls.examples);
+  const legacyTrainingSamples = trainingSamples === "none" ? "none" : ">0";
   const candidates = description.prompt_combinations || [];
   return candidates.find(p => p.task_type === taskType && p.desc_level === descLevel && p.training_samples === trainingSamples)
+      || candidates.find(p => p.task_type === taskType && p.desc_level === descLevel && p.training_samples === legacyTrainingSamples)
       || candidates.find(p => p.task_type === taskType && p.training_samples === trainingSamples)
+      || candidates.find(p => p.task_type === taskType && p.training_samples === legacyTrainingSamples)
       || candidates.find(p => p.task_type === taskType)
       || candidates[0];
 }
@@ -586,7 +611,7 @@ async function renderHome() {
             ${taskControls("home", state.home)}
             <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
             ${plotNoiseCue(state.home)}
-            ${renderPlot(plotData, description, { primaryChannel: "Position", yAxisTitle: "ball height", showInterventionMarker: false })}
+            ${renderPlot(plotData, description, { primaryChannel: "Position", yAxisTitle: "ball height", showInterventionMarker: false, disableZoom: true })}
             <div class="prompt-panel">
               <pre>${escapeHtml(prompt.agent_instruction)}</pre>
               <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>
@@ -614,7 +639,6 @@ async function renderHome() {
         <div class="feature-item"><strong>Controlled difficulty axes.</strong><p>TSENV varies textual context, observation noise, labeled examples, and answer interface in matched experimental conditions.</p></div>
       </div>
     </section>
-    <div class="footer-rule">Public data is loaded from <code>/public/data</code>.</div>
   `;
   commit(content);
 }
@@ -1062,7 +1086,10 @@ if (window.__TSENV_ENABLE_TEST_API__) {
     findPrompt,
     hashString,
     noiseProfile,
+    plotPayloads,
+    renderPlot,
     seedForRun,
+    trainingSamplesKey,
   };
 }
 

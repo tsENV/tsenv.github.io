@@ -39,7 +39,8 @@ const description = {
     { id: "v", label: "v" },
   ],
   prompt_combinations: [
-    { task_type: "code", desc_level: "high", training_samples: ">0", agent_instruction: "code-high-examples" },
+    { task_type: "code", desc_level: "high", training_samples: "multiple", agent_instruction: "code-high-multiple" },
+    { task_type: "code", desc_level: "high", training_samples: "one", agent_instruction: "code-high-one" },
     { task_type: "code", desc_level: "high", training_samples: "none", agent_instruction: "code-high-none" },
   ],
 };
@@ -93,5 +94,28 @@ assert.equal(
   promptHighNoise.agent_instruction,
   "noise-only changes must not change prompt selection"
 );
+assert.equal(promptLowNoise.agent_instruction, "code-high-multiple", "Three Examples should select multiple-example prompt");
+
+const promptOneExample = api.findPrompt(description, {
+  taskMode: "Code",
+  noise: "Low",
+  context: "High",
+  examples: "One Example",
+});
+assert.equal(promptOneExample.agent_instruction, "code-high-one", "One Example should select one-example prompt");
+
+api.plotPayloads.clear();
+api.renderPlot(data, description, { disableZoom: true, showInterventionMarker: false });
+const homepagePayload = [...api.plotPayloads.values()].at(-1);
+assert.equal(homepagePayload.config.staticPlot, true, "homepage plot should disable interactions");
+assert.equal(homepagePayload.config.displayModeBar, false, "homepage plot should hide modebar");
+assert.equal(homepagePayload.config.scrollZoom, false, "homepage plot should disable scroll zoom");
+
+api.plotPayloads.clear();
+api.renderPlot(data, description);
+const environmentPayload = [...api.plotPayloads.values()].at(-1);
+assert.equal(environmentPayload.config.displayModeBar, true, "environment plot should expose Plotly modebar");
+assert.equal(environmentPayload.config.scrollZoom, true, "environment plot should allow scroll zoom");
+assert.notEqual(environmentPayload.config.staticPlot, true, "environment plot should remain interactive");
 
 console.log("noise behavior ok");
