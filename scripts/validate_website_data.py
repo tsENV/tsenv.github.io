@@ -37,6 +37,7 @@ FORBIDDEN_HOMEPAGE_RANKED_PROMPT_SNIPPETS = (
     "<optional_lower_confidence_label>",
     "For each dataframe, predict(df)",
     "def predict(df) -> list[str]:",
+    "columns col1, col2, col3, and col4",
 )
 
 

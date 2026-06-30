@@ -508,7 +508,7 @@ def website_task_artifact(text: str, task_type: str) -> str:
     return rendered
 
 
-def website_prediction_format(task_type: str) -> str:
+def website_prediction_format(desc_level: str, task_type: str) -> str:
     if task_type != "code":
         return (
             "For each file in test_samples/, return the correct label.\n"
@@ -518,16 +518,21 @@ def website_prediction_format(task_type: str) -> str:
             '  "<filename_2>": "<correct_label_filename_2>"\n\n'
             "}"
         )
+    input_description = (
+        "one column, 'ball height'"
+        if desc_level == "high"
+        else "one column, col1"
+    )
     return (
-        "The input df is a pandas DataFrame containing one sample with columns col1, col2, col3, and col4.\n"
+        f"The input df is a pandas DataFrame containing one sample with {input_description}.\n"
         "The function will be called on samples inside test_samples/ and on additional held-out samples with the same schema and label set.\n"
         "The function must return the correct label as a string."
     )
 
 
-def render_website_task(task_artifact: str, task_type: str) -> str:
+def render_website_task(task_artifact: str, desc_level: str, task_type: str) -> str:
     artifact = website_task_artifact(task_artifact, task_type)
-    prediction_format = website_prediction_format(task_type)
+    prediction_format = website_prediction_format(desc_level, task_type)
     return "\n".join(part for part in (artifact, prediction_format) if part.strip())
 
 
@@ -552,7 +557,7 @@ def render_website_prompt(
         for field in WEBSITE_PROMPT_FIELDS
     }
     context = combine_context(values["sample_source"], values["environment_description"], desc_level)
-    task = render_website_task(values["task_artifact"], task_type)
+    task = render_website_task(values["task_artifact"], desc_level, task_type)
     blocks = [
         context,
         values["intervention_semantics"],
