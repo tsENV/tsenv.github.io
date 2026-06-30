@@ -501,9 +501,11 @@ def compact_label_space(text: str) -> str:
     return "\n".join(re.sub(r"[ \t]{2,}", " ", line).rstrip() for line in str(text or "").splitlines()).strip()
 
 
-def website_prediction_format(text: str, task_type: str, training_samples: str) -> str:
+def website_prediction_format(text: str, desc_level: str, task_type: str, training_samples: str) -> str:
     rendered = str(text or "").strip()
-    if task_type != "code" or training_samples == "multiple":
+    if task_type != "code":
+        return rendered
+    if desc_level == "none" and training_samples == "multiple":
         return rendered
     marker = "\nFor each dataframe,"
     if marker in rendered:
@@ -535,7 +537,7 @@ def render_website_prompt(
         for field in WEBSITE_PROMPT_FIELDS
     }
     context = combine_context(values["sample_source"], values["environment_description"], desc_level)
-    prediction_format = website_prediction_format(values["prediction_format"], task_type, training_samples)
+    prediction_format = website_prediction_format(values["prediction_format"], desc_level, task_type, training_samples)
     task = "\n".join(part for part in (values["task_artifact"], prediction_format) if part.strip())
     blocks = [
         context,

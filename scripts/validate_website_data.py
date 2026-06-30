@@ -156,7 +156,8 @@ def validate_homepage_prompt_combinations(value: Any, simulator: str) -> None:
                 snippet not in agent_instruction,
                 f"{simulator} homepage_prompt_combinations[{index}] contains full-agent prompt section {snippet!r}",
             )
-        if item.get("task_type") == "code" and item.get("training_samples") in {"none", "one"}:
+        allows_dataframe_instruction = item.get("desc_level") == "none" and item.get("training_samples") == "multiple"
+        if item.get("task_type") == "code" and not allows_dataframe_instruction:
             require(
                 "For each dataframe, predict(df)" not in agent_instruction,
                 f"{simulator} homepage_prompt_combinations[{index}] includes code prediction-format text absent from website.tex",

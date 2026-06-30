@@ -236,7 +236,7 @@ class WebsitePromptRenderingTest(unittest.TestCase):
         )
         self.assertNotIn("For each dataframe, predict(df)", by_key[("high", "code", "one")])
         self.assertNotIn("For each dataframe, predict(df)", by_key[("none", "code", "one")])
-        self.assertIn("For each dataframe, predict(df)", by_key[("high", "code", "multiple")])
+        self.assertNotIn("For each dataframe, predict(df)", by_key[("high", "code", "multiple")])
         self.assertIn("For each dataframe, predict(df)", by_key[("none", "code", "multiple")])
 
     def test_missing_tsenv_checkout_uses_local_documented_renderer(self) -> None:
