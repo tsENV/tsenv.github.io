@@ -525,8 +525,7 @@ def website_prediction_format(desc_level: str, task_type: str) -> str:
     )
     return (
         f"The input df is a pandas DataFrame containing one sample with {input_description}.\n"
-        "The function will be called on samples inside test_samples/ and on additional held-out samples with the same schema and label set.\n"
-        "The function must return the correct label as a string."
+        "The function will be called on samples inside test_samples/ and on additional held-out samples with the same schema and label set."
     )
 
 

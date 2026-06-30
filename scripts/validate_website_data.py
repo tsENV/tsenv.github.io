@@ -38,6 +38,7 @@ FORBIDDEN_HOMEPAGE_RANKED_PROMPT_SNIPPETS = (
     "For each dataframe, predict(df)",
     "def predict(df) -> list[str]:",
     "columns col1, col2, col3, and col4",
+    "The function must return the correct label as a string.",
 )
 
 

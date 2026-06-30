@@ -111,8 +111,7 @@ class WebsitePromptRenderingTest(unittest.TestCase):
             by_key[("none", "code", "one")],
             "prompt source none-code-1\n\n"
             "The input df is a pandas DataFrame containing one sample with one column, col1.\n"
-            "The function will be called on samples inside test_samples/ and on additional held-out samples with the same schema and label set.\n"
-            "The function must return the correct label as a string.\n\n"
+            "The function will be called on samples inside test_samples/ and on additional held-out samples with the same schema and label set.\n\n"
             "To help with this task, you can use the labeled train_samples/ directory containing one labeled example per class while developing rule.py. "
             "The corresponding labels are available in train_labels.json.",
         )
@@ -120,8 +119,7 @@ class WebsitePromptRenderingTest(unittest.TestCase):
             by_key[("none", "code", "multiple")],
             "prompt source none-code-3\n\n"
             "The input df is a pandas DataFrame containing one sample with one column, col1.\n"
-            "The function will be called on samples inside test_samples/ and on additional held-out samples with the same schema and label set.\n"
-            "The function must return the correct label as a string.\n\n"
+            "The function will be called on samples inside test_samples/ and on additional held-out samples with the same schema and label set.\n\n"
             "To help with this task, you can use the labeled train_samples/ directory containing multiple labeled examples per class while developing rule.py. "
             "The corresponding labels are available in train_labels.json.",
         )
@@ -240,7 +238,7 @@ class WebsitePromptRenderingTest(unittest.TestCase):
         self.assertIn("Create a Python script named rule.py", high_code)
         self.assertIn("def predict(df) -> str:", high_code)
         self.assertIn("The input df is a pandas DataFrame containing one sample with one column, 'ball height'.", high_code)
-        self.assertIn("The function must return the correct label as a string.", high_code)
+        self.assertNotIn("The function must return the correct label as a string.", high_code)
         self.assertNotIn("def predict(df) -> list[str]:", high_code)
         self.assertNotIn("For each dataframe, predict(df)", high_code)
         self.assertNotIn("columns col1, col2, col3, and col4", high_code)
