@@ -501,6 +501,19 @@ def compact_label_space(text: str) -> str:
     return "\n".join(re.sub(r"[ \t]{2,}", " ", line).rstrip() for line in str(text or "").splitlines()).strip()
 
 
+def website_prediction_format(text: str, task_type: str, training_samples: str) -> str:
+    rendered = str(text or "").strip()
+    if task_type != "code" or training_samples == "multiple":
+        return rendered
+    marker = "\nFor each dataframe,"
+    if marker in rendered:
+        return rendered.split(marker, 1)[0].strip()
+    inline_marker = " For each dataframe,"
+    if inline_marker in rendered:
+        return rendered.split(inline_marker, 1)[0].strip()
+    return rendered
+
+
 def render_website_prompt(
     question_text: Mapping[str, Any],
     *,
@@ -522,7 +535,8 @@ def render_website_prompt(
         for field in WEBSITE_PROMPT_FIELDS
     }
     context = combine_context(values["sample_source"], values["environment_description"], desc_level)
-    task = "\n".join(part for part in (values["task_artifact"], values["prediction_format"]) if part.strip())
+    prediction_format = website_prediction_format(values["prediction_format"], task_type, training_samples)
+    task = "\n".join(part for part in (values["task_artifact"], prediction_format) if part.strip())
     blocks = [
         context,
         values["intervention_semantics"],
