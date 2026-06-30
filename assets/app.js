@@ -624,8 +624,7 @@ async function renderHome() {
       </div>
     </section>
 
-    <section class="section" aria-labelledby="stats-title">
-      <h2 id="stats-title">Statistic row</h2>
+    <section class="section">
       <div class="stats-row">
         ${stats.map(([value, meaning]) => `<div class="stat-cell"><span class="stat-value">${value}</span><span class="stat-meaning">${meaning}</span></div>`).join("")}
       </div>
