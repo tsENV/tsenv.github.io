@@ -437,7 +437,10 @@ function renderPlot(data, description, options = {}) {
   const channels = channelDescriptions
     .map(ch => ch.id || ch)
     .filter(id => id !== "time" && rows.some(r => typeof r[id] === "number"));
-  const limitedChannels = channels.slice(0, 4);
+  const allowedChannelIds = Array.isArray(options.channelIds) ? new Set(options.channelIds.map(String)) : null;
+  const limitedChannels = channels
+    .filter(id => !allowedChannelIds || allowedChannelIds.has(String(id)))
+    .slice(0, 4);
   const x = rows.map(row => Number(row.time));
   const colors = ["#1f5fbf", "#6c757d", "#d97917", "#2f7d55"];
   const traces = [];
@@ -471,6 +474,7 @@ function renderPlot(data, description, options = {}) {
       xaxis: { title: "time", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
       yaxis: { title: options.yAxisTitle || "observed channels", showgrid: true, gridcolor: "#eef1f4", zeroline: false },
       legend: { orientation: "h", x: 0, y: 1.14 },
+      showlegend: options.showLegend !== false,
       shapes: showInterventionMarker ? [{
         type: "line",
         x0: Number(data.intervention_time),
@@ -611,7 +615,7 @@ async function renderHome() {
             ${taskControls("home", state.home)}
             <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
             ${plotNoiseCue(state.home)}
-            ${renderPlot(plotData, description, { primaryChannel: "Position", yAxisTitle: "ball height", showInterventionMarker: false, disableZoom: true })}
+            ${renderPlot(plotData, description, { channelIds: ["Position"], primaryChannel: "Position", yAxisTitle: "ball height", showInterventionMarker: false, disableZoom: true, showLegend: false })}
             <div class="prompt-panel">
               <pre>${escapeHtml(prompt.agent_instruction)}</pre>
               <button class="reveal-button" data-action="toggle-reveal">reveal answer</button>

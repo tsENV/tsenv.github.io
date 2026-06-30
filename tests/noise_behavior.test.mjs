@@ -112,6 +112,13 @@ assert.equal(homepagePayload.config.displayModeBar, false, "homepage plot should
 assert.equal(homepagePayload.config.scrollZoom, false, "homepage plot should disable scroll zoom");
 
 api.plotPayloads.clear();
+api.renderPlot(data, description, { channelIds: ["x"], primaryChannel: "x", showLegend: false });
+const singleChannelPayload = [...api.plotPayloads.values()].at(-1);
+assert.equal(singleChannelPayload.traces.length, 1, "channelIds should restrict the rendered traces");
+assert.equal(singleChannelPayload.traces[0].name, "x", "channelIds should keep the requested trace");
+assert.equal(singleChannelPayload.layout.showlegend, false, "showLegend false should hide the Plotly legend");
+
+api.plotPayloads.clear();
 api.renderPlot(data, description);
 const environmentPayload = [...api.plotPayloads.values()].at(-1);
 assert.equal(environmentPayload.config.displayModeBar, true, "environment plot should expose Plotly modebar");
