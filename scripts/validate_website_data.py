@@ -30,6 +30,14 @@ FORBIDDEN_WEBSITE_PROMPT_SNIPPETS = (
     "Additional requirements:",
     "Internet access is disabled",
 )
+FORBIDDEN_HOMEPAGE_RANKED_PROMPT_SNIPPETS = (
+    "ranked list",
+    "lower-confidence",
+    "<top_1_label>",
+    "<optional_lower_confidence_label>",
+    "For each dataframe, predict(df)",
+    "def predict(df) -> list[str]:",
+)
 
 
 class ValidationError(Exception):
@@ -156,11 +164,10 @@ def validate_homepage_prompt_combinations(value: Any, simulator: str) -> None:
                 snippet not in agent_instruction,
                 f"{simulator} homepage_prompt_combinations[{index}] contains full-agent prompt section {snippet!r}",
             )
-        allows_dataframe_instruction = item.get("desc_level") == "none" and item.get("training_samples") == "multiple"
-        if item.get("task_type") == "code" and not allows_dataframe_instruction:
+        for snippet in FORBIDDEN_HOMEPAGE_RANKED_PROMPT_SNIPPETS:
             require(
-                "For each dataframe, predict(df)" not in agent_instruction,
-                f"{simulator} homepage_prompt_combinations[{index}] includes code prediction-format text absent from website.tex",
+                snippet not in agent_instruction,
+                f"{simulator} homepage_prompt_combinations[{index}] contains ranked-list prompt text {snippet!r}",
             )
 
 

@@ -501,19 +501,34 @@ def compact_label_space(text: str) -> str:
     return "\n".join(re.sub(r"[ \t]{2,}", " ", line).rstrip() for line in str(text or "").splitlines()).strip()
 
 
-def website_prediction_format(text: str, desc_level: str, task_type: str, training_samples: str) -> str:
+def website_task_artifact(text: str, task_type: str) -> str:
     rendered = str(text or "").strip()
-    if task_type != "code":
-        return rendered
-    if desc_level == "none" and training_samples == "multiple":
-        return rendered
-    marker = "\nFor each dataframe,"
-    if marker in rendered:
-        return rendered.split(marker, 1)[0].strip()
-    inline_marker = " For each dataframe,"
-    if inline_marker in rendered:
-        return rendered.split(inline_marker, 1)[0].strip()
+    if task_type == "code":
+        return re.sub(r"def predict\(df\)\s*->\s*[^:\n]+:", "def predict(df) -> str:", rendered)
     return rendered
+
+
+def website_prediction_format(task_type: str) -> str:
+    if task_type != "code":
+        return (
+            "For each file in test_samples/, return the correct label.\n"
+            "The output must be valid JSON with exactly this structure:\n"
+            "{\n\n"
+            '  "<filename_1>": "<correct_label_filename_1>",\n'
+            '  "<filename_2>": "<correct_label_filename_2>"\n\n'
+            "}"
+        )
+    return (
+        "The input df is a pandas DataFrame containing one sample with columns col1, col2, col3, and col4.\n"
+        "The function will be called on samples inside test_samples/ and on additional held-out samples with the same schema and label set.\n"
+        "The function must return the correct label as a string."
+    )
+
+
+def render_website_task(task_artifact: str, task_type: str) -> str:
+    artifact = website_task_artifact(task_artifact, task_type)
+    prediction_format = website_prediction_format(task_type)
+    return "\n".join(part for part in (artifact, prediction_format) if part.strip())
 
 
 def render_website_prompt(
@@ -537,8 +552,7 @@ def render_website_prompt(
         for field in WEBSITE_PROMPT_FIELDS
     }
     context = combine_context(values["sample_source"], values["environment_description"], desc_level)
-    prediction_format = website_prediction_format(values["prediction_format"], desc_level, task_type, training_samples)
-    task = "\n".join(part for part in (values["task_artifact"], prediction_format) if part.strip())
+    task = render_website_task(values["task_artifact"], task_type)
     blocks = [
         context,
         values["intervention_semantics"],
