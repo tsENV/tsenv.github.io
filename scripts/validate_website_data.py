@@ -22,6 +22,14 @@ EXPECTED_PROMPT_COMBINATIONS = {
     for training_samples in ("none", "one", "multiple")
 }
 MALFORMED_PROMPT_PREFIX = "You are given multivariate time-series observations"
+FORBIDDEN_WEBSITE_PROMPT_SNIPPETS = (
+    "Observed Signals:",
+    "Requirements:",
+    "Requirements for predict(df):",
+    "Evaluation:",
+    "Additional requirements:",
+    "Internet access is disabled",
+)
 
 
 class ValidationError(Exception):
@@ -148,6 +156,11 @@ def validate_prompt_combinations(value: Any, simulator: str) -> None:
             not agent_instruction.startswith(MALFORMED_PROMPT_PREFIX),
             f"{simulator} prompt_combinations[{index}] appears to contain stale pre-rendered website prompt text",
         )
+        for snippet in FORBIDDEN_WEBSITE_PROMPT_SNIPPETS:
+            require(
+                snippet not in agent_instruction,
+                f"{simulator} prompt_combinations[{index}] contains full-agent prompt section {snippet!r}",
+            )
         key = (desc_level, task_type, training_samples)
         require(key not in seen, f"{simulator}/description.json has duplicate prompt combination: {key}")
         seen.add(key)

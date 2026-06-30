@@ -31,6 +31,15 @@ HOMEPAGE_DATA_FILENAME = "data_main_page.json"
 PROMPT_DESC_LEVELS = ("high", "none")
 PROMPT_TASK_TYPES = ("direct", "code")
 PROMPT_TRAINING_SAMPLES = ("none", "one", "multiple")
+WEBSITE_PROMPT_FIELDS = (
+    "sample_source",
+    "environment_description",
+    "intervention_semantics",
+    "label_space",
+    "no_change_guidance",
+    "task_artifact",
+    "prediction_format",
+)
 TSENV_DOCUMENTED_PROMPT_FIELDS = (
     "sample_source",
     "environment_description",
@@ -436,6 +445,95 @@ def resolve_tsenv_prompt_placeholders(
     return TSENV_PROMPT_PLACEHOLDER_RE.sub(replace, text).strip()
 
 
+def website_prompt_field(
+    question_text: Mapping[str, Any],
+    field: str,
+    *,
+    question_slug: str | None,
+    questions_by_id: Mapping[str, Mapping[str, Any]] | None,
+    questions_metadata: Mapping[str, Any] | None = None,
+) -> str:
+    if field not in question_text:
+        return ""
+    return resolve_tsenv_prompt_placeholders(
+        question_text.get(field),
+        current_question_text=question_text,
+        current_question_slug=str(question_slug or "").strip() or None,
+        questions_by_id=questions_by_id,
+        questions_metadata=questions_metadata,
+    )
+
+
+def first_sentence(text: str) -> str:
+    cleaned = str(text or "").strip()
+    if not cleaned:
+        return ""
+    match = re.search(r"(?<=[.!?])(?:\s|$)", cleaned)
+    return cleaned[: match.start()].strip() if match else cleaned
+
+
+def combine_context(sample_source: str, environment_description: str, desc_level: str) -> str:
+    source = str(sample_source or "").strip()
+    description = str(environment_description or "").strip()
+    if desc_level == "high":
+        description = first_sentence(description)
+    if not source:
+        return description
+    if not description:
+        return source
+    if source.endswith(".") or source.endswith(":"):
+        return f"{source}\n{description}"
+    return f"{source} {description}"
+
+
+def website_fewshot_context(task_type: str, training_samples: str) -> str:
+    if training_samples == "none":
+        return ""
+    count = "one labeled example per class" if training_samples == "one" else "multiple labeled examples per class"
+    suffix = " while developing rule.py" if task_type == "code" else ""
+    return (
+        f"To help with this task, you can use the labeled train_samples/ directory containing {count}"
+        f"{suffix}. The corresponding labels are available in train_labels.json."
+    )
+
+
+def compact_label_space(text: str) -> str:
+    return "\n".join(re.sub(r"[ \t]{2,}", " ", line).rstrip() for line in str(text or "").splitlines()).strip()
+
+
+def render_website_prompt(
+    question_text: Mapping[str, Any],
+    *,
+    question_slug: str | None = None,
+    questions_by_id: Mapping[str, Mapping[str, Any]] | None = None,
+    desc_level: str,
+    task_type: str,
+    training_samples: str,
+    questions_metadata: Mapping[str, Any] | None = None,
+) -> str:
+    values = {
+        field: website_prompt_field(
+            question_text,
+            field,
+            question_slug=question_slug,
+            questions_by_id=questions_by_id,
+            questions_metadata=questions_metadata,
+        )
+        for field in WEBSITE_PROMPT_FIELDS
+    }
+    context = combine_context(values["sample_source"], values["environment_description"], desc_level)
+    task = "\n".join(part for part in (values["task_artifact"], values["prediction_format"]) if part.strip())
+    blocks = [
+        context,
+        values["intervention_semantics"],
+        compact_label_space(values["label_space"]),
+        values["no_change_guidance"],
+        task,
+        website_fewshot_context(task_type, training_samples),
+    ]
+    return "\n\n".join(block for block in blocks if block.strip()).strip()
+
+
 def render_documented_tsenv_agent_prompt(
     question_text: Mapping[str, Any],
     *,
@@ -584,7 +682,7 @@ def select_question(
     )
 
 
-def rendered_prompt_combinations(questions_path: Path, renderer: PromptRenderer) -> list[dict[str, str]]:
+def rendered_prompt_combinations(questions_path: Path) -> list[dict[str, str]]:
     payload = read_json(questions_path)
     questions = payload.get("questions") if isinstance(payload, dict) else None
     if not isinstance(questions, dict) or not questions:
@@ -592,18 +690,21 @@ def rendered_prompt_combinations(questions_path: Path, renderer: PromptRenderer)
 
     combinations: list[dict[str, str]] = []
     for desc_level in PROMPT_DESC_LEVELS:
-        for task_type in PROMPT_TASK_TYPES:
-            for training_samples in PROMPT_TRAINING_SAMPLES:
+        for training_samples in PROMPT_TRAINING_SAMPLES:
+            for task_type in PROMPT_TASK_TYPES:
                 question_slug, question = select_question(
                     questions,
                     desc_level=desc_level,
                     task_type=task_type,
                     training_samples=training_samples,
                 )
-                rendered = renderer(
+                rendered = render_website_prompt(
                     question["question_text"],
                     question_slug=question_slug,
                     questions_by_id=questions,
+                    desc_level=desc_level,
+                    task_type=task_type,
+                    training_samples=training_samples,
                 ).strip()
                 if not rendered:
                     raise RuntimeError(f"rendered prompt for {question_slug} is empty")
@@ -619,7 +720,6 @@ def rendered_prompt_combinations(questions_path: Path, renderer: PromptRenderer)
 
 
 def sync_from_hf(repo: str, revision: str, output_dir: Path, tsenv_root: Path | None) -> None:
-    renderer = load_prompt_renderer(tsenv_root)
     output_dir.mkdir(parents=True, exist_ok=True)
     for filename in TOP_LEVEL_FILES:
         download_file(hf_url(repo, f"website/{filename}", revision), output_dir / filename)
@@ -639,7 +739,7 @@ def sync_from_hf(repo: str, revision: str, output_dir: Path, tsenv_root: Path | 
             description = read_json(description_path)
             if not isinstance(description, dict):
                 raise RuntimeError(f"{description_path} must contain a JSON object")
-            description["prompt_combinations"] = rendered_prompt_combinations(questions_path, renderer)
+            description["prompt_combinations"] = rendered_prompt_combinations(questions_path)
             write_json(description_path, description)
             for sample_number in range(1, 6):
                 download_file(hf_url(repo, f"{base}/data_{sample_number}.json", revision), env_dir / f"data_{sample_number}.json")
