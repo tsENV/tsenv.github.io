@@ -696,7 +696,41 @@ def select_question(
     )
 
 
-def rendered_prompt_combinations(questions_path: Path) -> list[dict[str, str]]:
+def rendered_prompt_combinations(questions_path: Path, renderer: PromptRenderer) -> list[dict[str, str]]:
+    payload = read_json(questions_path)
+    questions = payload.get("questions") if isinstance(payload, dict) else None
+    if not isinstance(questions, dict) or not questions:
+        raise RuntimeError(f"{questions_path} must contain a non-empty questions object")
+
+    combinations: list[dict[str, str]] = []
+    for desc_level in PROMPT_DESC_LEVELS:
+        for training_samples in PROMPT_TRAINING_SAMPLES:
+            for task_type in PROMPT_TASK_TYPES:
+                question_slug, question = select_question(
+                    questions,
+                    desc_level=desc_level,
+                    task_type=task_type,
+                    training_samples=training_samples,
+                )
+                rendered = renderer(
+                    question["question_text"],
+                    question_slug=question_slug,
+                    questions_by_id=questions,
+                ).strip()
+                if not rendered:
+                    raise RuntimeError(f"rendered prompt for {question_slug} is empty")
+                combinations.append(
+                    {
+                        "desc_level": desc_level,
+                        "task_type": task_type,
+                        "training_samples": training_samples,
+                        "agent_instruction": rendered,
+                    }
+                )
+    return combinations
+
+
+def rendered_homepage_prompt_combinations(questions_path: Path) -> list[dict[str, str]]:
     payload = read_json(questions_path)
     questions = payload.get("questions") if isinstance(payload, dict) else None
     if not isinstance(questions, dict) or not questions:
@@ -735,6 +769,7 @@ def rendered_prompt_combinations(questions_path: Path) -> list[dict[str, str]]:
 
 def sync_from_hf(repo: str, revision: str, output_dir: Path, tsenv_root: Path | None) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
+    prompt_renderer = load_prompt_renderer(tsenv_root)
     for filename in TOP_LEVEL_FILES:
         download_file(hf_url(repo, f"website/{filename}", revision), output_dir / filename)
     environments_dir = output_dir / "environments"
@@ -753,7 +788,11 @@ def sync_from_hf(repo: str, revision: str, output_dir: Path, tsenv_root: Path | 
             description = read_json(description_path)
             if not isinstance(description, dict):
                 raise RuntimeError(f"{description_path} must contain a JSON object")
-            description["prompt_combinations"] = rendered_prompt_combinations(questions_path)
+            description["prompt_combinations"] = rendered_prompt_combinations(questions_path, prompt_renderer)
+            if simulator == "BallDrop":
+                description["homepage_prompt_combinations"] = rendered_homepage_prompt_combinations(questions_path)
+            else:
+                description.pop("homepage_prompt_combinations", None)
             write_json(description_path, description)
             for sample_number in range(1, 6):
                 download_file(hf_url(repo, f"{base}/data_{sample_number}.json", revision), env_dir / f"data_{sample_number}.json")

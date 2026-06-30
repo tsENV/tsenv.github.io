@@ -87,6 +87,13 @@ def validate_environments(data_dir: Path, summary: dict[str, Any]) -> None:
         require(description.get("name"), f"{simulator}/description.json missing name")
         require(description.get("short_one_line_description"), f"{simulator}/description.json missing short description")
         validate_prompt_combinations(description.get("prompt_combinations"), simulator)
+        if simulator == "BallDrop":
+            validate_homepage_prompt_combinations(description.get("homepage_prompt_combinations"), simulator)
+        else:
+            require(
+                "homepage_prompt_combinations" not in description,
+                f"{simulator}/description.json must not include homepage_prompt_combinations",
+            )
         expected_download_link = (
             "https://huggingface.co/datasets/eth-siplab/tsenvbenchmark/tree/main/questions/"
             f"{simulator}"
@@ -136,41 +143,52 @@ def validate_homepage_data(data_dir: Path) -> None:
 
 
 def validate_prompt_combinations(value: Any, simulator: str) -> None:
-    require(isinstance(value, list) and value, f"{simulator}/description.json missing prompt_combinations")
+    validate_prompt_combination_set(value, simulator, "prompt_combinations")
+
+
+def validate_homepage_prompt_combinations(value: Any, simulator: str) -> None:
+    validate_prompt_combination_set(value, simulator, "homepage_prompt_combinations")
+    assert isinstance(value, list)
+    for index, item in enumerate(value):
+        agent_instruction = str(item.get("agent_instruction") or "").strip()
+        for snippet in FORBIDDEN_WEBSITE_PROMPT_SNIPPETS:
+            require(
+                snippet not in agent_instruction,
+                f"{simulator} homepage_prompt_combinations[{index}] contains full-agent prompt section {snippet!r}",
+            )
+        if item.get("task_type") == "code" and item.get("training_samples") in {"none", "one"}:
+            require(
+                "For each dataframe, predict(df)" not in agent_instruction,
+                f"{simulator} homepage_prompt_combinations[{index}] includes code prediction-format text absent from website.tex",
+            )
+
+
+def validate_prompt_combination_set(value: Any, simulator: str, field_name: str) -> None:
+    require(isinstance(value, list) and value, f"{simulator}/description.json missing {field_name}")
     require(
         len(value) == len(EXPECTED_PROMPT_COMBINATIONS),
-        f"{simulator}/description.json must contain exactly {len(EXPECTED_PROMPT_COMBINATIONS)} prompt combinations",
+        f"{simulator}/description.json must contain exactly {len(EXPECTED_PROMPT_COMBINATIONS)} {field_name}",
     )
     seen: set[tuple[str, str, str]] = set()
     for index, item in enumerate(value):
-        require(isinstance(item, dict), f"{simulator} prompt_combinations[{index}] must be an object")
+        require(isinstance(item, dict), f"{simulator} {field_name}[{index}] must be an object")
         desc_level = str(item.get("desc_level") or "").strip()
         task_type = str(item.get("task_type") or "").strip()
         training_samples = str(item.get("training_samples") or "").strip()
         agent_instruction = str(item.get("agent_instruction") or "").strip()
-        require(desc_level, f"{simulator} prompt_combinations[{index}] missing desc_level")
-        require(task_type, f"{simulator} prompt_combinations[{index}] missing task_type")
-        require(training_samples, f"{simulator} prompt_combinations[{index}] missing training_samples")
-        require(agent_instruction, f"{simulator} prompt_combinations[{index}] missing agent_instruction")
+        require(desc_level, f"{simulator} {field_name}[{index}] missing desc_level")
+        require(task_type, f"{simulator} {field_name}[{index}] missing task_type")
+        require(training_samples, f"{simulator} {field_name}[{index}] missing training_samples")
+        require(agent_instruction, f"{simulator} {field_name}[{index}] missing agent_instruction")
         require(
             not agent_instruction.startswith(MALFORMED_PROMPT_PREFIX),
-            f"{simulator} prompt_combinations[{index}] appears to contain stale pre-rendered website prompt text",
-        )
-        for snippet in FORBIDDEN_WEBSITE_PROMPT_SNIPPETS:
-            require(
-                snippet not in agent_instruction,
-                f"{simulator} prompt_combinations[{index}] contains full-agent prompt section {snippet!r}",
-            )
-        if task_type == "code" and training_samples in {"none", "one"}:
-            require(
-                "For each dataframe, predict(df)" not in agent_instruction,
-                f"{simulator} prompt_combinations[{index}] includes code prediction-format text absent from website.tex",
+            f"{simulator} {field_name}[{index}] appears to contain stale pre-rendered website prompt text",
             )
         key = (desc_level, task_type, training_samples)
-        require(key not in seen, f"{simulator}/description.json has duplicate prompt combination: {key}")
+        require(key not in seen, f"{simulator}/description.json has duplicate {field_name}: {key}")
         seen.add(key)
     missing = sorted(EXPECTED_PROMPT_COMBINATIONS - seen)
-    require(not missing, f"{simulator}/description.json missing prompt combinations: {missing}")
+    require(not missing, f"{simulator}/description.json missing {field_name}: {missing}")
 
 
 def validate_site_metadata(root: Path = ROOT) -> None:

@@ -43,6 +43,11 @@ const description = {
     { task_type: "code", desc_level: "high", training_samples: "one", agent_instruction: "code-high-one" },
     { task_type: "code", desc_level: "high", training_samples: "none", agent_instruction: "code-high-none" },
   ],
+  homepage_prompt_combinations: [
+    { task_type: "code", desc_level: "high", training_samples: "multiple", agent_instruction: "homepage-code-high-multiple" },
+    { task_type: "code", desc_level: "high", training_samples: "one", agent_instruction: "homepage-code-high-one" },
+    { task_type: "code", desc_level: "high", training_samples: "none", agent_instruction: "homepage-code-high-none" },
+  ],
 };
 const data = {
   run_id: "sample-run",
@@ -95,6 +100,18 @@ assert.equal(
   "noise-only changes must not change prompt selection"
 );
 assert.equal(promptLowNoise.agent_instruction, "code-high-multiple", "Three Examples should select multiple-example prompt");
+
+const homepagePrompt = api.findPrompt(description, {
+  taskMode: "Code",
+  noise: "Low",
+  context: "High",
+  examples: "Three Examples",
+}, "homepage_prompt_combinations");
+assert.equal(
+  homepagePrompt.agent_instruction,
+  "homepage-code-high-multiple",
+  "homepage prompt selection should use compact homepage prompt combinations"
+);
 
 const promptOneExample = api.findPrompt(description, {
   taskMode: "Code",

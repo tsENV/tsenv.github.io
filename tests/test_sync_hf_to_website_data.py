@@ -66,7 +66,10 @@ class WebsitePromptRenderingTest(unittest.TestCase):
             questions_path = Path(tmp) / "questions.json"
             self.write_questions(questions_path)
 
-            combinations = sync_hf_to_website_data.rendered_prompt_combinations(questions_path)
+            def fake_renderer(question_text: dict[str, Any], **kwargs: Any) -> str:
+                return f"full::{kwargs['question_slug']}::{question_text['sample_source']}"
+
+            combinations = sync_hf_to_website_data.rendered_prompt_combinations(questions_path, fake_renderer)
 
         self.assertEqual(len(combinations), 12)
         by_key = {
@@ -75,8 +78,26 @@ class WebsitePromptRenderingTest(unittest.TestCase):
         }
         self.assertEqual(
             by_key[("high", "direct", "none")],
-            "prompt source high-direct-0",
+            "full::high-direct-0::prompt source high-direct-0",
         )
+        self.assertEqual(
+            by_key[("none", "code", "one")],
+            "full::none-code-1::prompt source none-code-1",
+        )
+
+    def test_homepage_prompt_combinations_are_rendered_in_tex_compact_shape(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            questions_path = Path(tmp) / "questions.json"
+            self.write_questions(questions_path)
+
+            combinations = sync_hf_to_website_data.rendered_homepage_prompt_combinations(questions_path)
+
+        self.assertEqual(len(combinations), 12)
+        by_key = {
+            (item["desc_level"], item["task_type"], item["training_samples"]): item["agent_instruction"]
+            for item in combinations
+        }
+        self.assertEqual(by_key[("high", "direct", "none")], "prompt source high-direct-0")
         self.assertEqual(
             by_key[("none", "code", "one")],
             "prompt source none-code-1\n\n"
@@ -309,8 +330,12 @@ class WebsitePromptRenderingTest(unittest.TestCase):
 
         original_simulators = sync_hf_to_website_data.SIMULATORS
         original_download_file = sync_hf_to_website_data.download_file
+        original_load_prompt_renderer = sync_hf_to_website_data.load_prompt_renderer
         sync_hf_to_website_data.SIMULATORS = ("BallDrop",)
         sync_hf_to_website_data.download_file = fake_download_file
+        sync_hf_to_website_data.load_prompt_renderer = lambda tsenv_root: (
+            lambda question_text, **kwargs: f"full::{kwargs['question_slug']}::{question_text['sample_source']}"
+        )
         try:
             with tempfile.TemporaryDirectory() as tmp:
                 output_dir = Path(tmp) / "data"
@@ -324,6 +349,7 @@ class WebsitePromptRenderingTest(unittest.TestCase):
         finally:
             sync_hf_to_website_data.SIMULATORS = original_simulators
             sync_hf_to_website_data.download_file = original_download_file
+            sync_hf_to_website_data.load_prompt_renderer = original_load_prompt_renderer
 
         self.assertEqual(homepage_data["source"], "programmatic:ball-drop-bounce-gif")
         self.assertTrue(homepage_data["rows"])
@@ -332,6 +358,12 @@ class WebsitePromptRenderingTest(unittest.TestCase):
         self.assertNotEqual(combinations[0]["agent_instruction"], "stale deployed prompt")
         self.assertEqual(
             combinations[0]["agent_instruction"],
+            "full::high-direct-0::prompt source high-direct-0",
+        )
+        homepage_combinations = description["homepage_prompt_combinations"]
+        self.assertEqual(len(homepage_combinations), 12)
+        self.assertEqual(
+            homepage_combinations[0]["agent_instruction"],
             "prompt source high-direct-0",
         )
 
@@ -454,6 +486,21 @@ class WebsitePromptRenderingTest(unittest.TestCase):
                 ],
                 "BallDrop",
             )
+
+    def test_validator_allows_full_environment_prompts_but_rejects_full_homepage_prompts(self) -> None:
+        combinations = [
+            {
+                "desc_level": desc_level,
+                "task_type": task_type,
+                "training_samples": training_samples,
+                "agent_instruction": "Prompt body\n\nObserved Signals:\ncol1: height\n\nRequirements:\n- answer carefully",
+            }
+            for desc_level, task_type, training_samples in sorted(validate_website_data.EXPECTED_PROMPT_COMBINATIONS)
+        ]
+
+        validate_website_data.validate_prompt_combinations(combinations, "BallDrop")
+        with self.assertRaises(validate_website_data.ValidationError):
+            validate_website_data.validate_homepage_prompt_combinations(combinations, "BallDrop")
 
 
 if __name__ == "__main__":

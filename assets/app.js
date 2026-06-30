@@ -535,13 +535,13 @@ function mountPlots() {
   });
 }
 
-function findPrompt(description, controls) {
+function findPrompt(description, controls, promptField = "prompt_combinations") {
   const taskMode = controls.taskMode || "Code";
   const taskType = taskMode.toLowerCase();
   const descLevel = controls.context === "High" ? "high" : "none";
   const trainingSamples = trainingSamplesKey(controls.examples);
   const legacyTrainingSamples = trainingSamples === "none" ? "none" : ">0";
-  const candidates = description.prompt_combinations || [];
+  const candidates = description[promptField] || description.prompt_combinations || [];
   return candidates.find(p => p.task_type === taskType && p.desc_level === descLevel && p.training_samples === trainingSamples)
       || candidates.find(p => p.task_type === taskType && p.desc_level === descLevel && p.training_samples === legacyTrainingSamples)
       || candidates.find(p => p.task_type === taskType && p.training_samples === trainingSamples)
@@ -584,7 +584,7 @@ async function renderHome() {
   const description = await getEnvironmentDescription("BallDrop");
   const data = await getHomepageData();
   const plotData = dataWithPlotNoise(data, description, state.home);
-  const prompt = findPrompt(description, state.home);
+  const prompt = findPrompt(description, state.home, "homepage_prompt_combinations");
 
   const stats = [
     ["3 physical simulators", "BallDrop, BounceBall, MassSlide"],
