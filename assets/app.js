@@ -613,8 +613,6 @@ async function renderHome() {
           <p class="page-subtitle">A compact BallDrop task with controls for answer interface and benchmark condition axes.</p>
           <div class="panel">
             ${taskControls("home", state.home)}
-            <div class="signal-hint" aria-hidden="true">&rarr; click signals to inspect traces</div>
-            ${plotNoiseCue(state.home)}
             ${renderPlot(plotData, description, { channelIds: ["Position"], primaryChannel: "Position", yAxisTitle: "ball height", showInterventionMarker: false, disableZoom: true, showLegend: false })}
             <div class="prompt-panel">
               <pre>${escapeHtml(prompt.agent_instruction)}</pre>

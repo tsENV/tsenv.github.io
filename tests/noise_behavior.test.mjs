@@ -3,6 +3,9 @@ import fs from "node:fs";
 import vm from "node:vm";
 
 const source = fs.readFileSync("assets/app.js", "utf8");
+assert.ok(!source.includes("click signals to inspect traces"), "homepage should not render the signal-inspection helper text");
+assert.ok(!source.includes("plotNoiseCue(state.home)"), "homepage should not render a separate plot-noise cue");
+assert.ok(source.includes("plotNoiseCue(state.env)"), "environment pages should keep the plot-noise cue");
 
 const context = {
   console,
